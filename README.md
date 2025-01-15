@@ -7,7 +7,7 @@ This script performs the following tasks:
 1. Optimizes a monomer's geometry using Psi4.
 2. Calculates ESP and RESP charges.
 3. Builds a polymer using Pysimm.
-4. Please install modified_Pysimm from repository and install it to run this code.
+4. Please install Pysimm_by_SN from my repository and install it to run this code.
 
 ## Prerequisites
 
