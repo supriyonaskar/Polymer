@@ -69,13 +69,25 @@ This script performs the following tasks:
 
 ### Example: Input Parameters
 ```
-1  # Head atom index
-2  # Tail atom index
-3  # Hydrogen attached to head atom
-4  # Hydrogen attached to tail atom
-molecule_name  # Name of the molecule
-1  # Remove unnecessary files (1: Yes, 0: No)
-1  # Optimize and build polymer (1: Yes, 0: No)
+### Input parameters for polymer building ###
+#1. Index of head atom of the monomer (index starts from 1)
+#2. Index of the tail atom of the monomer 
+#3. Hydrogen attached to the head atom of the monomer
+#4. Hydrogen attached to the tail atom of the monomer
+#5. Name of the molecule (You should remember that your initial xyz file of the monomer should have a name like {moleculename}_initial.xyz), also make sure xyz file have two remarks like in begining. 
+#6. To remove files set it to 1. To keep make it 0
+#7. Flag to optimize or not, if 1 it will optimize, if 0 it will build the polymer...else not
+### Sometimes, you may not have some parameters in your force-field database, then you have to modify gaff.json to include those. 
+
+
+
+21
+38
+26
+40 
+SPEEK
+0 
+1
 ```
 
 ## Notes
