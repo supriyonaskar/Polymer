@@ -1,0 +1,46 @@
+HEADER    pdb written using pySIMM system module
+ATOM      1    o RES     1      -8.789 -13.102 -11.311                       O
+ATOM      2    o RES     1      -8.498 -12.681 -13.440                       O
+ATOM      3    c RES     1      -8.168 -12.622 -12.259                       C
+ATOM      4   c2 RES     1      -6.320 -11.959 -10.665                       C
+ATOM      5   ce RES     1      -6.877 -11.945 -11.893                       C
+ATOM      6   ha RES     1      -5.355 -11.483 -10.444                       H
+ATOM      7   ha RES     1      -6.759 -12.407  -9.800                       H
+ATOM      8   ha RES     1      -6.399 -11.535 -12.805                       H
+ATOM      9   c2 RES     1      -9.463 -13.357 -10.318                       C
+ATOM     10    o RES     1      -9.330 -15.467  -9.723                       O
+ATOM     11   c3 RES     1     -10.228 -14.674 -10.239                       C
+ATOM     12   ha RES     1     -10.264 -12.705 -10.316                       H
+ATOM     13   ha RES     1      -8.937 -13.222  -9.378                       H
+ATOM     14   h1 RES     1     -10.474 -14.961 -11.295                       H
+ATOM     15   h1 RES     1     -11.200 -14.628  -9.623                       H
+ATOM     16   c2 RES     1      -8.414 -18.651  -9.405                       C
+ATOM     17   c1 RES     1      -8.479 -16.280  -9.883                       C
+ATOM     18   c2 RES     1      -8.658 -17.322  -9.113                       C
+ATOM     19    o RES     1      -7.643 -16.221 -10.675                       O
+ATOM     20   ha RES     1      -8.550 -19.398  -8.649                       H
+ATOM     21   ha RES     1      -8.161 -19.076 -10.395                       H
+ATOM     22   ha RES     1      -8.865 -17.104  -8.009                       H
+TER
+CONECT    1    3    9
+CONECT    2    3
+CONECT    3    1    2    5
+CONECT    4    5    6    7
+CONECT    5    3    4    8
+CONECT    6    4
+CONECT    7    4
+CONECT    8    5
+CONECT    9    1   11   12   13
+CONECT   10   11   17
+CONECT   11    9   10   14   15
+CONECT   12    9
+CONECT   13    9
+CONECT   14   11
+CONECT   15   11
+CONECT   16   18   20   21
+CONECT   17   10   18   19
+CONECT   18   16   17   22
+CONECT   19   17
+CONECT   20   16
+CONECT   21   16
+CONECT   22   18

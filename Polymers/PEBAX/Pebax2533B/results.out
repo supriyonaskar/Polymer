@@ -1,0 +1,46 @@
+Electrostatic potential parameters
+    van der Waals radii (Angstrom):
+                                      C   1.500
+                                      H   1.200
+                                      O   1.400
+    VDW scale factors:                1.40  1.60  1.80  2.00
+    VDW point density:                1.000
+    ESP method:                       scf
+    ESP basis set:                    6-31g*
+
+Grid information (see 1_optimized_grid.dat in Angstrom)
+    Number of grid points:            720
+
+Quantum electrostatic potential (see 1_optimized_grid_esp.dat)
+
+Constraints
+    Charge constraints
+        Total charge of   0.00000000 on the set  15
+        Total charge of   0.00000000 on the set  10
+
+Restraint
+    Hyperbolic restraint to a charge of zero
+    Hydrogen atoms are not restrained
+    resp_a:                           0.0005
+    resp_b:                           0.1000
+
+Fit
+
+Electrostatic Potential Charges
+   Center  Symbol       ESP      RESP
+      1    C       0.46739290  0.30467060
+      2    C      -1.47546391 -1.24577862
+      3    C       1.10129250  0.92123675
+      4    H       0.28334020  0.23875086
+      5    H       0.28655419  0.24149457
+      6    C      -0.36010370 -0.29901426
+      7    H      -0.21506031 -0.17979132
+      8    H      -0.21360315 -0.17908964
+      9    H       0.09392750  0.08095238
+     10    H       0.00000000  0.00000000
+     11    H       0.09718887  0.08439321
+     12    O      -0.14137941 -0.11624206
+     13    H       0.03900413  0.07524716
+     14    H       0.03691019  0.07317036
+     15    H       0.00000000  0.00000000
+Total Charge:      0.00000000 -0.00000000

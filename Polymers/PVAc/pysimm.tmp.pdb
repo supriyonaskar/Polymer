@@ -1,0 +1,30 @@
+HEADER    pdb written using pySIMM system module
+ATOM      1    C RES     1      -1.358   0.109  -1.846                       C
+ATOM      2    C RES     1       0.096   0.351  -1.496                       C
+ATOM      3    H RES     1      -2.011   0.421  -1.031                       H
+ATOM      4    H RES     1      -1.532  -0.948  -2.055                       H
+ATOM      5    H RES     1      -1.621   0.684  -2.737                       H
+ATOM      6    O RES     1       0.517  -0.457  -0.397                       O
+ATOM      7    H RES     1       0.275   1.397  -1.259                       H
+ATOM      8    H RES     1       0.749   0.057  -2.315                       H
+ATOM      9    C RES     1       0.273  -0.023   0.833                       C
+ATOM     10    C RES     1       0.792  -0.985   1.863                       C
+ATOM     11    H RES     1       0.319  -1.957   1.724                       H
+ATOM     12    H RES     1       0.583  -0.603   2.858                       H
+ATOM     13    H RES     1       1.866  -1.118   1.727                       H
+ATOM     14    O RES     1      -0.283   0.998   1.076                       O
+TER
+CONECT    1    2    3    4    5
+CONECT    2    1    6    7    8
+CONECT    3    1
+CONECT    4    1
+CONECT    5    1
+CONECT    6    2    9
+CONECT    7    2
+CONECT    8    2
+CONECT    9    6   10   14
+CONECT   10    9   11   12   13
+CONECT   11   10
+CONECT   12   10
+CONECT   13   10
+CONECT   14    9

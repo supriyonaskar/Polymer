@@ -1,0 +1,61 @@
+2023-01-17:11:48:20,877 INFO     [psi4.driver.task_planner:266] PLANNING Atomic:  keywords={'SCF__INTS_TOLERANCE': 1e-12, 'function_kwargs': {}}
+2023-01-17:11:48:20,881 INFO     [psi4.driver.driver:617] Compute gradient(): method=scf, basis=cc-pvdz, molecule=default, nre=130.4129059812903
+2023-01-17:11:48:22,78 INFO     [psi4.driver.driver:620] Return gradient(): -276.95615031125453
+2023-01-17:11:48:22,79 INFO     [psi4.driver.driver:621] [[ 0.00205207  0.00589558  0.00095491]
+ [ 0.00538019  0.00180381  0.00095314]
+ [-0.00823731  0.00453819  0.0106757 ]
+ [-0.00287807 -0.0133493  -0.0019345 ]
+ [-0.00522811  0.00705526 -0.01118706]
+ [ 0.00378584 -0.01621022  0.03235002]
+ [-0.00764529  0.01895366  0.00113335]
+ [ 0.01277069 -0.00868698 -0.03294555]]
+2023-01-17:11:48:22,185 INFO     [psi4.driver.task_planner:266] PLANNING Atomic:  keywords={'CART_HESS_READ': 0, 'SCF__GUESS': 'READ', 'SCF__INTS_TOLERANCE': 1e-12, 'function_kwargs': {}}
+2023-01-17:11:48:22,189 INFO     [psi4.driver.driver:617] Compute gradient(): method=scf, basis=cc-pvdz, molecule=default, nre=133.81513110001023
+2023-01-17:11:48:23,91 INFO     [psi4.driver.driver:620] Return gradient(): -276.96101239646606
+2023-01-17:11:48:23,92 INFO     [psi4.driver.driver:621] [[-0.00058681 -0.00378745 -0.00051777]
+ [-0.00963894  0.00613079 -0.0006173 ]
+ [ 0.00142005 -0.0002874  -0.00052451]
+ [-0.00152005  0.00052329 -0.00014863]
+ [ 0.00123696 -0.00044065  0.00080631]
+ [ 0.00299471  0.00016376 -0.00591063]
+ [ 0.00478888 -0.00104948  0.00053758]
+ [ 0.00130519 -0.00125286  0.00637495]]
+2023-01-17:11:48:23,137 INFO     [psi4.driver.task_planner:266] PLANNING Atomic:  keywords={'CART_HESS_READ': 0, 'SCF__GUESS': 'READ', 'SCF__INTS_TOLERANCE': 1e-12, 'function_kwargs': {}}
+2023-01-17:11:48:23,140 INFO     [psi4.driver.driver:617] Compute gradient(): method=scf, basis=cc-pvdz, molecule=default, nre=133.537015674242
+2023-01-17:11:48:23,934 INFO     [psi4.driver.driver:620] Return gradient(): -276.961403407238
+2023-01-17:11:48:23,935 INFO     [psi4.driver.driver:621] [[ 0.00059783  0.00004726  0.00008783]
+ [-0.00155169 -0.00074486 -0.00029845]
+ [ 0.00036178 -0.0001218  -0.00042616]
+ [ 0.00063582  0.00116702  0.00022204]
+ [ 0.00023868 -0.0002248   0.00046869]
+ [-0.00023018  0.00033246  0.00173307]
+ [-0.00028282 -0.00117308 -0.00017426]
+ [ 0.00023059  0.00071781 -0.00161276]]
+2023-01-17:11:48:23,977 INFO     [psi4.driver.task_planner:266] PLANNING Atomic:  keywords={'CART_HESS_READ': 0, 'SCF__GUESS': 'READ', 'SCF__INTS_TOLERANCE': 1e-12, 'function_kwargs': {}}
+2023-01-17:11:48:23,980 INFO     [psi4.driver.driver:617] Compute gradient(): method=scf, basis=cc-pvdz, molecule=default, nre=133.57294977700943
+2023-01-17:11:48:24,744 INFO     [psi4.driver.driver:620] Return gradient(): -276.96142980042265
+2023-01-17:11:48:24,745 INFO     [psi4.driver.driver:621] [[ 0.00015337 -0.00014198  0.00000471]
+ [ 0.00012373  0.00078743  0.00010813]
+ [ 0.00002253 -0.00002101 -0.00004947]
+ [-0.00003074 -0.00000945 -0.00000532]
+ [ 0.00000916 -0.0000322   0.00004768]
+ [-0.00007103 -0.00026614 -0.00016332]
+ [-0.00010335 -0.00002296 -0.00001689]
+ [-0.00010368 -0.00029368  0.00007449]]
+2023-01-17:11:48:24,787 INFO     [psi4.driver.task_planner:266] PLANNING Atomic:  keywords={'CART_HESS_READ': 0, 'SCF__GUESS': 'READ', 'SCF__INTS_TOLERANCE': 1e-12, 'function_kwargs': {}}
+2023-01-17:11:48:24,790 INFO     [psi4.driver.driver:617] Compute gradient(): method=scf, basis=cc-pvdz, molecule=default, nre=133.54206552353537
+2023-01-17:11:48:25,645 INFO     [psi4.driver.driver:620] Return gradient(): -276.961430795567
+2023-01-17:11:48:25,646 INFO     [psi4.driver.driver:621] [[-0.00011249  0.00009959 -0.00000402]
+ [-0.00003231 -0.00022588 -0.00003037]
+ [-0.0000674   0.00001193  0.0000242 ]
+ [ 0.00001539 -0.00005097 -0.00000376]
+ [-0.00005883  0.00001909 -0.00003799]
+ [ 0.0000822   0.00006359  0.00005611]
+ [ 0.00008121  0.00001072  0.00001241]
+ [ 0.00009223  0.00007192 -0.00001659]]
+2023-01-17:11:48:25,742 INFO     [psi4.driver.task_planner:266] PLANNING Atomic:  keywords={'SCF__INTS_TOLERANCE': 1e-12, 'function_kwargs': {}}
+2023-01-17:11:48:25,745 INFO     [psi4.driver.driver:774] Compute properties(): method=scf, basis=6-31g*, molecule=optimized, nre=133.54206552356334
+2023-01-17:11:48:26,553 INFO     [psi4.driver.driver:777] Return properties(): -276.9439272525188
+2023-01-17:11:48:26,675 INFO     [psi4.driver.task_planner:266] PLANNING Atomic:  keywords={'SCF__INTS_TOLERANCE': 1e-12, 'function_kwargs': {}}
+2023-01-17:11:48:26,678 INFO     [psi4.driver.driver:774] Compute properties(): method=scf, basis=6-31g*, molecule=optimized, nre=133.54206552356334
+2023-01-17:11:48:27,619 INFO     [psi4.driver.driver:777] Return properties(): -276.94392725250634

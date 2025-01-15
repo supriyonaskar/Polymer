@@ -1,0 +1,25 @@
+CHARGE      0.00 ( 0 )
+Formula: H8 C3 O1 
+ATOM      1  O   RES     1      -1.755  -0.454   0.153  0.000000        oh
+ATOM      2  C   RES     1      -0.640   0.374  -0.036  0.000000        c3
+ATOM      3  C1  RES     1       0.676  -0.386   0.031  0.000000        c3
+ATOM      4  H   RES     1      -0.681   1.120   0.759  0.000000        h1
+ATOM      5  H1  RES     1      -0.713   0.915  -0.988  0.000000        h1
+ATOM      6  C2  RES     1       1.895   0.521  -0.115  0.000000        c3
+ATOM      7  H2  RES     1       0.689  -1.147  -0.758  0.000000        hc
+ATOM      8  H3  RES     1       0.716  -0.924   0.982  0.000000        hc
+ATOM      9  H4  RES     1       1.885   1.051  -1.071  0.000000        hc
+ATOM     10  H5  RES     1       2.821  -0.055  -0.066  0.000000        hc
+ATOM     11  H6  RES     1       1.928   1.270   0.680  0.000000        hc
+ATOM     12  H7  RES     1      -1.791  -1.089  -0.546  0.000000        ho
+BOND    1    1    2    1      O    C
+BOND    2    1   12    1      O   H7
+BOND    3    2    3    1      C   C1
+BOND    4    2    4    1      C    H
+BOND    5    2    5    1      C   H1
+BOND    6    3    6    1     C1   C2
+BOND    7    3    7    1     C1   H2
+BOND    8    3    8    1     C1   H3
+BOND    9    6    9    1     C2   H4
+BOND   10    6   10    1     C2   H5
+BOND   11    6   11    1     C2   H6

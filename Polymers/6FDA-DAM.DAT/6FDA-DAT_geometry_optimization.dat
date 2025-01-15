@@ -1,0 +1,187 @@
+
+Scratch directory: /tmp/
+gradient() will perform analytic gradient computation.
+
+*** tstart() called on node20
+*** at Thu Jan 19 11:58:35 2023
+
+   => Loading Basis Set <=
+
+    Name: CC-PVDZ
+    Role: ORBITAL
+    Keyword: BASIS
+    atoms 1, 32                                  entry N          line   168 file /home/snaskar/software/anaconda3/share/psi4/basis/cc-pvdz.gbs 
+    atoms 2-5, 9-12, 16-17, 21, 25-31, 33-39, 47 entry C          line   138 file /home/snaskar/software/anaconda3/share/psi4/basis/cc-pvdz.gbs 
+    atoms 6, 13-15, 40-44, 48-52                 entry H          line    22 file /home/snaskar/software/anaconda3/share/psi4/basis/cc-pvdz.gbs 
+    atoms 7-8, 45-46                             entry O          line   198 file /home/snaskar/software/anaconda3/share/psi4/basis/cc-pvdz.gbs 
+    atoms 18-20, 22-24                           entry F          line   228 file /home/snaskar/software/anaconda3/share/psi4/basis/cc-pvdz.gbs 
+
+
+         ---------------------------------------------------------
+                                   SCF
+               by Justin Turney, Rob Parrish, Andy Simmonett
+                          and Daniel G. A. Smith
+                              RHF Reference
+                       20 Threads,  95367 MiB Core
+         ---------------------------------------------------------
+
+  ==> Geometry <==
+
+    Molecular point group: c1
+    Full point group: C1
+
+    Geometry (in Angstrom), charge = 0, multiplicity = 1:
+
+       Center              X                  Y                   Z               Mass       
+    ------------   -----------------  -----------------  -----------------  -----------------
+         N           -7.542122094105     0.473854715899    -0.182342274175    14.003074004430
+         C           -6.573742094105     1.423564715899    -0.274592274175    12.000000000000
+         C           -5.291482094105     0.718724715899    -0.191042274175    12.000000000000
+         C           -7.021972094105    -0.774885284101    -0.014842274175    12.000000000000
+         C           -5.564362094105    -0.613025284101    -0.001272274175    12.000000000000
+         H           -8.529922094105     0.675834715899    -0.190032274175     1.007825032230
+         O           -6.711542094105     2.627014715899    -0.377062274175    15.994914619570
+         O           -7.616872094105    -1.821985284101     0.110267725825    15.994914619570
+         C           -3.988532094105     1.201524715899    -0.225012274175    12.000000000000
+         C           -4.546352094105    -1.508665284101     0.234577725825    12.000000000000
+         C           -3.216412094105    -1.019995284101     0.273907725825    12.000000000000
+         C           -2.874452094105     0.324534715899    -0.031832274175    12.000000000000
+         H           -3.894192094105     2.278424715899    -0.343892274175     1.007825032230
+         H           -4.772082094105    -2.553695284101     0.431467725825     1.007825032230
+         H           -2.479232094105    -1.742875284101     0.605877725825     1.007825032230
+         C           -1.382692094105     0.934954715899    -0.039172274175    12.000000000000
+         C           -1.268572094105     1.973394715899    -1.178342274175    12.000000000000
+         F           -1.569592094105     1.396994715899    -2.371612274175    18.998403162730
+         F           -0.032032094105     2.500434715899    -1.314342274175    18.998403162730
+         F           -2.093732094105     3.033114715899    -1.039512274175    18.998403162730
+         C           -1.267062094105     1.757414715899     1.259437725825    12.000000000000
+         F           -2.315052094105     2.588964715899     1.461807725825    18.998403162730
+         F           -0.162552094105     2.530784715899     1.314597725825    18.998403162730
+         F           -1.223492094105     0.932614715899     2.338847725825    18.998403162730
+         C           -0.096122094105    -0.028125284101    -0.144342274175    12.000000000000
+         C            1.229697905895     0.511154715899     0.000147725825    12.000000000000
+         C            2.356307905895    -0.319885284101    -0.007472274175    12.000000000000
+         C           -0.147732094105    -1.417695284101    -0.395362274175    12.000000000000
+         C            0.988597905895    -2.251245284101    -0.288322274175    12.000000000000
+         C            2.222867905895    -1.671535284101    -0.073572274175    12.000000000000
+         C            3.542777905895    -2.263055284101     0.126237725825    12.000000000000
+         N            4.481477905895    -1.257605284101     0.022287725825    14.003074004430
+         C            3.800287905895    -0.040355284101     0.035247725825    12.000000000000
+         C            5.936027905895    -1.413565284101     0.044107725825    12.000000000000
+         C            6.735037905895    -0.257185284101     0.202057725825    12.000000000000
+         C            8.132287905895    -0.291925284101     0.288497725825    12.000000000000
+         C            6.657367905895    -2.646485284101    -0.102422274175    12.000000000000
+         C            8.079517905895    -2.687675284101     0.097607725825    12.000000000000
+         C            8.797757905895    -1.501205284101     0.264437725825    12.000000000000
+         H            6.305367905895     0.736484715899     0.271697725825     1.007825032230
+         H            8.694647905895     0.632534715899     0.397237725825     1.007825032230
+         H            0.905117905895    -3.329625284101    -0.397002274175     1.007825032230
+         H           -1.059192094105    -1.919315284101    -0.697192274175     1.007825032230
+         H            1.421517905895     1.578724715899     0.108637725825     1.007825032230
+         O            4.181367905895     1.117094715899     0.053437725825    15.994914619570
+         O            3.604787905895    -3.431185284101     0.464217725825    15.994914619570
+         C            6.019547905895    -3.949855284101    -0.516262274175    12.000000000000
+         H            5.167497905895    -3.792125284101    -1.179252274175     1.007825032230
+         H            5.751977905895    -4.539345284101     0.366077725825     1.007825032230
+         H            6.699027905895    -4.549925284101    -1.131582274175     1.007825032230
+         H            9.881777905895    -1.520015284101     0.364497725825     1.007825032230
+         H            8.571027905895    -3.594885284101     0.118067725825     1.007825032230
+
+  Running in c1 symmetry.
+
+  Rotational constants: A =      0.00902  B =      0.00137  C =      0.00126 [cm^-1]
+  Rotational constants: A =    270.37888  B =     41.21055  C =     37.87928 [MHz]
+  Nuclear repulsion = 4176.312880519791179
+
+  Charge       = 0
+  Multiplicity = 1
+  Electrons    = 270
+  Nalpha       = 135
+  Nbeta        = 135
+
+  ==> Algorithm <==
+
+  SCF Algorithm Type is DF.
+  DIIS enabled.
+  MOM disabled.
+  Fractional occupation disabled.
+  Guess Type is SAD.
+  Energy threshold   = 1.00e-08
+  Density threshold  = 1.00e-08
+  Integral threshold = 1.00e-12
+
+  ==> Primary Basis <==
+
+  Basis Set: CC-PVDZ
+    Blend: CC-PVDZ
+    Number of shells: 270
+    Number of basis functions: 602
+    Number of Cartesian functions: 640
+    Spherical Harmonics?: true
+    Max angular momentum: 2
+
+   => Loading Basis Set <=
+
+    Name: (CC-PVDZ AUX)
+    Role: JKFIT
+    Keyword: DF_BASIS_SCF
+    atoms 1, 32                                  entry N          line   171 file /home/snaskar/software/anaconda3/share/psi4/basis/cc-pvdz-jkfit.gbs 
+    atoms 2-5, 9-12, 16-17, 21, 25-31, 33-39, 47 entry C          line   121 file /home/snaskar/software/anaconda3/share/psi4/basis/cc-pvdz-jkfit.gbs 
+    atoms 6, 13-15, 40-44, 48-52                 entry H          line    51 file /home/snaskar/software/anaconda3/share/psi4/basis/cc-pvdz-jkfit.gbs 
+    atoms 7-8, 45-46                             entry O          line   221 file /home/snaskar/software/anaconda3/share/psi4/basis/cc-pvdz-jkfit.gbs 
+    atoms 18-20, 22-24                           entry F          line   271 file /home/snaskar/software/anaconda3/share/psi4/basis/cc-pvdz-jkfit.gbs 
+
+  ==> Integral Setup <==
+
+  DFHelper Memory: AOs need 4.477 GiB; user supplied 69.849 GiB. Using in-core AOs.
+
+  ==> MemDFJK: Density-Fitted J/K Matrices <==
+
+    J tasked:                   Yes
+    K tasked:                   Yes
+    wK tasked:                   No
+    OpenMP threads:              20
+    Memory [MiB]:             71525
+    Algorithm:                 Core
+    Schwarz Cutoff:           1E-12
+    Mask sparsity (%):      46.5928
+    Fitting Condition:        1E-10
+
+   => Auxiliary Basis Set <=
+
+  Basis Set: (CC-PVDZ AUX)
+    Blend: CC-PVDZ-JKFIT
+    Number of shells: 1038
+    Number of basis functions: 2982
+    Number of Cartesian functions: 3428
+    Spherical Harmonics?: true
+    Max angular momentum: 3
+
+  Minimum eigenvalue in the overlap matrix is 1.9226896752E-04.
+  Reciprocal condition number of the overlap matrix is 3.1706960193E-05.
+    Using symmetric orthogonalization.
+
+  ==> Pre-Iterations <==
+
+  SCF Guess: Superposition of Atomic Densities via on-the-fly atomic UHF (no occupation information).
+
+   -------------------------
+    Irrep   Nso     Nmo    
+   -------------------------
+     A        602     602 
+   -------------------------
+    Total     602     602
+   -------------------------
+
+  ==> Iterations <==
+
+                           Total Energy        Delta E     RMS |[F,P]|
+
+   @DF-RHF iter SAD: -1996.41652492292837   -1.99642e+03   0.00000e+00 
+   @DF-RHF iter   1: -1996.98125001671565   -5.64725e-01   2.18657e-03 DIIS/ADIIS
+   @DF-RHF iter   2: -1997.51261709090386   -5.31367e-01   1.56312e-03 DIIS/ADIIS
+   @DF-RHF iter   3: -1997.83626205401129   -3.23645e-01   2.69619e-04 DIIS/ADIIS
+   @DF-RHF iter   4: -1997.85123595988716   -1.49739e-02   1.21082e-04 DIIS/ADIIS
+   @DF-RHF iter   5: -1997.85415809127085   -2.92213e-03   3.15168e-05 DIIS
+   @DF-RHF iter   6: -1997.85440554452657   -2.47453e-04   1.21954e-05 DIIS
+   @DF-RHF iter   7: -1997.85447343363739   -6.78891e-05   5.26466e-06 DIIS

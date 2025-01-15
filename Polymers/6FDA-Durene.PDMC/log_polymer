@@ -1,0 +1,3811 @@
+
+  Memory set to  93.132 GiB by Python driver.
+  Threads set to 20 by Python driver.
+# In this code we will optimize a monomer structure using scf/cc-pVDZ 
+
+# Then we wil calculate ESP and RESP charges
+ 
+# Then we build the polymer 
+
+# we have the initial structure of the monomer from avogadro 
+ 
+# You need to have the following modules: numpy, math, mdtraj, pysimm, psi4, resp, pandas 
+
+# you need to have the follwing files: input_parameters.dat file and {monomername}_initial.xyz 
+ 
+# input_parameters.dat file should have 7 columns 
+
+#1. Index of head atom of the monomer (index starts from 1) 
+
+#2. Index of the tail atom of the monomer 
+
+#3. Hydrogen attached to the head atom of the monomer 
+
+#4. Hydrogen attached to the tail atom of the monomer 
+
+#5. Name of the molecule (You should remember that your initial xyz file of the monomer should have a name like {moleculename}_monomer.mol2), also make sure xyz file have two remarks like in begining. 
+ 
+#6. Flag to keep or remove all the unnecessary files dusing the code execution. if 0 it keeps everything, elseif 1 it removes everything 
+
+#7. Flag to optimize or not, if 1 it will optimize, if 0 it will build the polymer...else not 
+# Sometimes, you may not have some parameters in your force-field database, then you have to modify gaff.json to include those. 
+
+### Written by Supriyo Naskar, ICGM, Univ. of Montepllier, CNRS, ENSCM ### 
+(debug) PySIMM: reading file
+12:23:56: starting LAMMPS simulation
+12:23:56: simulation using LAMMPS successful
+(debug) PySIMM: reading file
+12:23:59: starting LAMMPS simulation
+12:23:59: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+12:24:00: 1/10 monomers added
+12:24:00: 2/10 monomers added
+12:24:00: starting relax_002 LAMMPS simulation
+12:24:01: relax_002 simulation using LAMMPS successful
+12:24:01: 3/10 monomers added
+12:24:01: starting relax_003 LAMMPS simulation
+12:24:04: relax_003 simulation using LAMMPS successful
+12:24:04: 4/10 monomers added
+12:24:04: starting relax_004 LAMMPS simulation
+12:24:06: relax_004 simulation using LAMMPS successful
+12:24:07: 5/10 monomers added
+12:24:07: starting relax_005 LAMMPS simulation
+12:24:09: relax_005 simulation using LAMMPS successful
+12:24:10: 6/10 monomers added
+12:24:10: starting relax_006 LAMMPS simulation
+12:24:14: relax_006 simulation using LAMMPS successful
+12:24:14: 7/10 monomers added
+12:24:14: starting relax_007 LAMMPS simulation
+12:24:17: relax_007 simulation using LAMMPS successful
+12:24:17: 8/10 monomers added
+12:24:17: starting relax_008 LAMMPS simulation
+12:24:22: relax_008 simulation using LAMMPS successful
+12:24:22: 9/10 monomers added
+12:24:22: starting relax_009 LAMMPS simulation
+12:24:27: relax_009 simulation using LAMMPS successful
+12:24:27: 10/10 monomers added
+12:24:27: starting relax_010 LAMMPS simulation
+12:24:33: relax_010 simulation using LAMMPS successful
+polymerlength= 10 pe1, pe1, pe1, pe2, pe2, pe1, pe2, pe2, pe2, pe1, pe1
+12:24:34: starting LAMMPS simulation
+12:24:38: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+12:24:38: 1/11 monomers added
+12:24:39: 2/11 monomers added
+12:24:39: starting relax_002 LAMMPS simulation
+12:24:40: relax_002 simulation using LAMMPS successful
+12:24:40: 3/11 monomers added
+12:24:40: starting relax_003 LAMMPS simulation
+12:24:42: relax_003 simulation using LAMMPS successful
+12:24:42: 4/11 monomers added
+12:24:42: starting relax_004 LAMMPS simulation
+12:24:44: relax_004 simulation using LAMMPS successful
+12:24:44: 5/11 monomers added
+12:24:44: starting relax_005 LAMMPS simulation
+12:24:48: relax_005 simulation using LAMMPS successful
+12:24:48: 6/11 monomers added
+12:24:48: starting relax_006 LAMMPS simulation
+12:24:52: relax_006 simulation using LAMMPS successful
+12:24:52: 7/11 monomers added
+12:24:52: starting relax_007 LAMMPS simulation
+12:24:56: relax_007 simulation using LAMMPS successful
+12:24:56: 8/11 monomers added
+12:24:56: starting relax_008 LAMMPS simulation
+12:25:01: relax_008 simulation using LAMMPS successful
+12:25:01: 9/11 monomers added
+12:25:01: starting relax_009 LAMMPS simulation
+12:25:06: relax_009 simulation using LAMMPS successful
+12:25:06: 10/11 monomers added
+12:25:06: starting relax_010 LAMMPS simulation
+12:25:13: relax_010 simulation using LAMMPS successful
+12:25:13: 11/11 monomers added
+12:25:13: starting relax_011 LAMMPS simulation
+12:25:19: relax_011 simulation using LAMMPS successful
+polymerlength= 11 pe1, pe1, pe1, pe2, pe1, pe2, pe2, pe1, pe2, pe2, pe2, pe1
+12:25:20: starting LAMMPS simulation
+12:25:25: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+12:25:25: 1/12 monomers added
+12:25:25: 2/12 monomers added
+12:25:25: starting relax_002 LAMMPS simulation
+12:25:26: relax_002 simulation using LAMMPS successful
+12:25:26: 3/12 monomers added
+12:25:26: starting relax_003 LAMMPS simulation
+12:25:28: relax_003 simulation using LAMMPS successful
+12:25:28: 4/12 monomers added
+12:25:28: starting relax_004 LAMMPS simulation
+12:25:32: relax_004 simulation using LAMMPS successful
+12:25:32: 5/12 monomers added
+12:25:32: starting relax_005 LAMMPS simulation
+12:25:36: relax_005 simulation using LAMMPS successful
+12:25:36: 6/12 monomers added
+12:25:36: starting relax_006 LAMMPS simulation
+12:25:41: relax_006 simulation using LAMMPS successful
+12:25:41: 7/12 monomers added
+12:25:41: starting relax_007 LAMMPS simulation
+12:25:47: relax_007 simulation using LAMMPS successful
+12:25:47: 8/12 monomers added
+12:25:47: starting relax_008 LAMMPS simulation
+12:25:53: relax_008 simulation using LAMMPS successful
+12:25:53: 9/12 monomers added
+12:25:53: starting relax_009 LAMMPS simulation
+12:25:59: relax_009 simulation using LAMMPS successful
+12:25:59: 10/12 monomers added
+12:25:59: starting relax_010 LAMMPS simulation
+12:26:04: relax_010 simulation using LAMMPS successful
+12:26:04: 11/12 monomers added
+12:26:04: starting relax_011 LAMMPS simulation
+12:26:11: relax_011 simulation using LAMMPS successful
+12:26:11: 12/12 monomers added
+12:26:11: starting relax_012 LAMMPS simulation
+12:26:18: relax_012 simulation using LAMMPS successful
+polymerlength= 12 pe1, pe1, pe2, pe1, pe2, pe1, pe1, pe2, pe1, pe2, pe1, pe2, pe1
+12:26:19: starting LAMMPS simulation
+12:26:24: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+12:26:24: 1/13 monomers added
+12:26:24: 2/13 monomers added
+12:26:24: starting relax_002 LAMMPS simulation
+12:26:25: relax_002 simulation using LAMMPS successful
+12:26:25: 3/13 monomers added
+12:26:25: starting relax_003 LAMMPS simulation
+12:26:27: relax_003 simulation using LAMMPS successful
+12:26:28: 4/13 monomers added
+12:26:28: starting relax_004 LAMMPS simulation
+12:26:31: relax_004 simulation using LAMMPS successful
+12:26:31: 5/13 monomers added
+12:26:31: starting relax_005 LAMMPS simulation
+12:26:34: relax_005 simulation using LAMMPS successful
+12:26:34: 6/13 monomers added
+12:26:34: starting relax_006 LAMMPS simulation
+12:26:37: relax_006 simulation using LAMMPS successful
+12:26:37: 7/13 monomers added
+12:26:37: starting relax_007 LAMMPS simulation
+12:26:42: relax_007 simulation using LAMMPS successful
+12:26:42: 8/13 monomers added
+12:26:42: starting relax_008 LAMMPS simulation
+12:26:46: relax_008 simulation using LAMMPS successful
+12:26:46: 9/13 monomers added
+12:26:46: starting relax_009 LAMMPS simulation
+12:26:51: relax_009 simulation using LAMMPS successful
+12:26:51: 10/13 monomers added
+12:26:51: starting relax_010 LAMMPS simulation
+12:26:56: relax_010 simulation using LAMMPS successful
+12:26:56: 11/13 monomers added
+12:26:56: starting relax_011 LAMMPS simulation
+12:27:02: relax_011 simulation using LAMMPS successful
+12:27:02: 12/13 monomers added
+12:27:02: starting relax_012 LAMMPS simulation
+12:27:08: relax_012 simulation using LAMMPS successful
+12:27:08: 13/13 monomers added
+12:27:08: starting relax_013 LAMMPS simulation
+12:27:16: relax_013 simulation using LAMMPS successful
+polymerlength= 13 pe1, pe1, pe1, pe2, pe2, pe2, pe2, pe2, pe1, pe2, pe2, pe1, pe1, pe2
+12:27:16: starting LAMMPS simulation
+12:27:23: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+12:27:24: 1/14 monomers added
+12:27:24: 2/14 monomers added
+12:27:24: starting relax_002 LAMMPS simulation
+12:27:50: relax_002 simulation using LAMMPS successful
+12:27:50: 3/14 monomers added
+12:27:50: starting relax_003 LAMMPS simulation
+12:27:52: relax_003 simulation using LAMMPS successful
+12:27:52: 4/14 monomers added
+12:27:52: starting relax_004 LAMMPS simulation
+12:27:55: relax_004 simulation using LAMMPS successful
+12:27:55: 5/14 monomers added
+12:27:55: starting relax_005 LAMMPS simulation
+12:27:57: relax_005 simulation using LAMMPS successful
+12:27:57: 6/14 monomers added
+12:27:57: starting relax_006 LAMMPS simulation
+12:28:01: relax_006 simulation using LAMMPS successful
+12:28:01: 7/14 monomers added
+12:28:01: starting relax_007 LAMMPS simulation
+12:28:05: relax_007 simulation using LAMMPS successful
+12:28:05: 8/14 monomers added
+12:28:05: starting relax_008 LAMMPS simulation
+12:28:09: relax_008 simulation using LAMMPS successful
+12:28:09: 9/14 monomers added
+12:28:09: starting relax_009 LAMMPS simulation
+12:28:15: relax_009 simulation using LAMMPS successful
+12:28:15: 10/14 monomers added
+12:28:15: starting relax_010 LAMMPS simulation
+12:28:19: relax_010 simulation using LAMMPS successful
+12:28:19: 11/14 monomers added
+12:28:19: starting relax_011 LAMMPS simulation
+12:28:25: relax_011 simulation using LAMMPS successful
+12:28:25: 12/14 monomers added
+12:28:25: starting relax_012 LAMMPS simulation
+12:28:32: relax_012 simulation using LAMMPS successful
+12:28:32: 13/14 monomers added
+12:28:32: starting relax_013 LAMMPS simulation
+12:28:39: relax_013 simulation using LAMMPS successful
+12:28:39: 14/14 monomers added
+12:28:39: starting relax_014 LAMMPS simulation
+12:28:46: relax_014 simulation using LAMMPS successful
+polymerlength= 14 pe2, pe1, pe1, pe2, pe1, pe2, pe2, pe1, pe1, pe1, pe2, pe2, pe1, pe1, pe1
+12:28:47: starting LAMMPS simulation
+12:28:56: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+12:28:56: 1/15 monomers added
+12:28:56: 2/15 monomers added
+12:28:56: starting relax_002 LAMMPS simulation
+12:29:24: relax_002 simulation using LAMMPS successful
+12:29:24: 3/15 monomers added
+12:29:24: starting relax_003 LAMMPS simulation
+12:29:26: relax_003 simulation using LAMMPS successful
+12:29:26: 4/15 monomers added
+12:29:26: starting relax_004 LAMMPS simulation
+12:29:28: relax_004 simulation using LAMMPS successful
+12:29:28: 5/15 monomers added
+12:29:28: starting relax_005 LAMMPS simulation
+12:29:31: relax_005 simulation using LAMMPS successful
+12:29:32: 6/15 monomers added
+12:29:32: starting relax_006 LAMMPS simulation
+12:29:36: relax_006 simulation using LAMMPS successful
+12:29:36: 7/15 monomers added
+12:29:36: starting relax_007 LAMMPS simulation
+12:29:39: relax_007 simulation using LAMMPS successful
+12:29:39: 8/15 monomers added
+12:29:39: starting relax_008 LAMMPS simulation
+12:29:43: relax_008 simulation using LAMMPS successful
+12:29:43: 9/15 monomers added
+12:29:43: starting relax_009 LAMMPS simulation
+12:29:48: relax_009 simulation using LAMMPS successful
+12:29:48: 10/15 monomers added
+12:29:48: starting relax_010 LAMMPS simulation
+12:29:54: relax_010 simulation using LAMMPS successful
+12:29:54: 11/15 monomers added
+12:29:54: starting relax_011 LAMMPS simulation
+12:30:01: relax_011 simulation using LAMMPS successful
+12:30:01: 12/15 monomers added
+12:30:01: starting relax_012 LAMMPS simulation
+12:30:06: relax_012 simulation using LAMMPS successful
+12:30:07: 13/15 monomers added
+12:30:07: starting relax_013 LAMMPS simulation
+12:30:14: relax_013 simulation using LAMMPS successful
+12:30:14: 14/15 monomers added
+12:30:14: starting relax_014 LAMMPS simulation
+12:30:22: relax_014 simulation using LAMMPS successful
+12:30:22: 15/15 monomers added
+12:30:22: starting relax_015 LAMMPS simulation
+12:30:29: relax_015 simulation using LAMMPS successful
+polymerlength= 15 pe2, pe2, pe1, pe1, pe2, pe2, pe1, pe2, pe1, pe1, pe2, pe1, pe2, pe1, pe2, pe1
+12:30:30: starting LAMMPS simulation
+12:30:35: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+12:30:35: 1/16 monomers added
+12:30:35: 2/16 monomers added
+12:30:35: starting relax_002 LAMMPS simulation
+12:31:02: relax_002 simulation using LAMMPS successful
+12:31:02: 3/16 monomers added
+12:31:02: starting relax_003 LAMMPS simulation
+12:31:03: relax_003 simulation using LAMMPS successful
+12:31:04: 4/16 monomers added
+12:31:04: starting relax_004 LAMMPS simulation
+12:31:06: relax_004 simulation using LAMMPS successful
+12:31:06: 5/16 monomers added
+12:31:06: starting relax_005 LAMMPS simulation
+12:31:09: relax_005 simulation using LAMMPS successful
+12:31:09: 6/16 monomers added
+12:31:09: starting relax_006 LAMMPS simulation
+12:31:12: relax_006 simulation using LAMMPS successful
+12:31:12: 7/16 monomers added
+12:31:12: starting relax_007 LAMMPS simulation
+12:31:15: relax_007 simulation using LAMMPS successful
+12:31:15: 8/16 monomers added
+12:31:15: starting relax_008 LAMMPS simulation
+12:31:21: relax_008 simulation using LAMMPS successful
+12:31:21: 9/16 monomers added
+12:31:21: starting relax_009 LAMMPS simulation
+12:31:26: relax_009 simulation using LAMMPS successful
+12:31:27: 10/16 monomers added
+12:31:27: starting relax_010 LAMMPS simulation
+12:31:32: relax_010 simulation using LAMMPS successful
+12:31:32: 11/16 monomers added
+12:31:32: starting relax_011 LAMMPS simulation
+12:31:37: relax_011 simulation using LAMMPS successful
+12:31:37: 12/16 monomers added
+12:31:37: starting relax_012 LAMMPS simulation
+12:31:43: relax_012 simulation using LAMMPS successful
+12:31:43: 13/16 monomers added
+12:31:43: starting relax_013 LAMMPS simulation
+12:31:50: relax_013 simulation using LAMMPS successful
+12:31:50: 14/16 monomers added
+12:31:50: starting relax_014 LAMMPS simulation
+12:31:59: relax_014 simulation using LAMMPS successful
+12:31:59: 15/16 monomers added
+12:31:59: starting relax_015 LAMMPS simulation
+12:32:09: relax_015 simulation using LAMMPS successful
+12:32:09: 16/16 monomers added
+12:32:09: starting relax_016 LAMMPS simulation
+12:32:18: relax_016 simulation using LAMMPS successful
+polymerlength= 16 pe2, pe1, pe1, pe1, pe1, pe2, pe1, pe1, pe1, pe1, pe2, pe1, pe1, pe1, pe1, pe1, pe1
+12:32:20: starting LAMMPS simulation
+12:32:27: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+12:32:27: 1/17 monomers added
+12:32:27: 2/17 monomers added
+12:32:27: starting relax_002 LAMMPS simulation
+12:32:53: relax_002 simulation using LAMMPS successful
+12:32:53: 3/17 monomers added
+12:32:53: starting relax_003 LAMMPS simulation
+12:32:55: relax_003 simulation using LAMMPS successful
+12:32:55: 4/17 monomers added
+12:32:55: starting relax_004 LAMMPS simulation
+12:32:58: relax_004 simulation using LAMMPS successful
+12:32:58: 5/17 monomers added
+12:32:58: starting relax_005 LAMMPS simulation
+12:33:02: relax_005 simulation using LAMMPS successful
+12:33:02: 6/17 monomers added
+12:33:02: starting relax_006 LAMMPS simulation
+12:33:04: relax_006 simulation using LAMMPS successful
+12:33:04: 7/17 monomers added
+12:33:04: starting relax_007 LAMMPS simulation
+12:33:08: relax_007 simulation using LAMMPS successful
+12:33:08: 8/17 monomers added
+12:33:08: starting relax_008 LAMMPS simulation
+12:33:13: relax_008 simulation using LAMMPS successful
+12:33:13: 9/17 monomers added
+12:33:13: starting relax_009 LAMMPS simulation
+12:33:18: relax_009 simulation using LAMMPS successful
+12:33:18: 10/17 monomers added
+12:33:18: starting relax_010 LAMMPS simulation
+12:33:24: relax_010 simulation using LAMMPS successful
+12:33:24: 11/17 monomers added
+12:33:24: starting relax_011 LAMMPS simulation
+12:33:30: relax_011 simulation using LAMMPS successful
+12:33:30: 12/17 monomers added
+12:33:30: starting relax_012 LAMMPS simulation
+12:33:36: relax_012 simulation using LAMMPS successful
+12:33:36: 13/17 monomers added
+12:33:36: starting relax_013 LAMMPS simulation
+12:33:43: relax_013 simulation using LAMMPS successful
+12:33:43: 14/17 monomers added
+12:33:43: starting relax_014 LAMMPS simulation
+12:33:49: relax_014 simulation using LAMMPS successful
+12:33:49: 15/17 monomers added
+12:33:49: starting relax_015 LAMMPS simulation
+12:33:59: relax_015 simulation using LAMMPS successful
+12:33:59: 16/17 monomers added
+12:33:59: starting relax_016 LAMMPS simulation
+12:34:08: relax_016 simulation using LAMMPS successful
+12:34:08: 17/17 monomers added
+12:34:08: starting relax_017 LAMMPS simulation
+12:34:18: relax_017 simulation using LAMMPS successful
+polymerlength= 17 pe2, pe1, pe1, pe1, pe1, pe2, pe2, pe1, pe1, pe1, pe1, pe2, pe2, pe1, pe1, pe2, pe2, pe2
+12:34:19: starting LAMMPS simulation
+12:34:28: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+12:34:29: 1/18 monomers added
+12:34:29: 2/18 monomers added
+12:34:29: starting relax_002 LAMMPS simulation
+12:35:09: relax_002 simulation using LAMMPS successful
+12:35:09: 3/18 monomers added
+12:35:09: starting relax_003 LAMMPS simulation
+12:35:10: relax_003 simulation using LAMMPS successful
+12:35:11: 4/18 monomers added
+12:35:11: starting relax_004 LAMMPS simulation
+12:35:12: relax_004 simulation using LAMMPS successful
+12:35:12: 5/18 monomers added
+12:35:12: starting relax_005 LAMMPS simulation
+12:35:15: relax_005 simulation using LAMMPS successful
+12:35:15: 6/18 monomers added
+12:35:15: starting relax_006 LAMMPS simulation
+12:35:19: relax_006 simulation using LAMMPS successful
+12:35:19: 7/18 monomers added
+12:35:19: starting relax_007 LAMMPS simulation
+12:35:22: relax_007 simulation using LAMMPS successful
+12:35:23: 8/18 monomers added
+12:35:23: starting relax_008 LAMMPS simulation
+12:35:28: relax_008 simulation using LAMMPS successful
+12:35:28: 9/18 monomers added
+12:35:28: starting relax_009 LAMMPS simulation
+12:35:33: relax_009 simulation using LAMMPS successful
+12:35:34: 10/18 monomers added
+12:35:34: starting relax_010 LAMMPS simulation
+12:35:40: relax_010 simulation using LAMMPS successful
+12:35:40: 11/18 monomers added
+12:35:40: starting relax_011 LAMMPS simulation
+12:35:45: relax_011 simulation using LAMMPS successful
+12:35:46: 12/18 monomers added
+12:35:46: starting relax_012 LAMMPS simulation
+12:35:52: relax_012 simulation using LAMMPS successful
+12:35:52: 13/18 monomers added
+12:35:52: starting relax_013 LAMMPS simulation
+12:35:58: relax_013 simulation using LAMMPS successful
+12:35:58: 14/18 monomers added
+12:35:59: starting relax_014 LAMMPS simulation
+12:36:08: relax_014 simulation using LAMMPS successful
+12:36:08: 15/18 monomers added
+12:36:08: starting relax_015 LAMMPS simulation
+12:36:18: relax_015 simulation using LAMMPS successful
+12:36:18: 16/18 monomers added
+12:36:18: starting relax_016 LAMMPS simulation
+12:36:27: relax_016 simulation using LAMMPS successful
+12:36:27: 17/18 monomers added
+12:36:28: starting relax_017 LAMMPS simulation
+12:36:37: relax_017 simulation using LAMMPS successful
+12:36:37: 18/18 monomers added
+12:36:37: starting relax_018 LAMMPS simulation
+12:36:47: relax_018 simulation using LAMMPS successful
+polymerlength= 18 pe1, pe1, pe1, pe2, pe2, pe2, pe1, pe1, pe1, pe1, pe1, pe1, pe2, pe1, pe2, pe1, pe2, pe1, pe2
+12:36:48: starting LAMMPS simulation
+12:36:55: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+12:36:55: 1/19 monomers added
+12:36:55: 2/19 monomers added
+12:36:55: starting relax_002 LAMMPS simulation
+12:37:39: relax_002 simulation using LAMMPS successful
+12:37:39: 3/19 monomers added
+12:37:39: starting relax_003 LAMMPS simulation
+12:38:23: relax_003 simulation using LAMMPS successful
+12:38:23: 4/19 monomers added
+12:38:23: starting relax_004 LAMMPS simulation
+12:39:05: relax_004 simulation using LAMMPS successful
+12:39:05: 5/19 monomers added
+12:39:05: starting relax_005 LAMMPS simulation
+12:39:08: relax_005 simulation using LAMMPS successful
+12:39:08: 6/19 monomers added
+12:39:08: starting relax_006 LAMMPS simulation
+12:39:10: relax_006 simulation using LAMMPS successful
+12:39:10: 7/19 monomers added
+12:39:10: starting relax_007 LAMMPS simulation
+12:39:14: relax_007 simulation using LAMMPS successful
+12:39:14: 8/19 monomers added
+12:39:14: starting relax_008 LAMMPS simulation
+12:39:17: relax_008 simulation using LAMMPS successful
+12:39:17: 9/19 monomers added
+12:39:17: starting relax_009 LAMMPS simulation
+12:39:22: relax_009 simulation using LAMMPS successful
+12:39:22: 10/19 monomers added
+12:39:22: starting relax_010 LAMMPS simulation
+12:39:27: relax_010 simulation using LAMMPS successful
+12:39:27: 11/19 monomers added
+12:39:27: starting relax_011 LAMMPS simulation
+12:39:32: relax_011 simulation using LAMMPS successful
+12:39:32: 12/19 monomers added
+12:39:32: starting relax_012 LAMMPS simulation
+12:39:38: relax_012 simulation using LAMMPS successful
+12:39:38: 13/19 monomers added
+12:39:38: starting relax_013 LAMMPS simulation
+12:39:43: relax_013 simulation using LAMMPS successful
+12:39:43: 14/19 monomers added
+12:39:43: starting relax_014 LAMMPS simulation
+12:39:50: relax_014 simulation using LAMMPS successful
+12:39:50: 15/19 monomers added
+12:39:50: starting relax_015 LAMMPS simulation
+12:39:57: relax_015 simulation using LAMMPS successful
+12:39:57: 16/19 monomers added
+12:39:57: starting relax_016 LAMMPS simulation
+12:40:05: relax_016 simulation using LAMMPS successful
+12:40:05: 17/19 monomers added
+12:40:05: starting relax_017 LAMMPS simulation
+12:40:13: relax_017 simulation using LAMMPS successful
+12:40:14: 18/19 monomers added
+12:40:14: starting relax_018 LAMMPS simulation
+12:40:24: relax_018 simulation using LAMMPS successful
+12:40:24: 19/19 monomers added
+12:40:24: starting relax_019 LAMMPS simulation
+12:40:36: relax_019 simulation using LAMMPS successful
+polymerlength= 19 pe1, pe2, pe2, pe2, pe2, pe1, pe1, pe1, pe2, pe2, pe2, pe1, pe2, pe1, pe1, pe2, pe2, pe1, pe2, pe1
+12:40:38: starting LAMMPS simulation
+12:40:46: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+12:40:46: 1/20 monomers added
+12:40:46: 2/20 monomers added
+12:40:46: starting relax_002 LAMMPS simulation
+12:41:29: relax_002 simulation using LAMMPS successful
+12:41:29: 3/20 monomers added
+12:41:29: starting relax_003 LAMMPS simulation
+12:42:11: relax_003 simulation using LAMMPS successful
+12:42:11: 4/20 monomers added
+12:42:11: starting relax_004 LAMMPS simulation
+12:42:54: relax_004 simulation using LAMMPS successful
+12:42:54: 5/20 monomers added
+12:42:54: starting relax_005 LAMMPS simulation
+12:43:39: relax_005 simulation using LAMMPS successful
+12:43:39: 6/20 monomers added
+12:43:39: starting relax_006 LAMMPS simulation
+12:43:41: relax_006 simulation using LAMMPS successful
+12:43:41: 7/20 monomers added
+12:43:41: starting relax_007 LAMMPS simulation
+12:43:44: relax_007 simulation using LAMMPS successful
+12:43:44: 8/20 monomers added
+12:43:44: starting relax_008 LAMMPS simulation
+12:43:48: relax_008 simulation using LAMMPS successful
+12:43:48: 9/20 monomers added
+12:43:48: starting relax_009 LAMMPS simulation
+12:43:53: relax_009 simulation using LAMMPS successful
+12:43:53: 10/20 monomers added
+12:43:53: starting relax_010 LAMMPS simulation
+12:43:57: relax_010 simulation using LAMMPS successful
+12:43:57: 11/20 monomers added
+12:43:57: starting relax_011 LAMMPS simulation
+12:44:03: relax_011 simulation using LAMMPS successful
+12:44:03: 12/20 monomers added
+12:44:03: starting relax_012 LAMMPS simulation
+12:44:10: relax_012 simulation using LAMMPS successful
+12:44:10: 13/20 monomers added
+12:44:10: starting relax_013 LAMMPS simulation
+12:44:16: relax_013 simulation using LAMMPS successful
+12:44:16: 14/20 monomers added
+12:44:16: starting relax_014 LAMMPS simulation
+12:44:23: relax_014 simulation using LAMMPS successful
+12:44:23: 15/20 monomers added
+12:44:23: starting relax_015 LAMMPS simulation
+12:44:31: relax_015 simulation using LAMMPS successful
+12:44:31: 16/20 monomers added
+12:44:31: starting relax_016 LAMMPS simulation
+12:44:38: relax_016 simulation using LAMMPS successful
+12:44:38: 17/20 monomers added
+12:44:38: starting relax_017 LAMMPS simulation
+12:44:45: relax_017 simulation using LAMMPS successful
+12:44:45: 18/20 monomers added
+12:44:45: starting relax_018 LAMMPS simulation
+12:44:53: relax_018 simulation using LAMMPS successful
+12:44:53: 19/20 monomers added
+12:44:53: starting relax_019 LAMMPS simulation
+12:45:03: relax_019 simulation using LAMMPS successful
+12:45:03: 20/20 monomers added
+12:45:03: starting relax_020 LAMMPS simulation
+12:45:15: relax_020 simulation using LAMMPS successful
+polymerlength= 20 pe2, pe2, pe2, pe2, pe2, pe1, pe1, pe1, pe2, pe2, pe2, pe1, pe1, pe2, pe2, pe1, pe2, pe2, pe2, pe2, pe2
+12:45:18: starting LAMMPS simulation
+12:45:25: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+12:45:25: 1/21 monomers added
+12:45:25: 2/21 monomers added
+12:45:25: starting relax_002 LAMMPS simulation
+12:46:06: relax_002 simulation using LAMMPS successful
+12:46:06: 3/21 monomers added
+12:46:06: starting relax_003 LAMMPS simulation
+12:46:48: relax_003 simulation using LAMMPS successful
+12:46:48: 4/21 monomers added
+12:46:48: starting relax_004 LAMMPS simulation
+12:47:34: relax_004 simulation using LAMMPS successful
+12:47:34: 5/21 monomers added
+12:47:34: starting relax_005 LAMMPS simulation
+12:47:37: relax_005 simulation using LAMMPS successful
+12:47:37: 6/21 monomers added
+12:47:37: starting relax_006 LAMMPS simulation
+12:47:40: relax_006 simulation using LAMMPS successful
+12:47:40: 7/21 monomers added
+12:47:40: starting relax_007 LAMMPS simulation
+12:47:43: relax_007 simulation using LAMMPS successful
+12:47:43: 8/21 monomers added
+12:47:43: starting relax_008 LAMMPS simulation
+12:47:47: relax_008 simulation using LAMMPS successful
+12:47:47: 9/21 monomers added
+12:47:47: starting relax_009 LAMMPS simulation
+12:47:52: relax_009 simulation using LAMMPS successful
+12:47:52: 10/21 monomers added
+12:47:52: starting relax_010 LAMMPS simulation
+12:47:58: relax_010 simulation using LAMMPS successful
+12:47:58: 11/21 monomers added
+12:47:58: starting relax_011 LAMMPS simulation
+12:48:03: relax_011 simulation using LAMMPS successful
+12:48:03: 12/21 monomers added
+12:48:03: starting relax_012 LAMMPS simulation
+12:48:08: relax_012 simulation using LAMMPS successful
+12:48:08: 13/21 monomers added
+12:48:08: starting relax_013 LAMMPS simulation
+12:48:15: relax_013 simulation using LAMMPS successful
+12:48:15: 14/21 monomers added
+12:48:15: starting relax_014 LAMMPS simulation
+12:48:22: relax_014 simulation using LAMMPS successful
+12:48:23: 15/21 monomers added
+12:48:23: starting relax_015 LAMMPS simulation
+12:48:30: relax_015 simulation using LAMMPS successful
+12:48:31: 16/21 monomers added
+12:48:31: starting relax_016 LAMMPS simulation
+12:48:38: relax_016 simulation using LAMMPS successful
+12:48:38: 17/21 monomers added
+12:48:38: starting relax_017 LAMMPS simulation
+12:48:48: relax_017 simulation using LAMMPS successful
+12:48:49: 18/21 monomers added
+12:48:49: starting relax_018 LAMMPS simulation
+12:48:59: relax_018 simulation using LAMMPS successful
+12:48:59: 19/21 monomers added
+12:48:59: starting relax_019 LAMMPS simulation
+12:49:09: relax_019 simulation using LAMMPS successful
+12:49:09: 20/21 monomers added
+12:49:09: starting relax_020 LAMMPS simulation
+12:49:20: relax_020 simulation using LAMMPS successful
+12:49:20: 21/21 monomers added
+12:49:20: starting relax_021 LAMMPS simulation
+12:49:30: relax_021 simulation using LAMMPS successful
+polymerlength= 21 pe2, pe1, pe2, pe2, pe1, pe1, pe1, pe2, pe2, pe1, pe2, pe2, pe1, pe2, pe2, pe1, pe1, pe2, pe2, pe1, pe1, pe1
+12:49:32: starting LAMMPS simulation
+12:49:40: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+12:49:40: 1/22 monomers added
+12:49:40: 2/22 monomers added
+12:49:40: starting relax_002 LAMMPS simulation
+12:50:23: relax_002 simulation using LAMMPS successful
+12:50:23: 3/22 monomers added
+12:50:23: starting relax_003 LAMMPS simulation
+12:51:04: relax_003 simulation using LAMMPS successful
+12:51:04: 4/22 monomers added
+12:51:04: starting relax_004 LAMMPS simulation
+12:51:05: relax_004 simulation using LAMMPS successful
+12:51:05: 5/22 monomers added
+12:51:05: starting relax_005 LAMMPS simulation
+12:51:07: relax_005 simulation using LAMMPS successful
+12:51:07: 6/22 monomers added
+12:51:07: starting relax_006 LAMMPS simulation
+12:51:10: relax_006 simulation using LAMMPS successful
+12:51:10: 7/22 monomers added
+12:51:10: starting relax_007 LAMMPS simulation
+12:51:14: relax_007 simulation using LAMMPS successful
+12:51:14: 8/22 monomers added
+12:51:14: starting relax_008 LAMMPS simulation
+12:51:19: relax_008 simulation using LAMMPS successful
+12:51:19: 9/22 monomers added
+12:51:19: starting relax_009 LAMMPS simulation
+12:51:23: relax_009 simulation using LAMMPS successful
+12:51:23: 10/22 monomers added
+12:51:23: starting relax_010 LAMMPS simulation
+12:51:28: relax_010 simulation using LAMMPS successful
+12:51:28: 11/22 monomers added
+12:51:28: starting relax_011 LAMMPS simulation
+12:51:35: relax_011 simulation using LAMMPS successful
+12:51:35: 12/22 monomers added
+12:51:35: starting relax_012 LAMMPS simulation
+12:51:41: relax_012 simulation using LAMMPS successful
+12:51:41: 13/22 monomers added
+12:51:41: starting relax_013 LAMMPS simulation
+12:51:47: relax_013 simulation using LAMMPS successful
+12:51:47: 14/22 monomers added
+12:51:47: starting relax_014 LAMMPS simulation
+12:51:55: relax_014 simulation using LAMMPS successful
+12:51:55: 15/22 monomers added
+12:51:55: starting relax_015 LAMMPS simulation
+12:52:02: relax_015 simulation using LAMMPS successful
+12:52:02: 16/22 monomers added
+12:52:02: starting relax_016 LAMMPS simulation
+12:52:12: relax_016 simulation using LAMMPS successful
+12:52:12: 17/22 monomers added
+12:52:12: starting relax_017 LAMMPS simulation
+12:52:23: relax_017 simulation using LAMMPS successful
+12:52:23: 18/22 monomers added
+12:52:23: starting relax_018 LAMMPS simulation
+12:52:34: relax_018 simulation using LAMMPS successful
+12:52:34: 19/22 monomers added
+12:52:34: starting relax_019 LAMMPS simulation
+12:52:45: relax_019 simulation using LAMMPS successful
+12:52:46: 20/22 monomers added
+12:52:46: starting relax_020 LAMMPS simulation
+12:52:57: relax_020 simulation using LAMMPS successful
+12:52:57: 21/22 monomers added
+12:52:57: starting relax_021 LAMMPS simulation
+12:53:09: relax_021 simulation using LAMMPS successful
+12:53:09: 22/22 monomers added
+12:53:09: starting relax_022 LAMMPS simulation
+12:53:20: relax_022 simulation using LAMMPS successful
+polymerlength= 22 pe2, pe1, pe2, pe1, pe1, pe2, pe2, pe1, pe2, pe1, pe2, pe2, pe1, pe1, pe1, pe1, pe2, pe2, pe2, pe1, pe2, pe2, pe1
+12:53:22: starting LAMMPS simulation
+12:53:31: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+12:53:31: 1/23 monomers added
+12:53:31: 2/23 monomers added
+12:53:31: starting relax_002 LAMMPS simulation
+12:54:13: relax_002 simulation using LAMMPS successful
+12:54:13: 3/23 monomers added
+12:54:13: starting relax_003 LAMMPS simulation
+12:54:56: relax_003 simulation using LAMMPS successful
+12:54:56: 4/23 monomers added
+12:54:56: starting relax_004 LAMMPS simulation
+12:54:57: relax_004 simulation using LAMMPS successful
+12:54:58: 5/23 monomers added
+12:54:58: starting relax_005 LAMMPS simulation
+12:54:59: relax_005 simulation using LAMMPS successful
+12:54:59: 6/23 monomers added
+12:54:59: starting relax_006 LAMMPS simulation
+12:55:03: relax_006 simulation using LAMMPS successful
+12:55:03: 7/23 monomers added
+12:55:03: starting relax_007 LAMMPS simulation
+12:55:06: relax_007 simulation using LAMMPS successful
+12:55:06: 8/23 monomers added
+12:55:06: starting relax_008 LAMMPS simulation
+12:55:10: relax_008 simulation using LAMMPS successful
+12:55:10: 9/23 monomers added
+12:55:10: starting relax_009 LAMMPS simulation
+12:55:15: relax_009 simulation using LAMMPS successful
+12:55:15: 10/23 monomers added
+12:55:15: starting relax_010 LAMMPS simulation
+12:55:20: relax_010 simulation using LAMMPS successful
+12:55:20: 11/23 monomers added
+12:55:20: starting relax_011 LAMMPS simulation
+12:55:26: relax_011 simulation using LAMMPS successful
+12:55:26: 12/23 monomers added
+12:55:26: starting relax_012 LAMMPS simulation
+12:55:31: relax_012 simulation using LAMMPS successful
+12:55:32: 13/23 monomers added
+12:55:32: starting relax_013 LAMMPS simulation
+12:55:39: relax_013 simulation using LAMMPS successful
+12:55:39: 14/23 monomers added
+12:55:39: starting relax_014 LAMMPS simulation
+12:55:46: relax_014 simulation using LAMMPS successful
+12:55:47: 15/23 monomers added
+12:55:47: starting relax_015 LAMMPS simulation
+12:55:55: relax_015 simulation using LAMMPS successful
+12:55:55: 16/23 monomers added
+12:55:55: starting relax_016 LAMMPS simulation
+12:56:05: relax_016 simulation using LAMMPS successful
+12:56:06: 17/23 monomers added
+12:56:06: starting relax_017 LAMMPS simulation
+12:56:17: relax_017 simulation using LAMMPS successful
+12:56:18: 18/23 monomers added
+12:56:18: starting relax_018 LAMMPS simulation
+12:56:28: relax_018 simulation using LAMMPS successful
+12:56:29: 19/23 monomers added
+12:56:29: starting relax_019 LAMMPS simulation
+12:56:40: relax_019 simulation using LAMMPS successful
+12:56:40: 20/23 monomers added
+12:56:40: starting relax_020 LAMMPS simulation
+12:56:51: relax_020 simulation using LAMMPS successful
+12:56:51: 21/23 monomers added
+12:56:51: starting relax_021 LAMMPS simulation
+12:57:04: relax_021 simulation using LAMMPS successful
+12:57:04: 22/23 monomers added
+12:57:04: starting relax_022 LAMMPS simulation
+12:57:18: relax_022 simulation using LAMMPS successful
+12:57:18: 23/23 monomers added
+12:57:18: starting relax_023 LAMMPS simulation
+12:57:29: relax_023 simulation using LAMMPS successful
+polymerlength= 23 pe2, pe1, pe2, pe1, pe2, pe1, pe2, pe1, pe2, pe2, pe1, pe1, pe2, pe2, pe1, pe1, pe1, pe1, pe1, pe2, pe1, pe1, pe1, pe2
+12:57:31: starting LAMMPS simulation
+12:57:40: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+12:57:40: 1/24 monomers added
+12:57:40: 2/24 monomers added
+12:57:40: starting relax_002 LAMMPS simulation
+12:58:21: relax_002 simulation using LAMMPS successful
+12:58:21: 3/24 monomers added
+12:58:21: starting relax_003 LAMMPS simulation
+12:59:03: relax_003 simulation using LAMMPS successful
+12:59:03: 4/24 monomers added
+12:59:03: starting relax_004 LAMMPS simulation
+12:59:47: relax_004 simulation using LAMMPS successful
+12:59:47: 5/24 monomers added
+12:59:47: starting relax_005 LAMMPS simulation
+12:59:50: relax_005 simulation using LAMMPS successful
+12:59:50: 6/24 monomers added
+12:59:50: starting relax_006 LAMMPS simulation
+12:59:53: relax_006 simulation using LAMMPS successful
+12:59:53: 7/24 monomers added
+12:59:53: starting relax_007 LAMMPS simulation
+12:59:58: relax_007 simulation using LAMMPS successful
+12:59:59: 8/24 monomers added
+12:59:59: starting relax_008 LAMMPS simulation
+13:00:04: relax_008 simulation using LAMMPS successful
+13:00:04: 9/24 monomers added
+13:00:04: starting relax_009 LAMMPS simulation
+13:00:10: relax_009 simulation using LAMMPS successful
+13:00:10: 10/24 monomers added
+13:00:10: starting relax_010 LAMMPS simulation
+13:00:16: relax_010 simulation using LAMMPS successful
+13:00:16: 11/24 monomers added
+13:00:16: starting relax_011 LAMMPS simulation
+13:00:21: relax_011 simulation using LAMMPS successful
+13:00:22: 12/24 monomers added
+13:00:22: starting relax_012 LAMMPS simulation
+13:00:28: relax_012 simulation using LAMMPS successful
+13:00:28: 13/24 monomers added
+13:00:28: starting relax_013 LAMMPS simulation
+13:00:34: relax_013 simulation using LAMMPS successful
+13:00:34: 14/24 monomers added
+13:00:34: starting relax_014 LAMMPS simulation
+13:00:40: relax_014 simulation using LAMMPS successful
+13:00:40: 15/24 monomers added
+13:00:40: starting relax_015 LAMMPS simulation
+13:00:47: relax_015 simulation using LAMMPS successful
+13:00:47: 16/24 monomers added
+13:00:47: starting relax_016 LAMMPS simulation
+13:00:54: relax_016 simulation using LAMMPS successful
+13:00:54: 17/24 monomers added
+13:00:54: starting relax_017 LAMMPS simulation
+13:01:06: relax_017 simulation using LAMMPS successful
+13:01:06: 18/24 monomers added
+13:01:06: starting relax_018 LAMMPS simulation
+13:01:17: relax_018 simulation using LAMMPS successful
+13:01:17: 19/24 monomers added
+13:01:17: starting relax_019 LAMMPS simulation
+13:01:28: relax_019 simulation using LAMMPS successful
+13:01:28: 20/24 monomers added
+13:01:28: starting relax_020 LAMMPS simulation
+13:01:39: relax_020 simulation using LAMMPS successful
+13:01:39: 21/24 monomers added
+13:01:39: starting relax_021 LAMMPS simulation
+13:01:50: relax_021 simulation using LAMMPS successful
+13:01:50: 22/24 monomers added
+13:01:51: starting relax_022 LAMMPS simulation
+13:02:02: relax_022 simulation using LAMMPS successful
+13:02:02: 23/24 monomers added
+13:02:02: starting relax_023 LAMMPS simulation
+13:02:15: relax_023 simulation using LAMMPS successful
+13:02:15: 24/24 monomers added
+13:02:15: starting relax_024 LAMMPS simulation
+13:02:26: relax_024 simulation using LAMMPS successful
+polymerlength= 24 pe1, pe1, pe2, pe2, pe1, pe1, pe1, pe1, pe2, pe2, pe2, pe2, pe1, pe1, pe2, pe2, pe1, pe1, pe2, pe2, pe2, pe2, pe1, pe1, pe2
+13:02:29: starting LAMMPS simulation
+13:02:36: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+13:02:37: 1/25 monomers added
+13:02:37: 2/25 monomers added
+13:02:37: starting relax_002 LAMMPS simulation
+13:03:16: relax_002 simulation using LAMMPS successful
+13:03:16: 3/25 monomers added
+13:03:16: starting relax_003 LAMMPS simulation
+13:03:56: relax_003 simulation using LAMMPS successful
+13:03:56: 4/25 monomers added
+13:03:56: starting relax_004 LAMMPS simulation
+13:03:58: relax_004 simulation using LAMMPS successful
+13:03:58: 5/25 monomers added
+13:03:58: starting relax_005 LAMMPS simulation
+13:04:00: relax_005 simulation using LAMMPS successful
+13:04:00: 6/25 monomers added
+13:04:00: starting relax_006 LAMMPS simulation
+13:04:03: relax_006 simulation using LAMMPS successful
+13:04:04: 7/25 monomers added
+13:04:04: starting relax_007 LAMMPS simulation
+13:04:08: relax_007 simulation using LAMMPS successful
+13:04:08: 8/25 monomers added
+13:04:08: starting relax_008 LAMMPS simulation
+13:04:11: relax_008 simulation using LAMMPS successful
+13:04:11: 9/25 monomers added
+13:04:11: starting relax_009 LAMMPS simulation
+13:04:16: relax_009 simulation using LAMMPS successful
+13:04:16: 10/25 monomers added
+13:04:16: starting relax_010 LAMMPS simulation
+13:04:21: relax_010 simulation using LAMMPS successful
+13:04:22: 11/25 monomers added
+13:04:22: starting relax_011 LAMMPS simulation
+13:04:27: relax_011 simulation using LAMMPS successful
+13:04:27: 12/25 monomers added
+13:04:27: starting relax_012 LAMMPS simulation
+13:04:32: relax_012 simulation using LAMMPS successful
+13:04:32: 13/25 monomers added
+13:04:32: starting relax_013 LAMMPS simulation
+13:04:38: relax_013 simulation using LAMMPS successful
+13:04:39: 14/25 monomers added
+13:04:39: starting relax_014 LAMMPS simulation
+13:04:46: relax_014 simulation using LAMMPS successful
+13:04:46: 15/25 monomers added
+13:04:46: starting relax_015 LAMMPS simulation
+13:04:56: relax_015 simulation using LAMMPS successful
+13:04:57: 16/25 monomers added
+13:04:57: starting relax_016 LAMMPS simulation
+13:05:07: relax_016 simulation using LAMMPS successful
+13:05:07: 17/25 monomers added
+13:05:07: starting relax_017 LAMMPS simulation
+13:05:19: relax_017 simulation using LAMMPS successful
+13:05:19: 18/25 monomers added
+13:05:19: starting relax_018 LAMMPS simulation
+13:05:30: relax_018 simulation using LAMMPS successful
+13:05:30: 19/25 monomers added
+13:05:30: starting relax_019 LAMMPS simulation
+13:05:41: relax_019 simulation using LAMMPS successful
+13:05:41: 20/25 monomers added
+13:05:41: starting relax_020 LAMMPS simulation
+13:05:52: relax_020 simulation using LAMMPS successful
+13:05:52: 21/25 monomers added
+13:05:52: starting relax_021 LAMMPS simulation
+13:06:02: relax_021 simulation using LAMMPS successful
+13:06:02: 22/25 monomers added
+13:06:02: starting relax_022 LAMMPS simulation
+13:06:13: relax_022 simulation using LAMMPS successful
+13:06:13: 23/25 monomers added
+13:06:13: starting relax_023 LAMMPS simulation
+13:06:25: relax_023 simulation using LAMMPS successful
+13:06:25: 24/25 monomers added
+13:06:25: starting relax_024 LAMMPS simulation
+13:06:37: relax_024 simulation using LAMMPS successful
+13:06:37: 25/25 monomers added
+13:06:37: starting relax_025 LAMMPS simulation
+13:06:51: relax_025 simulation using LAMMPS successful
+polymerlength= 25 pe2, pe1, pe1, pe1, pe2, pe2, pe1, pe2, pe1, pe2, pe1, pe2, pe1, pe1, pe1, pe1, pe1, pe2, pe1, pe1, pe1, pe2, pe2, pe1, pe2, pe2
+13:06:54: starting LAMMPS simulation
+13:07:03: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+13:07:03: 1/26 monomers added
+13:07:03: 2/26 monomers added
+13:07:03: starting relax_002 LAMMPS simulation
+13:07:46: relax_002 simulation using LAMMPS successful
+13:07:47: 3/26 monomers added
+13:07:47: starting relax_003 LAMMPS simulation
+13:08:33: relax_003 simulation using LAMMPS successful
+13:08:33: 4/26 monomers added
+13:08:33: starting relax_004 LAMMPS simulation
+13:09:18: relax_004 simulation using LAMMPS successful
+13:09:18: 5/26 monomers added
+13:09:18: starting relax_005 LAMMPS simulation
+13:09:21: relax_005 simulation using LAMMPS successful
+13:09:21: 6/26 monomers added
+13:09:21: starting relax_006 LAMMPS simulation
+13:09:23: relax_006 simulation using LAMMPS successful
+13:09:23: 7/26 monomers added
+13:09:23: starting relax_007 LAMMPS simulation
+13:09:26: relax_007 simulation using LAMMPS successful
+13:09:26: 8/26 monomers added
+13:09:26: starting relax_008 LAMMPS simulation
+13:09:30: relax_008 simulation using LAMMPS successful
+13:09:30: 9/26 monomers added
+13:09:30: starting relax_009 LAMMPS simulation
+13:09:35: relax_009 simulation using LAMMPS successful
+13:09:35: 10/26 monomers added
+13:09:35: starting relax_010 LAMMPS simulation
+13:09:40: relax_010 simulation using LAMMPS successful
+13:09:40: 11/26 monomers added
+13:09:40: starting relax_011 LAMMPS simulation
+13:09:45: relax_011 simulation using LAMMPS successful
+13:09:45: 12/26 monomers added
+13:09:45: starting relax_012 LAMMPS simulation
+13:09:52: relax_012 simulation using LAMMPS successful
+13:09:52: 13/26 monomers added
+13:09:52: starting relax_013 LAMMPS simulation
+13:09:58: relax_013 simulation using LAMMPS successful
+13:09:58: 14/26 monomers added
+13:09:58: starting relax_014 LAMMPS simulation
+13:10:04: relax_014 simulation using LAMMPS successful
+13:10:04: 15/26 monomers added
+13:10:04: starting relax_015 LAMMPS simulation
+13:10:14: relax_015 simulation using LAMMPS successful
+13:10:14: 16/26 monomers added
+13:10:14: starting relax_016 LAMMPS simulation
+13:10:24: relax_016 simulation using LAMMPS successful
+13:10:24: 17/26 monomers added
+13:10:24: starting relax_017 LAMMPS simulation
+13:10:35: relax_017 simulation using LAMMPS successful
+13:10:35: 18/26 monomers added
+13:10:35: starting relax_018 LAMMPS simulation
+13:10:45: relax_018 simulation using LAMMPS successful
+13:10:45: 19/26 monomers added
+13:10:45: starting relax_019 LAMMPS simulation
+13:10:56: relax_019 simulation using LAMMPS successful
+13:10:56: 20/26 monomers added
+13:10:56: starting relax_020 LAMMPS simulation
+13:11:08: relax_020 simulation using LAMMPS successful
+13:11:08: 21/26 monomers added
+13:11:08: starting relax_021 LAMMPS simulation
+13:11:19: relax_021 simulation using LAMMPS successful
+13:11:19: 22/26 monomers added
+13:11:19: starting relax_022 LAMMPS simulation
+13:11:31: relax_022 simulation using LAMMPS successful
+13:11:31: 23/26 monomers added
+13:11:31: starting relax_023 LAMMPS simulation
+13:11:42: relax_023 simulation using LAMMPS successful
+13:11:42: 24/26 monomers added
+13:11:42: starting relax_024 LAMMPS simulation
+13:11:54: relax_024 simulation using LAMMPS successful
+13:11:54: 25/26 monomers added
+13:11:54: starting relax_025 LAMMPS simulation
+13:12:07: relax_025 simulation using LAMMPS successful
+13:12:07: 26/26 monomers added
+13:12:07: starting relax_026 LAMMPS simulation
+13:12:19: relax_026 simulation using LAMMPS successful
+polymerlength= 26 pe1, pe1, pe2, pe2, pe1, pe2, pe2, pe1, pe1, pe1, pe2, pe1, pe1, pe1, pe2, pe1, pe2, pe1, pe2, pe1, pe2, pe1, pe1, pe1, pe2, pe1, pe2
+13:12:23: starting LAMMPS simulation
+13:12:34: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+13:12:34: 1/27 monomers added
+13:12:34: 2/27 monomers added
+13:12:34: starting relax_002 LAMMPS simulation
+13:13:20: relax_002 simulation using LAMMPS successful
+13:13:20: 3/27 monomers added
+13:13:20: starting relax_003 LAMMPS simulation
+13:14:04: relax_003 simulation using LAMMPS successful
+13:14:04: 4/27 monomers added
+13:14:04: starting relax_004 LAMMPS simulation
+13:14:49: relax_004 simulation using LAMMPS successful
+13:14:49: 5/27 monomers added
+13:14:49: starting relax_005 LAMMPS simulation
+13:14:51: relax_005 simulation using LAMMPS successful
+13:14:51: 6/27 monomers added
+13:14:51: starting relax_006 LAMMPS simulation
+13:14:55: relax_006 simulation using LAMMPS successful
+13:14:55: 7/27 monomers added
+13:14:55: starting relax_007 LAMMPS simulation
+13:14:59: relax_007 simulation using LAMMPS successful
+13:14:59: 8/27 monomers added
+13:14:59: starting relax_008 LAMMPS simulation
+13:15:01: relax_008 simulation using LAMMPS successful
+13:15:02: 9/27 monomers added
+13:15:02: starting relax_009 LAMMPS simulation
+13:15:06: relax_009 simulation using LAMMPS successful
+13:15:06: 10/27 monomers added
+13:15:06: starting relax_010 LAMMPS simulation
+13:15:11: relax_010 simulation using LAMMPS successful
+13:15:11: 11/27 monomers added
+13:15:11: starting relax_011 LAMMPS simulation
+13:15:17: relax_011 simulation using LAMMPS successful
+13:15:17: 12/27 monomers added
+13:15:17: starting relax_012 LAMMPS simulation
+13:15:24: relax_012 simulation using LAMMPS successful
+13:15:24: 13/27 monomers added
+13:15:24: starting relax_013 LAMMPS simulation
+13:15:29: relax_013 simulation using LAMMPS successful
+13:15:30: 14/27 monomers added
+13:15:30: starting relax_014 LAMMPS simulation
+13:15:37: relax_014 simulation using LAMMPS successful
+13:15:37: 15/27 monomers added
+13:15:37: starting relax_015 LAMMPS simulation
+13:15:44: relax_015 simulation using LAMMPS successful
+13:15:44: 16/27 monomers added
+13:15:44: starting relax_016 LAMMPS simulation
+13:15:51: relax_016 simulation using LAMMPS successful
+13:15:51: 17/27 monomers added
+13:15:51: starting relax_017 LAMMPS simulation
+13:15:59: relax_017 simulation using LAMMPS successful
+13:15:59: 18/27 monomers added
+13:15:59: starting relax_018 LAMMPS simulation
+13:16:07: relax_018 simulation using LAMMPS successful
+13:16:07: 19/27 monomers added
+13:16:07: starting relax_019 LAMMPS simulation
+13:16:15: relax_019 simulation using LAMMPS successful
+13:16:15: 20/27 monomers added
+13:16:15: starting relax_020 LAMMPS simulation
+13:16:26: relax_020 simulation using LAMMPS successful
+13:16:26: 21/27 monomers added
+13:16:27: starting relax_021 LAMMPS simulation
+13:16:37: relax_021 simulation using LAMMPS successful
+13:16:38: 22/27 monomers added
+13:16:38: starting relax_022 LAMMPS simulation
+13:16:49: relax_022 simulation using LAMMPS successful
+13:16:49: 23/27 monomers added
+13:16:49: starting relax_023 LAMMPS simulation
+13:17:01: relax_023 simulation using LAMMPS successful
+13:17:02: 24/27 monomers added
+13:17:02: starting relax_024 LAMMPS simulation
+13:17:13: relax_024 simulation using LAMMPS successful
+13:17:13: 25/27 monomers added
+13:17:13: starting relax_025 LAMMPS simulation
+13:17:27: relax_025 simulation using LAMMPS successful
+13:17:27: 26/27 monomers added
+13:17:27: starting relax_026 LAMMPS simulation
+13:17:43: relax_026 simulation using LAMMPS successful
+13:17:43: 27/27 monomers added
+13:17:43: starting relax_027 LAMMPS simulation
+13:17:58: relax_027 simulation using LAMMPS successful
+polymerlength= 27 pe1, pe2, pe2, pe1, pe2, pe2, pe1, pe2, pe2, pe1, pe1, pe1, pe2, pe2, pe2, pe2, pe2, pe2, pe2, pe2, pe1, pe1, pe1, pe2, pe2, pe1, pe1, pe2
+13:18:01: starting LAMMPS simulation
+13:18:11: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+13:18:11: 1/28 monomers added
+13:18:11: 2/28 monomers added
+13:18:11: starting relax_002 LAMMPS simulation
+13:18:55: relax_002 simulation using LAMMPS successful
+13:18:55: 3/28 monomers added
+13:18:55: starting relax_003 LAMMPS simulation
+13:19:40: relax_003 simulation using LAMMPS successful
+13:19:40: 4/28 monomers added
+13:19:40: starting relax_004 LAMMPS simulation
+13:19:41: relax_004 simulation using LAMMPS successful
+13:19:41: 5/28 monomers added
+13:19:41: starting relax_005 LAMMPS simulation
+13:19:43: relax_005 simulation using LAMMPS successful
+13:19:44: 6/28 monomers added
+13:19:44: starting relax_006 LAMMPS simulation
+13:19:46: relax_006 simulation using LAMMPS successful
+13:19:46: 7/28 monomers added
+13:19:46: starting relax_007 LAMMPS simulation
+13:19:50: relax_007 simulation using LAMMPS successful
+13:19:50: 8/28 monomers added
+13:19:50: starting relax_008 LAMMPS simulation
+13:19:55: relax_008 simulation using LAMMPS successful
+13:19:55: 9/28 monomers added
+13:19:55: starting relax_009 LAMMPS simulation
+13:20:00: relax_009 simulation using LAMMPS successful
+13:20:00: 10/28 monomers added
+13:20:00: starting relax_010 LAMMPS simulation
+13:20:04: relax_010 simulation using LAMMPS successful
+13:20:04: 11/28 monomers added
+13:20:04: starting relax_011 LAMMPS simulation
+13:20:10: relax_011 simulation using LAMMPS successful
+13:20:10: 12/28 monomers added
+13:20:10: starting relax_012 LAMMPS simulation
+13:20:15: relax_012 simulation using LAMMPS successful
+13:20:16: 13/28 monomers added
+13:20:16: starting relax_013 LAMMPS simulation
+13:20:22: relax_013 simulation using LAMMPS successful
+13:20:22: 14/28 monomers added
+13:20:22: starting relax_014 LAMMPS simulation
+13:20:32: relax_014 simulation using LAMMPS successful
+13:20:32: 15/28 monomers added
+13:20:32: starting relax_015 LAMMPS simulation
+13:20:42: relax_015 simulation using LAMMPS successful
+13:20:42: 16/28 monomers added
+13:20:42: starting relax_016 LAMMPS simulation
+13:20:52: relax_016 simulation using LAMMPS successful
+13:20:52: 17/28 monomers added
+13:20:52: starting relax_017 LAMMPS simulation
+13:21:02: relax_017 simulation using LAMMPS successful
+13:21:02: 18/28 monomers added
+13:21:02: starting relax_018 LAMMPS simulation
+13:21:12: relax_018 simulation using LAMMPS successful
+13:21:12: 19/28 monomers added
+13:21:12: starting relax_019 LAMMPS simulation
+13:21:22: relax_019 simulation using LAMMPS successful
+13:21:22: 20/28 monomers added
+13:21:22: starting relax_020 LAMMPS simulation
+13:21:33: relax_020 simulation using LAMMPS successful
+13:21:33: 21/28 monomers added
+13:21:33: starting relax_021 LAMMPS simulation
+13:21:44: relax_021 simulation using LAMMPS successful
+13:21:44: 22/28 monomers added
+13:21:44: starting relax_022 LAMMPS simulation
+13:21:56: relax_022 simulation using LAMMPS successful
+13:21:56: 23/28 monomers added
+13:21:56: starting relax_023 LAMMPS simulation
+13:22:07: relax_023 simulation using LAMMPS successful
+13:22:07: 24/28 monomers added
+13:22:07: starting relax_024 LAMMPS simulation
+13:22:19: relax_024 simulation using LAMMPS successful
+13:22:19: 25/28 monomers added
+13:22:19: starting relax_025 LAMMPS simulation
+13:22:32: relax_025 simulation using LAMMPS successful
+13:22:32: 26/28 monomers added
+13:22:32: starting relax_026 LAMMPS simulation
+13:22:45: relax_026 simulation using LAMMPS successful
+13:22:45: 27/28 monomers added
+13:22:45: starting relax_027 LAMMPS simulation
+13:22:58: relax_027 simulation using LAMMPS successful
+13:22:58: 28/28 monomers added
+13:22:58: starting relax_028 LAMMPS simulation
+13:23:12: relax_028 simulation using LAMMPS successful
+polymerlength= 28 pe1, pe1, pe2, pe1, pe2, pe2, pe1, pe1, pe1, pe2, pe1, pe1, pe1, pe1, pe2, pe1, pe1, pe2, pe1, pe2, pe1, pe2, pe1, pe1, pe2, pe1, pe2, pe1, pe1
+13:23:16: starting LAMMPS simulation
+13:23:28: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+13:23:28: 1/29 monomers added
+13:23:28: 2/29 monomers added
+13:23:28: starting relax_002 LAMMPS simulation
+13:24:10: relax_002 simulation using LAMMPS successful
+13:24:10: 3/29 monomers added
+13:24:10: starting relax_003 LAMMPS simulation
+13:24:56: relax_003 simulation using LAMMPS successful
+13:24:56: 4/29 monomers added
+13:24:56: starting relax_004 LAMMPS simulation
+13:25:41: relax_004 simulation using LAMMPS successful
+13:25:41: 5/29 monomers added
+13:25:41: starting relax_005 LAMMPS simulation
+13:26:25: relax_005 simulation using LAMMPS successful
+13:26:25: 6/29 monomers added
+13:26:25: starting relax_006 LAMMPS simulation
+13:27:11: relax_006 simulation using LAMMPS successful
+13:27:11: 7/29 monomers added
+13:27:11: starting relax_007 LAMMPS simulation
+13:27:14: relax_007 simulation using LAMMPS successful
+13:27:14: 8/29 monomers added
+13:27:14: starting relax_008 LAMMPS simulation
+13:27:18: relax_008 simulation using LAMMPS successful
+13:27:19: 9/29 monomers added
+13:27:19: starting relax_009 LAMMPS simulation
+13:27:23: relax_009 simulation using LAMMPS successful
+13:27:23: 10/29 monomers added
+13:27:23: starting relax_010 LAMMPS simulation
+13:27:29: relax_010 simulation using LAMMPS successful
+13:27:29: 11/29 monomers added
+13:27:29: starting relax_011 LAMMPS simulation
+13:27:34: relax_011 simulation using LAMMPS successful
+13:27:34: 12/29 monomers added
+13:27:34: starting relax_012 LAMMPS simulation
+13:27:39: relax_012 simulation using LAMMPS successful
+13:27:39: 13/29 monomers added
+13:27:39: starting relax_013 LAMMPS simulation
+13:27:45: relax_013 simulation using LAMMPS successful
+13:27:45: 14/29 monomers added
+13:27:45: starting relax_014 LAMMPS simulation
+13:27:51: relax_014 simulation using LAMMPS successful
+13:27:51: 15/29 monomers added
+13:27:51: starting relax_015 LAMMPS simulation
+13:27:58: relax_015 simulation using LAMMPS successful
+13:27:59: 16/29 monomers added
+13:27:59: starting relax_016 LAMMPS simulation
+13:28:06: relax_016 simulation using LAMMPS successful
+13:28:06: 17/29 monomers added
+13:28:06: starting relax_017 LAMMPS simulation
+13:28:13: relax_017 simulation using LAMMPS successful
+13:28:13: 18/29 monomers added
+13:28:13: starting relax_018 LAMMPS simulation
+13:28:21: relax_018 simulation using LAMMPS successful
+13:28:21: 19/29 monomers added
+13:28:21: starting relax_019 LAMMPS simulation
+13:28:30: relax_019 simulation using LAMMPS successful
+13:28:30: 20/29 monomers added
+13:28:30: starting relax_020 LAMMPS simulation
+13:28:41: relax_020 simulation using LAMMPS successful
+13:28:41: 21/29 monomers added
+13:28:41: starting relax_021 LAMMPS simulation
+13:28:51: relax_021 simulation using LAMMPS successful
+13:28:52: 22/29 monomers added
+13:28:52: starting relax_022 LAMMPS simulation
+13:29:04: relax_022 simulation using LAMMPS successful
+13:29:04: 23/29 monomers added
+13:29:04: starting relax_023 LAMMPS simulation
+13:29:16: relax_023 simulation using LAMMPS successful
+13:29:16: 24/29 monomers added
+13:29:16: starting relax_024 LAMMPS simulation
+13:29:29: relax_024 simulation using LAMMPS successful
+13:29:29: 25/29 monomers added
+13:29:30: starting relax_025 LAMMPS simulation
+13:29:42: relax_025 simulation using LAMMPS successful
+13:29:43: 26/29 monomers added
+13:29:43: starting relax_026 LAMMPS simulation
+13:29:56: relax_026 simulation using LAMMPS successful
+13:29:56: 27/29 monomers added
+13:29:56: starting relax_027 LAMMPS simulation
+13:30:10: relax_027 simulation using LAMMPS successful
+13:30:10: 28/29 monomers added
+13:30:10: starting relax_028 LAMMPS simulation
+13:30:24: relax_028 simulation using LAMMPS successful
+13:30:24: 29/29 monomers added
+13:30:24: starting relax_029 LAMMPS simulation
+13:30:40: relax_029 simulation using LAMMPS successful
+polymerlength= 29 pe2, pe2, pe2, pe1, pe2, pe2, pe2, pe2, pe1, pe2, pe2, pe2, pe1, pe1, pe1, pe1, pe2, pe2, pe2, pe2, pe1, pe2, pe2, pe2, pe1, pe2, pe1, pe2, pe2, pe1
+13:30:44: starting LAMMPS simulation
+13:30:54: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+13:30:54: 1/30 monomers added
+13:30:54: 2/30 monomers added
+13:30:54: starting relax_002 LAMMPS simulation
+13:31:37: relax_002 simulation using LAMMPS successful
+13:31:37: 3/30 monomers added
+13:31:37: starting relax_003 LAMMPS simulation
+13:32:22: relax_003 simulation using LAMMPS successful
+13:32:22: 4/30 monomers added
+13:32:22: starting relax_004 LAMMPS simulation
+13:33:09: relax_004 simulation using LAMMPS successful
+13:33:09: 5/30 monomers added
+13:33:09: starting relax_005 LAMMPS simulation
+13:33:55: relax_005 simulation using LAMMPS successful
+13:33:55: 6/30 monomers added
+13:33:55: starting relax_006 LAMMPS simulation
+13:33:58: relax_006 simulation using LAMMPS successful
+13:33:58: 7/30 monomers added
+13:33:58: starting relax_007 LAMMPS simulation
+13:34:01: relax_007 simulation using LAMMPS successful
+13:34:01: 8/30 monomers added
+13:34:01: starting relax_008 LAMMPS simulation
+13:34:05: relax_008 simulation using LAMMPS successful
+13:34:05: 9/30 monomers added
+13:34:05: starting relax_009 LAMMPS simulation
+13:34:10: relax_009 simulation using LAMMPS successful
+13:34:10: 10/30 monomers added
+13:34:10: starting relax_010 LAMMPS simulation
+13:34:15: relax_010 simulation using LAMMPS successful
+13:34:15: 11/30 monomers added
+13:34:15: starting relax_011 LAMMPS simulation
+13:34:21: relax_011 simulation using LAMMPS successful
+13:34:21: 12/30 monomers added
+13:34:21: starting relax_012 LAMMPS simulation
+13:34:27: relax_012 simulation using LAMMPS successful
+13:34:27: 13/30 monomers added
+13:34:27: starting relax_013 LAMMPS simulation
+13:34:34: relax_013 simulation using LAMMPS successful
+13:34:34: 14/30 monomers added
+13:34:34: starting relax_014 LAMMPS simulation
+13:34:40: relax_014 simulation using LAMMPS successful
+13:34:41: 15/30 monomers added
+13:34:41: starting relax_015 LAMMPS simulation
+13:34:48: relax_015 simulation using LAMMPS successful
+13:34:48: 16/30 monomers added
+13:34:48: starting relax_016 LAMMPS simulation
+13:34:55: relax_016 simulation using LAMMPS successful
+13:34:55: 17/30 monomers added
+13:34:56: starting relax_017 LAMMPS simulation
+13:35:04: relax_017 simulation using LAMMPS successful
+13:35:04: 18/30 monomers added
+13:35:04: starting relax_018 LAMMPS simulation
+13:35:12: relax_018 simulation using LAMMPS successful
+13:35:12: 19/30 monomers added
+13:35:12: starting relax_019 LAMMPS simulation
+13:35:19: relax_019 simulation using LAMMPS successful
+13:35:19: 20/30 monomers added
+13:35:19: starting relax_020 LAMMPS simulation
+13:35:30: relax_020 simulation using LAMMPS successful
+13:35:30: 21/30 monomers added
+13:35:31: starting relax_021 LAMMPS simulation
+13:35:41: relax_021 simulation using LAMMPS successful
+13:35:41: 22/30 monomers added
+13:35:41: starting relax_022 LAMMPS simulation
+13:35:52: relax_022 simulation using LAMMPS successful
+13:35:53: 23/30 monomers added
+13:35:53: starting relax_023 LAMMPS simulation
+13:36:03: relax_023 simulation using LAMMPS successful
+13:36:03: 24/30 monomers added
+13:36:03: starting relax_024 LAMMPS simulation
+13:36:15: relax_024 simulation using LAMMPS successful
+13:36:15: 25/30 monomers added
+13:36:15: starting relax_025 LAMMPS simulation
+13:36:28: relax_025 simulation using LAMMPS successful
+13:36:28: 26/30 monomers added
+13:36:29: starting relax_026 LAMMPS simulation
+13:36:40: relax_026 simulation using LAMMPS successful
+13:36:40: 27/30 monomers added
+13:36:40: starting relax_027 LAMMPS simulation
+13:36:53: relax_027 simulation using LAMMPS successful
+13:36:53: 28/30 monomers added
+13:36:53: starting relax_028 LAMMPS simulation
+13:37:06: relax_028 simulation using LAMMPS successful
+13:37:06: 29/30 monomers added
+13:37:06: starting relax_029 LAMMPS simulation
+13:37:20: relax_029 simulation using LAMMPS successful
+13:37:20: 30/30 monomers added
+13:37:20: starting relax_030 LAMMPS simulation
+13:37:34: relax_030 simulation using LAMMPS successful
+polymerlength= 30 pe2, pe1, pe2, pe1, pe2, pe2, pe2, pe1, pe2, pe2, pe1, pe2, pe2, pe2, pe2, pe1, pe2, pe2, pe1, pe2, pe1, pe2, pe2, pe1, pe2, pe1, pe1, pe2, pe1, pe1, pe2
+13:37:39: starting LAMMPS simulation
+13:37:52: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+13:37:53: 1/31 monomers added
+13:37:53: 2/31 monomers added
+13:37:53: starting relax_002 LAMMPS simulation
+13:38:39: relax_002 simulation using LAMMPS successful
+13:38:39: 3/31 monomers added
+13:38:39: starting relax_003 LAMMPS simulation
+13:39:25: relax_003 simulation using LAMMPS successful
+13:39:25: 4/31 monomers added
+13:39:25: starting relax_004 LAMMPS simulation
+13:40:10: relax_004 simulation using LAMMPS successful
+13:40:10: 5/31 monomers added
+13:40:10: starting relax_005 LAMMPS simulation
+13:40:12: relax_005 simulation using LAMMPS successful
+13:40:12: 6/31 monomers added
+13:40:12: starting relax_006 LAMMPS simulation
+13:40:15: relax_006 simulation using LAMMPS successful
+13:40:15: 7/31 monomers added
+13:40:15: starting relax_007 LAMMPS simulation
+13:40:19: relax_007 simulation using LAMMPS successful
+13:40:19: 8/31 monomers added
+13:40:19: starting relax_008 LAMMPS simulation
+13:40:24: relax_008 simulation using LAMMPS successful
+13:40:24: 9/31 monomers added
+13:40:24: starting relax_009 LAMMPS simulation
+13:40:29: relax_009 simulation using LAMMPS successful
+13:40:29: 10/31 monomers added
+13:40:29: starting relax_010 LAMMPS simulation
+13:40:33: relax_010 simulation using LAMMPS successful
+13:40:34: 11/31 monomers added
+13:40:34: starting relax_011 LAMMPS simulation
+13:40:39: relax_011 simulation using LAMMPS successful
+13:40:39: 12/31 monomers added
+13:40:39: starting relax_012 LAMMPS simulation
+13:40:45: relax_012 simulation using LAMMPS successful
+13:40:45: 13/31 monomers added
+13:40:45: starting relax_013 LAMMPS simulation
+13:40:52: relax_013 simulation using LAMMPS successful
+13:40:52: 14/31 monomers added
+13:40:52: starting relax_014 LAMMPS simulation
+13:40:59: relax_014 simulation using LAMMPS successful
+13:40:59: 15/31 monomers added
+13:40:59: starting relax_015 LAMMPS simulation
+13:41:06: relax_015 simulation using LAMMPS successful
+13:41:06: 16/31 monomers added
+13:41:06: starting relax_016 LAMMPS simulation
+13:41:16: relax_016 simulation using LAMMPS successful
+13:41:16: 17/31 monomers added
+13:41:16: starting relax_017 LAMMPS simulation
+13:41:26: relax_017 simulation using LAMMPS successful
+13:41:27: 18/31 monomers added
+13:41:27: starting relax_018 LAMMPS simulation
+13:41:38: relax_018 simulation using LAMMPS successful
+13:41:38: 19/31 monomers added
+13:41:38: starting relax_019 LAMMPS simulation
+13:41:49: relax_019 simulation using LAMMPS successful
+13:41:49: 20/31 monomers added
+13:41:49: starting relax_020 LAMMPS simulation
+13:42:00: relax_020 simulation using LAMMPS successful
+13:42:00: 21/31 monomers added
+13:42:00: starting relax_021 LAMMPS simulation
+13:42:10: relax_021 simulation using LAMMPS successful
+13:42:10: 22/31 monomers added
+13:42:11: starting relax_022 LAMMPS simulation
+13:42:21: relax_022 simulation using LAMMPS successful
+13:42:21: 23/31 monomers added
+13:42:21: starting relax_023 LAMMPS simulation
+13:42:32: relax_023 simulation using LAMMPS successful
+13:42:32: 24/31 monomers added
+13:42:32: starting relax_024 LAMMPS simulation
+13:42:46: relax_024 simulation using LAMMPS successful
+13:42:46: 25/31 monomers added
+13:42:46: starting relax_025 LAMMPS simulation
+13:42:57: relax_025 simulation using LAMMPS successful
+13:42:58: 26/31 monomers added
+13:42:58: starting relax_026 LAMMPS simulation
+13:43:10: relax_026 simulation using LAMMPS successful
+13:43:10: 27/31 monomers added
+13:43:10: starting relax_027 LAMMPS simulation
+13:43:22: relax_027 simulation using LAMMPS successful
+13:43:23: 28/31 monomers added
+13:43:23: starting relax_028 LAMMPS simulation
+13:43:36: relax_028 simulation using LAMMPS successful
+13:43:36: 29/31 monomers added
+13:43:36: starting relax_029 LAMMPS simulation
+13:43:50: relax_029 simulation using LAMMPS successful
+13:43:50: 30/31 monomers added
+13:43:50: starting relax_030 LAMMPS simulation
+13:44:04: relax_030 simulation using LAMMPS successful
+13:44:04: 31/31 monomers added
+13:44:04: starting relax_031 LAMMPS simulation
+13:44:19: relax_031 simulation using LAMMPS successful
+polymerlength= 31 pe1, pe1, pe2, pe1, pe2, pe1, pe1, pe2, pe2, pe1, pe2, pe2, pe1, pe1, pe1, pe2, pe2, pe2, pe1, pe2, pe1, pe2, pe1, pe2, pe1, pe1, pe2, pe1, pe2, pe1, pe1, pe2
+13:44:24: starting LAMMPS simulation
+13:44:35: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+13:44:35: 1/32 monomers added
+13:44:35: 2/32 monomers added
+13:44:35: starting relax_002 LAMMPS simulation
+13:45:19: relax_002 simulation using LAMMPS successful
+13:45:19: 3/32 monomers added
+13:45:19: starting relax_003 LAMMPS simulation
+13:46:05: relax_003 simulation using LAMMPS successful
+13:46:05: 4/32 monomers added
+13:46:05: starting relax_004 LAMMPS simulation
+13:46:51: relax_004 simulation using LAMMPS successful
+13:46:52: 5/32 monomers added
+13:46:52: starting relax_005 LAMMPS simulation
+13:46:53: relax_005 simulation using LAMMPS successful
+13:46:53: 6/32 monomers added
+13:46:53: starting relax_006 LAMMPS simulation
+13:46:55: relax_006 simulation using LAMMPS successful
+13:46:55: 7/32 monomers added
+13:46:55: starting relax_007 LAMMPS simulation
+13:46:59: relax_007 simulation using LAMMPS successful
+13:46:59: 8/32 monomers added
+13:46:59: starting relax_008 LAMMPS simulation
+13:47:03: relax_008 simulation using LAMMPS successful
+13:47:04: 9/32 monomers added
+13:47:04: starting relax_009 LAMMPS simulation
+13:47:08: relax_009 simulation using LAMMPS successful
+13:47:08: 10/32 monomers added
+13:47:08: starting relax_010 LAMMPS simulation
+13:47:13: relax_010 simulation using LAMMPS successful
+13:47:13: 11/32 monomers added
+13:47:13: starting relax_011 LAMMPS simulation
+13:47:19: relax_011 simulation using LAMMPS successful
+13:47:19: 12/32 monomers added
+13:47:19: starting relax_012 LAMMPS simulation
+13:47:25: relax_012 simulation using LAMMPS successful
+13:47:25: 13/32 monomers added
+13:47:25: starting relax_013 LAMMPS simulation
+13:47:31: relax_013 simulation using LAMMPS successful
+13:47:31: 14/32 monomers added
+13:47:31: starting relax_014 LAMMPS simulation
+13:47:38: relax_014 simulation using LAMMPS successful
+13:47:38: 15/32 monomers added
+13:47:38: starting relax_015 LAMMPS simulation
+13:47:47: relax_015 simulation using LAMMPS successful
+13:47:47: 16/32 monomers added
+13:47:47: starting relax_016 LAMMPS simulation
+13:47:57: relax_016 simulation using LAMMPS successful
+13:47:57: 17/32 monomers added
+13:47:57: starting relax_017 LAMMPS simulation
+13:48:06: relax_017 simulation using LAMMPS successful
+13:48:06: 18/32 monomers added
+13:48:06: starting relax_018 LAMMPS simulation
+13:48:17: relax_018 simulation using LAMMPS successful
+13:48:17: 19/32 monomers added
+13:48:17: starting relax_019 LAMMPS simulation
+13:48:28: relax_019 simulation using LAMMPS successful
+13:48:28: 20/32 monomers added
+13:48:28: starting relax_020 LAMMPS simulation
+13:48:39: relax_020 simulation using LAMMPS successful
+13:48:39: 21/32 monomers added
+13:48:39: starting relax_021 LAMMPS simulation
+13:48:51: relax_021 simulation using LAMMPS successful
+13:48:51: 22/32 monomers added
+13:48:51: starting relax_022 LAMMPS simulation
+13:49:02: relax_022 simulation using LAMMPS successful
+13:49:02: 23/32 monomers added
+13:49:02: starting relax_023 LAMMPS simulation
+13:49:14: relax_023 simulation using LAMMPS successful
+13:49:14: 24/32 monomers added
+13:49:14: starting relax_024 LAMMPS simulation
+13:49:27: relax_024 simulation using LAMMPS successful
+13:49:27: 25/32 monomers added
+13:49:27: starting relax_025 LAMMPS simulation
+13:49:40: relax_025 simulation using LAMMPS successful
+13:49:40: 26/32 monomers added
+13:49:40: starting relax_026 LAMMPS simulation
+13:49:54: relax_026 simulation using LAMMPS successful
+13:49:54: 27/32 monomers added
+13:49:54: starting relax_027 LAMMPS simulation
+13:50:10: relax_027 simulation using LAMMPS successful
+13:50:10: 28/32 monomers added
+13:50:10: starting relax_028 LAMMPS simulation
+13:50:25: relax_028 simulation using LAMMPS successful
+13:50:25: 29/32 monomers added
+13:50:25: starting relax_029 LAMMPS simulation
+13:50:40: relax_029 simulation using LAMMPS successful
+13:50:41: 30/32 monomers added
+13:50:41: starting relax_030 LAMMPS simulation
+13:50:57: relax_030 simulation using LAMMPS successful
+13:50:57: 31/32 monomers added
+13:50:57: starting relax_031 LAMMPS simulation
+13:51:14: relax_031 simulation using LAMMPS successful
+13:51:14: 32/32 monomers added
+13:51:14: starting relax_032 LAMMPS simulation
+13:51:31: relax_032 simulation using LAMMPS successful
+polymerlength= 32 pe1, pe1, pe1, pe2, pe2, pe2, pe1, pe1, pe2, pe1, pe1, pe1, pe1, pe1, pe2, pe1, pe1, pe1, pe2, pe1, pe1, pe2, pe1, pe1, pe1, pe1, pe1, pe2, pe1, pe2, pe2, pe2, pe1
+13:51:35: starting LAMMPS simulation
+13:51:50: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+13:51:50: 1/33 monomers added
+13:51:50: 2/33 monomers added
+13:51:50: starting relax_002 LAMMPS simulation
+13:52:35: relax_002 simulation using LAMMPS successful
+13:52:35: 3/33 monomers added
+13:52:35: starting relax_003 LAMMPS simulation
+13:53:21: relax_003 simulation using LAMMPS successful
+13:53:21: 4/33 monomers added
+13:53:21: starting relax_004 LAMMPS simulation
+13:54:10: relax_004 simulation using LAMMPS successful
+13:54:10: 5/33 monomers added
+13:54:10: starting relax_005 LAMMPS simulation
+13:54:54: relax_005 simulation using LAMMPS successful
+13:54:55: 6/33 monomers added
+13:54:55: starting relax_006 LAMMPS simulation
+13:54:56: relax_006 simulation using LAMMPS successful
+13:54:56: 7/33 monomers added
+13:54:56: starting relax_007 LAMMPS simulation
+13:55:00: relax_007 simulation using LAMMPS successful
+13:55:00: 8/33 monomers added
+13:55:00: starting relax_008 LAMMPS simulation
+13:55:04: relax_008 simulation using LAMMPS successful
+13:55:04: 9/33 monomers added
+13:55:04: starting relax_009 LAMMPS simulation
+13:55:08: relax_009 simulation using LAMMPS successful
+13:55:08: 10/33 monomers added
+13:55:08: starting relax_010 LAMMPS simulation
+13:55:13: relax_010 simulation using LAMMPS successful
+13:55:13: 11/33 monomers added
+13:55:13: starting relax_011 LAMMPS simulation
+13:55:18: relax_011 simulation using LAMMPS successful
+13:55:18: 12/33 monomers added
+13:55:18: starting relax_012 LAMMPS simulation
+13:55:25: relax_012 simulation using LAMMPS successful
+13:55:25: 13/33 monomers added
+13:55:25: starting relax_013 LAMMPS simulation
+13:55:31: relax_013 simulation using LAMMPS successful
+13:55:31: 14/33 monomers added
+13:55:31: starting relax_014 LAMMPS simulation
+13:55:38: relax_014 simulation using LAMMPS successful
+13:55:38: 15/33 monomers added
+13:55:38: starting relax_015 LAMMPS simulation
+13:55:46: relax_015 simulation using LAMMPS successful
+13:55:46: 16/33 monomers added
+13:55:46: starting relax_016 LAMMPS simulation
+13:55:53: relax_016 simulation using LAMMPS successful
+13:55:53: 17/33 monomers added
+13:55:53: starting relax_017 LAMMPS simulation
+13:56:04: relax_017 simulation using LAMMPS successful
+13:56:04: 18/33 monomers added
+13:56:04: starting relax_018 LAMMPS simulation
+13:56:14: relax_018 simulation using LAMMPS successful
+13:56:14: 19/33 monomers added
+13:56:14: starting relax_019 LAMMPS simulation
+13:56:25: relax_019 simulation using LAMMPS successful
+13:56:25: 20/33 monomers added
+13:56:25: starting relax_020 LAMMPS simulation
+13:56:37: relax_020 simulation using LAMMPS successful
+13:56:37: 21/33 monomers added
+13:56:37: starting relax_021 LAMMPS simulation
+13:56:49: relax_021 simulation using LAMMPS successful
+13:56:49: 22/33 monomers added
+13:56:49: starting relax_022 LAMMPS simulation
+13:56:59: relax_022 simulation using LAMMPS successful
+13:56:59: 23/33 monomers added
+13:56:59: starting relax_023 LAMMPS simulation
+13:57:12: relax_023 simulation using LAMMPS successful
+13:57:12: 24/33 monomers added
+13:57:12: starting relax_024 LAMMPS simulation
+13:57:25: relax_024 simulation using LAMMPS successful
+13:57:26: 25/33 monomers added
+13:57:26: starting relax_025 LAMMPS simulation
+13:57:38: relax_025 simulation using LAMMPS successful
+13:57:39: 26/33 monomers added
+13:57:39: starting relax_026 LAMMPS simulation
+13:57:52: relax_026 simulation using LAMMPS successful
+13:57:52: 27/33 monomers added
+13:57:52: starting relax_027 LAMMPS simulation
+13:58:05: relax_027 simulation using LAMMPS successful
+13:58:05: 28/33 monomers added
+13:58:05: starting relax_028 LAMMPS simulation
+13:58:17: relax_028 simulation using LAMMPS successful
+13:58:18: 29/33 monomers added
+13:58:18: starting relax_029 LAMMPS simulation
+13:58:31: relax_029 simulation using LAMMPS successful
+13:58:31: 30/33 monomers added
+13:58:31: starting relax_030 LAMMPS simulation
+13:58:48: relax_030 simulation using LAMMPS successful
+13:58:48: 31/33 monomers added
+13:58:48: starting relax_031 LAMMPS simulation
+13:59:03: relax_031 simulation using LAMMPS successful
+13:59:03: 32/33 monomers added
+13:59:03: starting relax_032 LAMMPS simulation
+13:59:19: relax_032 simulation using LAMMPS successful
+13:59:19: 33/33 monomers added
+13:59:19: starting relax_033 LAMMPS simulation
+13:59:35: relax_033 simulation using LAMMPS successful
+polymerlength= 33 pe1, pe2, pe1, pe2, pe2, pe1, pe1, pe1, pe1, pe2, pe1, pe1, pe2, pe2, pe2, pe2, pe1, pe1, pe1, pe2, pe2, pe1, pe1, pe1, pe2, pe1, pe1, pe2, pe1, pe2, pe2, pe2, pe1, pe2
+13:59:40: starting LAMMPS simulation
+13:59:50: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+13:59:50: 1/34 monomers added
+13:59:51: 2/34 monomers added
+13:59:51: starting relax_002 LAMMPS simulation
+14:00:53: relax_002 simulation using LAMMPS successful
+14:00:53: 3/34 monomers added
+14:00:53: starting relax_003 LAMMPS simulation
+14:01:56: relax_003 simulation using LAMMPS successful
+14:01:56: 4/34 monomers added
+14:01:56: starting relax_004 LAMMPS simulation
+14:02:58: relax_004 simulation using LAMMPS successful
+14:02:58: 5/34 monomers added
+14:02:58: starting relax_005 LAMMPS simulation
+14:04:00: relax_005 simulation using LAMMPS successful
+14:04:00: 6/34 monomers added
+14:04:00: starting relax_006 LAMMPS simulation
+14:05:06: relax_006 simulation using LAMMPS successful
+14:05:06: 7/34 monomers added
+14:05:06: starting relax_007 LAMMPS simulation
+14:05:08: relax_007 simulation using LAMMPS successful
+14:05:08: 8/34 monomers added
+14:05:08: starting relax_008 LAMMPS simulation
+14:05:10: relax_008 simulation using LAMMPS successful
+14:05:11: 9/34 monomers added
+14:05:11: starting relax_009 LAMMPS simulation
+14:05:15: relax_009 simulation using LAMMPS successful
+14:05:15: 10/34 monomers added
+14:05:15: starting relax_010 LAMMPS simulation
+14:05:20: relax_010 simulation using LAMMPS successful
+14:05:20: 11/34 monomers added
+14:05:20: starting relax_011 LAMMPS simulation
+14:05:26: relax_011 simulation using LAMMPS successful
+14:05:26: 12/34 monomers added
+14:05:26: starting relax_012 LAMMPS simulation
+14:05:32: relax_012 simulation using LAMMPS successful
+14:05:32: 13/34 monomers added
+14:05:32: starting relax_013 LAMMPS simulation
+14:05:37: relax_013 simulation using LAMMPS successful
+14:05:37: 14/34 monomers added
+14:05:37: starting relax_014 LAMMPS simulation
+14:05:44: relax_014 simulation using LAMMPS successful
+14:05:44: 15/34 monomers added
+14:05:44: starting relax_015 LAMMPS simulation
+14:05:50: relax_015 simulation using LAMMPS successful
+14:05:50: 16/34 monomers added
+14:05:50: starting relax_016 LAMMPS simulation
+14:05:56: relax_016 simulation using LAMMPS successful
+14:05:57: 17/34 monomers added
+14:05:57: starting relax_017 LAMMPS simulation
+14:06:04: relax_017 simulation using LAMMPS successful
+14:06:04: 18/34 monomers added
+14:06:04: starting relax_018 LAMMPS simulation
+14:06:12: relax_018 simulation using LAMMPS successful
+14:06:12: 19/34 monomers added
+14:06:12: starting relax_019 LAMMPS simulation
+14:06:23: relax_019 simulation using LAMMPS successful
+14:06:23: 20/34 monomers added
+14:06:23: starting relax_020 LAMMPS simulation
+14:06:35: relax_020 simulation using LAMMPS successful
+14:06:35: 21/34 monomers added
+14:06:35: starting relax_021 LAMMPS simulation
+14:06:48: relax_021 simulation using LAMMPS successful
+14:06:48: 22/34 monomers added
+14:06:48: starting relax_022 LAMMPS simulation
+14:06:59: relax_022 simulation using LAMMPS successful
+14:06:59: 23/34 monomers added
+14:06:59: starting relax_023 LAMMPS simulation
+14:07:11: relax_023 simulation using LAMMPS successful
+14:07:11: 24/34 monomers added
+14:07:12: starting relax_024 LAMMPS simulation
+14:07:24: relax_024 simulation using LAMMPS successful
+14:07:24: 25/34 monomers added
+14:07:24: starting relax_025 LAMMPS simulation
+14:07:35: relax_025 simulation using LAMMPS successful
+14:07:36: 26/34 monomers added
+14:07:36: starting relax_026 LAMMPS simulation
+14:07:48: relax_026 simulation using LAMMPS successful
+14:07:48: 27/34 monomers added
+14:07:48: starting relax_027 LAMMPS simulation
+14:08:00: relax_027 simulation using LAMMPS successful
+14:08:00: 28/34 monomers added
+14:08:00: starting relax_028 LAMMPS simulation
+14:08:13: relax_028 simulation using LAMMPS successful
+14:08:13: 29/34 monomers added
+14:08:13: starting relax_029 LAMMPS simulation
+14:08:27: relax_029 simulation using LAMMPS successful
+14:08:27: 30/34 monomers added
+14:08:27: starting relax_030 LAMMPS simulation
+14:08:40: relax_030 simulation using LAMMPS successful
+14:08:40: 31/34 monomers added
+14:08:40: starting relax_031 LAMMPS simulation
+14:08:55: relax_031 simulation using LAMMPS successful
+14:08:55: 32/34 monomers added
+14:08:55: starting relax_032 LAMMPS simulation
+14:09:09: relax_032 simulation using LAMMPS successful
+14:09:10: 33/34 monomers added
+14:09:10: starting relax_033 LAMMPS simulation
+14:09:26: relax_033 simulation using LAMMPS successful
+14:09:27: 34/34 monomers added
+14:09:27: starting relax_034 LAMMPS simulation
+14:09:45: relax_034 simulation using LAMMPS successful
+polymerlength= 34 pe1, pe2, pe1, pe2, pe2, pe2, pe2, pe1, pe1, pe2, pe1, pe2, pe2, pe2, pe2, pe2, pe1, pe1, pe1, pe2, pe1, pe2, pe2, pe1, pe2, pe2, pe2, pe1, pe1, pe2, pe1, pe1, pe1, pe2, pe1
+14:09:50: starting LAMMPS simulation
+14:10:03: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+14:10:03: 1/35 monomers added
+14:10:03: 2/35 monomers added
+14:10:03: starting relax_002 LAMMPS simulation
+14:10:47: relax_002 simulation using LAMMPS successful
+14:10:47: 3/35 monomers added
+14:10:47: starting relax_003 LAMMPS simulation
+14:11:31: relax_003 simulation using LAMMPS successful
+14:11:31: 4/35 monomers added
+14:11:31: starting relax_004 LAMMPS simulation
+14:12:18: relax_004 simulation using LAMMPS successful
+14:12:18: 5/35 monomers added
+14:12:18: starting relax_005 LAMMPS simulation
+14:13:06: relax_005 simulation using LAMMPS successful
+14:13:06: 6/35 monomers added
+14:13:06: starting relax_006 LAMMPS simulation
+14:13:52: relax_006 simulation using LAMMPS successful
+14:13:52: 7/35 monomers added
+14:13:52: starting relax_007 LAMMPS simulation
+14:13:55: relax_007 simulation using LAMMPS successful
+14:13:56: 8/35 monomers added
+14:13:56: starting relax_008 LAMMPS simulation
+14:13:59: relax_008 simulation using LAMMPS successful
+14:13:59: 9/35 monomers added
+14:13:59: starting relax_009 LAMMPS simulation
+14:14:03: relax_009 simulation using LAMMPS successful
+14:14:03: 10/35 monomers added
+14:14:03: starting relax_010 LAMMPS simulation
+14:14:08: relax_010 simulation using LAMMPS successful
+14:14:08: 11/35 monomers added
+14:14:08: starting relax_011 LAMMPS simulation
+14:14:13: relax_011 simulation using LAMMPS successful
+14:14:13: 12/35 monomers added
+14:14:13: starting relax_012 LAMMPS simulation
+14:14:17: relax_012 simulation using LAMMPS successful
+14:14:17: 13/35 monomers added
+14:14:17: starting relax_013 LAMMPS simulation
+14:14:22: relax_013 simulation using LAMMPS successful
+14:14:23: 14/35 monomers added
+14:14:23: starting relax_014 LAMMPS simulation
+14:14:30: relax_014 simulation using LAMMPS successful
+14:14:30: 15/35 monomers added
+14:14:30: starting relax_015 LAMMPS simulation
+14:14:37: relax_015 simulation using LAMMPS successful
+14:14:37: 16/35 monomers added
+14:14:37: starting relax_016 LAMMPS simulation
+14:14:44: relax_016 simulation using LAMMPS successful
+14:14:44: 17/35 monomers added
+14:14:44: starting relax_017 LAMMPS simulation
+14:14:52: relax_017 simulation using LAMMPS successful
+14:14:52: 18/35 monomers added
+14:14:52: starting relax_018 LAMMPS simulation
+14:14:59: relax_018 simulation using LAMMPS successful
+14:14:59: 19/35 monomers added
+14:14:59: starting relax_019 LAMMPS simulation
+14:15:09: relax_019 simulation using LAMMPS successful
+14:15:09: 20/35 monomers added
+14:15:09: starting relax_020 LAMMPS simulation
+14:15:21: relax_020 simulation using LAMMPS successful
+14:15:21: 21/35 monomers added
+14:15:21: starting relax_021 LAMMPS simulation
+14:15:33: relax_021 simulation using LAMMPS successful
+14:15:33: 22/35 monomers added
+14:15:33: starting relax_022 LAMMPS simulation
+14:15:45: relax_022 simulation using LAMMPS successful
+14:15:45: 23/35 monomers added
+14:15:45: starting relax_023 LAMMPS simulation
+14:15:55: relax_023 simulation using LAMMPS successful
+14:15:56: 24/35 monomers added
+14:15:56: starting relax_024 LAMMPS simulation
+14:16:08: relax_024 simulation using LAMMPS successful
+14:16:08: 25/35 monomers added
+14:16:08: starting relax_025 LAMMPS simulation
+14:16:19: relax_025 simulation using LAMMPS successful
+14:16:19: 26/35 monomers added
+14:16:19: starting relax_026 LAMMPS simulation
+14:16:31: relax_026 simulation using LAMMPS successful
+14:16:31: 27/35 monomers added
+14:16:31: starting relax_027 LAMMPS simulation
+14:16:44: relax_027 simulation using LAMMPS successful
+14:16:44: 28/35 monomers added
+14:16:44: starting relax_028 LAMMPS simulation
+14:16:57: relax_028 simulation using LAMMPS successful
+14:16:57: 29/35 monomers added
+14:16:57: starting relax_029 LAMMPS simulation
+14:17:10: relax_029 simulation using LAMMPS successful
+14:17:10: 30/35 monomers added
+14:17:10: starting relax_030 LAMMPS simulation
+14:17:24: relax_030 simulation using LAMMPS successful
+14:17:24: 31/35 monomers added
+14:17:24: starting relax_031 LAMMPS simulation
+14:17:37: relax_031 simulation using LAMMPS successful
+14:17:37: 32/35 monomers added
+14:17:38: starting relax_032 LAMMPS simulation
+14:17:52: relax_032 simulation using LAMMPS successful
+14:17:52: 33/35 monomers added
+14:17:52: starting relax_033 LAMMPS simulation
+14:18:10: relax_033 simulation using LAMMPS successful
+14:18:10: 34/35 monomers added
+14:18:10: starting relax_034 LAMMPS simulation
+14:18:27: relax_034 simulation using LAMMPS successful
+14:18:27: 35/35 monomers added
+14:18:27: starting relax_035 LAMMPS simulation
+14:18:44: relax_035 simulation using LAMMPS successful
+polymerlength= 35 pe2, pe1, pe2, pe1, pe2, pe2, pe2, pe2, pe2, pe2, pe2, pe1, pe1, pe2, pe1, pe1, pe2, pe1, pe1, pe2, pe1, pe1, pe1, pe2, pe2, pe1, pe2, pe2, pe2, pe1, pe1, pe2, pe1, pe1, pe1, pe1
+14:18:50: starting LAMMPS simulation
+14:19:02: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+14:19:03: 1/36 monomers added
+14:19:03: 2/36 monomers added
+14:19:03: starting relax_002 LAMMPS simulation
+14:20:08: relax_002 simulation using LAMMPS successful
+14:20:08: 3/36 monomers added
+14:20:08: starting relax_003 LAMMPS simulation
+14:21:12: relax_003 simulation using LAMMPS successful
+14:21:12: 4/36 monomers added
+14:21:12: starting relax_004 LAMMPS simulation
+14:22:15: relax_004 simulation using LAMMPS successful
+14:22:15: 5/36 monomers added
+14:22:15: starting relax_005 LAMMPS simulation
+14:23:17: relax_005 simulation using LAMMPS successful
+14:23:17: 6/36 monomers added
+14:23:17: starting relax_006 LAMMPS simulation
+14:23:19: relax_006 simulation using LAMMPS successful
+14:23:19: 7/36 monomers added
+14:23:19: starting relax_007 LAMMPS simulation
+14:23:22: relax_007 simulation using LAMMPS successful
+14:23:22: 8/36 monomers added
+14:23:22: starting relax_008 LAMMPS simulation
+14:23:26: relax_008 simulation using LAMMPS successful
+14:23:26: 9/36 monomers added
+14:23:26: starting relax_009 LAMMPS simulation
+14:23:30: relax_009 simulation using LAMMPS successful
+14:23:30: 10/36 monomers added
+14:23:30: starting relax_010 LAMMPS simulation
+14:23:35: relax_010 simulation using LAMMPS successful
+14:23:35: 11/36 monomers added
+14:23:35: starting relax_011 LAMMPS simulation
+14:23:39: relax_011 simulation using LAMMPS successful
+14:23:39: 12/36 monomers added
+14:23:39: starting relax_012 LAMMPS simulation
+14:23:46: relax_012 simulation using LAMMPS successful
+14:23:46: 13/36 monomers added
+14:23:46: starting relax_013 LAMMPS simulation
+14:23:52: relax_013 simulation using LAMMPS successful
+14:23:52: 14/36 monomers added
+14:23:52: starting relax_014 LAMMPS simulation
+14:23:58: relax_014 simulation using LAMMPS successful
+14:23:58: 15/36 monomers added
+14:23:58: starting relax_015 LAMMPS simulation
+14:24:05: relax_015 simulation using LAMMPS successful
+14:24:05: 16/36 monomers added
+14:24:05: starting relax_016 LAMMPS simulation
+14:24:12: relax_016 simulation using LAMMPS successful
+14:24:12: 17/36 monomers added
+14:24:13: starting relax_017 LAMMPS simulation
+14:24:22: relax_017 simulation using LAMMPS successful
+14:24:22: 18/36 monomers added
+14:24:22: starting relax_018 LAMMPS simulation
+14:24:32: relax_018 simulation using LAMMPS successful
+14:24:32: 19/36 monomers added
+14:24:32: starting relax_019 LAMMPS simulation
+14:24:42: relax_019 simulation using LAMMPS successful
+14:24:42: 20/36 monomers added
+14:24:42: starting relax_020 LAMMPS simulation
+14:24:52: relax_020 simulation using LAMMPS successful
+14:24:52: 21/36 monomers added
+14:24:52: starting relax_021 LAMMPS simulation
+14:25:03: relax_021 simulation using LAMMPS successful
+14:25:03: 22/36 monomers added
+14:25:03: starting relax_022 LAMMPS simulation
+14:25:15: relax_022 simulation using LAMMPS successful
+14:25:15: 23/36 monomers added
+14:25:15: starting relax_023 LAMMPS simulation
+14:25:27: relax_023 simulation using LAMMPS successful
+14:25:28: 24/36 monomers added
+14:25:28: starting relax_024 LAMMPS simulation
+14:25:39: relax_024 simulation using LAMMPS successful
+14:25:39: 25/36 monomers added
+14:25:39: starting relax_025 LAMMPS simulation
+14:25:52: relax_025 simulation using LAMMPS successful
+14:25:52: 26/36 monomers added
+14:25:52: starting relax_026 LAMMPS simulation
+14:26:04: relax_026 simulation using LAMMPS successful
+14:26:04: 27/36 monomers added
+14:26:04: starting relax_027 LAMMPS simulation
+14:26:17: relax_027 simulation using LAMMPS successful
+14:26:17: 28/36 monomers added
+14:26:17: starting relax_028 LAMMPS simulation
+14:26:30: relax_028 simulation using LAMMPS successful
+14:26:30: 29/36 monomers added
+14:26:30: starting relax_029 LAMMPS simulation
+14:26:43: relax_029 simulation using LAMMPS successful
+14:26:43: 30/36 monomers added
+14:26:43: starting relax_030 LAMMPS simulation
+14:26:57: relax_030 simulation using LAMMPS successful
+14:26:57: 31/36 monomers added
+14:26:57: starting relax_031 LAMMPS simulation
+14:27:10: relax_031 simulation using LAMMPS successful
+14:27:10: 32/36 monomers added
+14:27:10: starting relax_032 LAMMPS simulation
+14:27:26: relax_032 simulation using LAMMPS successful
+14:27:27: 33/36 monomers added
+14:27:27: starting relax_033 LAMMPS simulation
+14:27:45: relax_033 simulation using LAMMPS successful
+14:27:46: 34/36 monomers added
+14:27:46: starting relax_034 LAMMPS simulation
+14:28:04: relax_034 simulation using LAMMPS successful
+14:28:04: 35/36 monomers added
+14:28:04: starting relax_035 LAMMPS simulation
+14:28:22: relax_035 simulation using LAMMPS successful
+14:28:22: 36/36 monomers added
+14:28:22: starting relax_036 LAMMPS simulation
+14:28:40: relax_036 simulation using LAMMPS successful
+polymerlength= 36 pe1, pe1, pe2, pe2, pe1, pe1, pe1, pe2, pe1, pe2, pe2, pe2, pe2, pe2, pe1, pe1, pe1, pe2, pe1, pe2, pe2, pe2, pe1, pe1, pe1, pe2, pe1, pe1, pe2, pe2, pe2, pe1, pe1, pe1, pe1, pe2, pe1
+14:28:45: starting LAMMPS simulation
+14:28:54: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+14:28:54: 1/37 monomers added
+14:28:54: 2/37 monomers added
+14:28:54: starting relax_002 LAMMPS simulation
+14:29:59: relax_002 simulation using LAMMPS successful
+14:29:59: 3/37 monomers added
+14:29:59: starting relax_003 LAMMPS simulation
+14:31:00: relax_003 simulation using LAMMPS successful
+14:31:00: 4/37 monomers added
+14:31:00: starting relax_004 LAMMPS simulation
+14:32:03: relax_004 simulation using LAMMPS successful
+14:32:03: 5/37 monomers added
+14:32:03: starting relax_005 LAMMPS simulation
+14:33:07: relax_005 simulation using LAMMPS successful
+14:33:07: 6/37 monomers added
+14:33:07: starting relax_006 LAMMPS simulation
+14:34:11: relax_006 simulation using LAMMPS successful
+14:34:11: 7/37 monomers added
+14:34:11: starting relax_007 LAMMPS simulation
+14:34:13: relax_007 simulation using LAMMPS successful
+14:34:13: 8/37 monomers added
+14:34:13: starting relax_008 LAMMPS simulation
+14:34:17: relax_008 simulation using LAMMPS successful
+14:34:17: 9/37 monomers added
+14:34:17: starting relax_009 LAMMPS simulation
+14:34:22: relax_009 simulation using LAMMPS successful
+14:34:22: 10/37 monomers added
+14:34:22: starting relax_010 LAMMPS simulation
+14:34:26: relax_010 simulation using LAMMPS successful
+14:34:26: 11/37 monomers added
+14:34:26: starting relax_011 LAMMPS simulation
+14:34:31: relax_011 simulation using LAMMPS successful
+14:34:31: 12/37 monomers added
+14:34:31: starting relax_012 LAMMPS simulation
+14:34:35: relax_012 simulation using LAMMPS successful
+14:34:35: 13/37 monomers added
+14:34:36: starting relax_013 LAMMPS simulation
+14:34:42: relax_013 simulation using LAMMPS successful
+14:34:42: 14/37 monomers added
+14:34:42: starting relax_014 LAMMPS simulation
+14:34:47: relax_014 simulation using LAMMPS successful
+14:34:48: 15/37 monomers added
+14:34:48: starting relax_015 LAMMPS simulation
+14:34:55: relax_015 simulation using LAMMPS successful
+14:34:55: 16/37 monomers added
+14:34:55: starting relax_016 LAMMPS simulation
+14:35:01: relax_016 simulation using LAMMPS successful
+14:35:01: 17/37 monomers added
+14:35:01: starting relax_017 LAMMPS simulation
+14:35:12: relax_017 simulation using LAMMPS successful
+14:35:12: 18/37 monomers added
+14:35:12: starting relax_018 LAMMPS simulation
+14:35:23: relax_018 simulation using LAMMPS successful
+14:35:23: 19/37 monomers added
+14:35:23: starting relax_019 LAMMPS simulation
+14:35:35: relax_019 simulation using LAMMPS successful
+14:35:35: 20/37 monomers added
+14:35:35: starting relax_020 LAMMPS simulation
+14:35:46: relax_020 simulation using LAMMPS successful
+14:35:46: 21/37 monomers added
+14:35:46: starting relax_021 LAMMPS simulation
+14:35:58: relax_021 simulation using LAMMPS successful
+14:35:58: 22/37 monomers added
+14:35:58: starting relax_022 LAMMPS simulation
+14:36:10: relax_022 simulation using LAMMPS successful
+14:36:10: 23/37 monomers added
+14:36:10: starting relax_023 LAMMPS simulation
+14:36:22: relax_023 simulation using LAMMPS successful
+14:36:22: 24/37 monomers added
+14:36:22: starting relax_024 LAMMPS simulation
+14:36:35: relax_024 simulation using LAMMPS successful
+14:36:36: 25/37 monomers added
+14:36:36: starting relax_025 LAMMPS simulation
+14:36:47: relax_025 simulation using LAMMPS successful
+14:36:48: 26/37 monomers added
+14:36:48: starting relax_026 LAMMPS simulation
+14:37:00: relax_026 simulation using LAMMPS successful
+14:37:00: 27/37 monomers added
+14:37:00: starting relax_027 LAMMPS simulation
+14:37:14: relax_027 simulation using LAMMPS successful
+14:37:14: 28/37 monomers added
+14:37:14: starting relax_028 LAMMPS simulation
+14:37:27: relax_028 simulation using LAMMPS successful
+14:37:27: 29/37 monomers added
+14:37:27: starting relax_029 LAMMPS simulation
+14:37:44: relax_029 simulation using LAMMPS successful
+14:37:44: 30/37 monomers added
+14:37:44: starting relax_030 LAMMPS simulation
+14:37:59: relax_030 simulation using LAMMPS successful
+14:37:59: 31/37 monomers added
+14:37:59: starting relax_031 LAMMPS simulation
+14:38:15: relax_031 simulation using LAMMPS successful
+14:38:15: 32/37 monomers added
+14:38:15: starting relax_032 LAMMPS simulation
+14:38:32: relax_032 simulation using LAMMPS successful
+14:38:32: 33/37 monomers added
+14:38:32: starting relax_033 LAMMPS simulation
+14:38:50: relax_033 simulation using LAMMPS successful
+14:38:50: 34/37 monomers added
+14:38:50: starting relax_034 LAMMPS simulation
+14:39:07: relax_034 simulation using LAMMPS successful
+14:39:07: 35/37 monomers added
+14:39:07: starting relax_035 LAMMPS simulation
+14:39:25: relax_035 simulation using LAMMPS successful
+14:39:25: 36/37 monomers added
+14:39:25: starting relax_036 LAMMPS simulation
+14:39:43: relax_036 simulation using LAMMPS successful
+14:39:43: 37/37 monomers added
+14:39:43: starting relax_037 LAMMPS simulation
+14:40:01: relax_037 simulation using LAMMPS successful
+polymerlength= 37 pe1, pe2, pe1, pe1, pe2, pe2, pe1, pe1, pe2, pe2, pe2, pe1, pe1, pe2, pe1, pe1, pe1, pe1, pe2, pe1, pe1, pe2, pe2, pe2, pe1, pe2, pe1, pe1, pe1, pe1, pe2, pe1, pe1, pe1, pe1, pe2, pe1, pe1
+14:40:07: starting LAMMPS simulation
+14:40:25: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+14:40:25: 1/38 monomers added
+14:40:25: 2/38 monomers added
+14:40:25: starting relax_002 LAMMPS simulation
+14:41:27: relax_002 simulation using LAMMPS successful
+14:41:28: 3/38 monomers added
+14:41:28: starting relax_003 LAMMPS simulation
+14:42:31: relax_003 simulation using LAMMPS successful
+14:42:31: 4/38 monomers added
+14:42:31: starting relax_004 LAMMPS simulation
+14:43:35: relax_004 simulation using LAMMPS successful
+14:43:35: 5/38 monomers added
+14:43:36: starting relax_005 LAMMPS simulation
+14:44:37: relax_005 simulation using LAMMPS successful
+14:44:37: 6/38 monomers added
+14:44:37: starting relax_006 LAMMPS simulation
+14:45:42: relax_006 simulation using LAMMPS successful
+14:45:42: 7/38 monomers added
+14:45:42: starting relax_007 LAMMPS simulation
+14:46:47: relax_007 simulation using LAMMPS successful
+14:46:47: 8/38 monomers added
+14:46:47: starting relax_008 LAMMPS simulation
+14:46:50: relax_008 simulation using LAMMPS successful
+14:46:50: 9/38 monomers added
+14:46:50: starting relax_009 LAMMPS simulation
+14:46:52: relax_009 simulation using LAMMPS successful
+14:46:53: 10/38 monomers added
+14:46:53: starting relax_010 LAMMPS simulation
+14:46:57: relax_010 simulation using LAMMPS successful
+14:46:57: 11/38 monomers added
+14:46:57: starting relax_011 LAMMPS simulation
+14:47:01: relax_011 simulation using LAMMPS successful
+14:47:01: 12/38 monomers added
+14:47:01: starting relax_012 LAMMPS simulation
+14:47:07: relax_012 simulation using LAMMPS successful
+14:47:07: 13/38 monomers added
+14:47:07: starting relax_013 LAMMPS simulation
+14:47:12: relax_013 simulation using LAMMPS successful
+14:47:12: 14/38 monomers added
+14:47:12: starting relax_014 LAMMPS simulation
+14:47:19: relax_014 simulation using LAMMPS successful
+14:47:19: 15/38 monomers added
+14:47:19: starting relax_015 LAMMPS simulation
+14:47:26: relax_015 simulation using LAMMPS successful
+14:47:26: 16/38 monomers added
+14:47:26: starting relax_016 LAMMPS simulation
+14:47:34: relax_016 simulation using LAMMPS successful
+14:47:34: 17/38 monomers added
+14:47:34: starting relax_017 LAMMPS simulation
+14:47:41: relax_017 simulation using LAMMPS successful
+14:47:41: 18/38 monomers added
+14:47:41: starting relax_018 LAMMPS simulation
+14:47:49: relax_018 simulation using LAMMPS successful
+14:47:49: 19/38 monomers added
+14:47:49: starting relax_019 LAMMPS simulation
+14:47:59: relax_019 simulation using LAMMPS successful
+14:47:59: 20/38 monomers added
+14:47:59: starting relax_020 LAMMPS simulation
+14:48:10: relax_020 simulation using LAMMPS successful
+14:48:10: 21/38 monomers added
+14:48:10: starting relax_021 LAMMPS simulation
+14:48:21: relax_021 simulation using LAMMPS successful
+14:48:21: 22/38 monomers added
+14:48:21: starting relax_022 LAMMPS simulation
+14:48:32: relax_022 simulation using LAMMPS successful
+14:48:32: 23/38 monomers added
+14:48:32: starting relax_023 LAMMPS simulation
+14:48:43: relax_023 simulation using LAMMPS successful
+14:48:43: 24/38 monomers added
+14:48:43: starting relax_024 LAMMPS simulation
+14:48:55: relax_024 simulation using LAMMPS successful
+14:48:55: 25/38 monomers added
+14:48:55: starting relax_025 LAMMPS simulation
+14:49:07: relax_025 simulation using LAMMPS successful
+14:49:07: 26/38 monomers added
+14:49:07: starting relax_026 LAMMPS simulation
+14:49:20: relax_026 simulation using LAMMPS successful
+14:49:20: 27/38 monomers added
+14:49:20: starting relax_027 LAMMPS simulation
+14:49:33: relax_027 simulation using LAMMPS successful
+14:49:34: 28/38 monomers added
+14:49:34: starting relax_028 LAMMPS simulation
+14:49:47: relax_028 simulation using LAMMPS successful
+14:49:47: 29/38 monomers added
+14:49:47: starting relax_029 LAMMPS simulation
+14:50:00: relax_029 simulation using LAMMPS successful
+14:50:00: 30/38 monomers added
+14:50:00: starting relax_030 LAMMPS simulation
+14:50:15: relax_030 simulation using LAMMPS successful
+14:50:15: 31/38 monomers added
+14:50:15: starting relax_031 LAMMPS simulation
+14:50:29: relax_031 simulation using LAMMPS successful
+14:50:29: 32/38 monomers added
+14:50:29: starting relax_032 LAMMPS simulation
+14:50:45: relax_032 simulation using LAMMPS successful
+14:50:45: 33/38 monomers added
+14:50:45: starting relax_033 LAMMPS simulation
+14:51:01: relax_033 simulation using LAMMPS successful
+14:51:01: 34/38 monomers added
+14:51:01: starting relax_034 LAMMPS simulation
+14:51:21: relax_034 simulation using LAMMPS successful
+14:51:21: 35/38 monomers added
+14:51:21: starting relax_035 LAMMPS simulation
+14:51:39: relax_035 simulation using LAMMPS successful
+14:51:39: 36/38 monomers added
+14:51:39: starting relax_036 LAMMPS simulation
+14:51:58: relax_036 simulation using LAMMPS successful
+14:51:58: 37/38 monomers added
+14:51:58: starting relax_037 LAMMPS simulation
+14:52:18: relax_037 simulation using LAMMPS successful
+14:52:18: 38/38 monomers added
+14:52:18: starting relax_038 LAMMPS simulation
+14:52:38: relax_038 simulation using LAMMPS successful
+polymerlength= 38 pe1, pe2, pe2, pe1, pe2, pe2, pe2, pe1, pe2, pe2, pe1, pe1, pe1, pe1, pe2, pe2, pe1, pe2, pe2, pe2, pe1, pe2, pe1, pe2, pe1, pe2, pe2, pe1, pe2, pe1, pe2, pe2, pe1, pe2, pe2, pe1, pe2, pe2, pe1
+14:52:44: starting LAMMPS simulation
+14:52:58: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+14:52:58: 1/39 monomers added
+14:52:58: 2/39 monomers added
+14:52:58: starting relax_002 LAMMPS simulation
+14:53:59: relax_002 simulation using LAMMPS successful
+14:53:59: 3/39 monomers added
+14:53:59: starting relax_003 LAMMPS simulation
+14:55:05: relax_003 simulation using LAMMPS successful
+14:55:05: 4/39 monomers added
+14:55:05: starting relax_004 LAMMPS simulation
+14:56:06: relax_004 simulation using LAMMPS successful
+14:56:06: 5/39 monomers added
+14:56:06: starting relax_005 LAMMPS simulation
+14:57:10: relax_005 simulation using LAMMPS successful
+14:57:10: 6/39 monomers added
+14:57:10: starting relax_006 LAMMPS simulation
+14:58:17: relax_006 simulation using LAMMPS successful
+14:58:17: 7/39 monomers added
+14:58:17: starting relax_007 LAMMPS simulation
+14:59:22: relax_007 simulation using LAMMPS successful
+14:59:22: 8/39 monomers added
+14:59:22: starting relax_008 LAMMPS simulation
+14:59:25: relax_008 simulation using LAMMPS successful
+14:59:25: 9/39 monomers added
+14:59:25: starting relax_009 LAMMPS simulation
+14:59:28: relax_009 simulation using LAMMPS successful
+14:59:28: 10/39 monomers added
+14:59:28: starting relax_010 LAMMPS simulation
+14:59:32: relax_010 simulation using LAMMPS successful
+14:59:32: 11/39 monomers added
+14:59:32: starting relax_011 LAMMPS simulation
+14:59:37: relax_011 simulation using LAMMPS successful
+14:59:37: 12/39 monomers added
+14:59:38: starting relax_012 LAMMPS simulation
+14:59:44: relax_012 simulation using LAMMPS successful
+14:59:44: 13/39 monomers added
+14:59:44: starting relax_013 LAMMPS simulation
+14:59:50: relax_013 simulation using LAMMPS successful
+14:59:51: 14/39 monomers added
+14:59:51: starting relax_014 LAMMPS simulation
+14:59:57: relax_014 simulation using LAMMPS successful
+14:59:58: 15/39 monomers added
+14:59:58: starting relax_015 LAMMPS simulation
+15:00:04: relax_015 simulation using LAMMPS successful
+15:00:04: 16/39 monomers added
+15:00:04: starting relax_016 LAMMPS simulation
+15:00:13: relax_016 simulation using LAMMPS successful
+15:00:13: 17/39 monomers added
+15:00:13: starting relax_017 LAMMPS simulation
+15:00:21: relax_017 simulation using LAMMPS successful
+15:00:21: 18/39 monomers added
+15:00:21: starting relax_018 LAMMPS simulation
+15:00:32: relax_018 simulation using LAMMPS successful
+15:00:32: 19/39 monomers added
+15:00:32: starting relax_019 LAMMPS simulation
+15:00:43: relax_019 simulation using LAMMPS successful
+15:00:43: 20/39 monomers added
+15:00:43: starting relax_020 LAMMPS simulation
+15:00:57: relax_020 simulation using LAMMPS successful
+15:00:57: 21/39 monomers added
+15:00:57: starting relax_021 LAMMPS simulation
+15:01:08: relax_021 simulation using LAMMPS successful
+15:01:08: 22/39 monomers added
+15:01:08: starting relax_022 LAMMPS simulation
+15:01:19: relax_022 simulation using LAMMPS successful
+15:01:19: 23/39 monomers added
+15:01:19: starting relax_023 LAMMPS simulation
+15:01:31: relax_023 simulation using LAMMPS successful
+15:01:31: 24/39 monomers added
+15:01:31: starting relax_024 LAMMPS simulation
+15:01:43: relax_024 simulation using LAMMPS successful
+15:01:43: 25/39 monomers added
+15:01:43: starting relax_025 LAMMPS simulation
+15:01:55: relax_025 simulation using LAMMPS successful
+15:01:55: 26/39 monomers added
+15:01:55: starting relax_026 LAMMPS simulation
+15:02:08: relax_026 simulation using LAMMPS successful
+15:02:08: 27/39 monomers added
+15:02:08: starting relax_027 LAMMPS simulation
+15:02:21: relax_027 simulation using LAMMPS successful
+15:02:21: 28/39 monomers added
+15:02:21: starting relax_028 LAMMPS simulation
+15:02:35: relax_028 simulation using LAMMPS successful
+15:02:35: 29/39 monomers added
+15:02:35: starting relax_029 LAMMPS simulation
+15:02:48: relax_029 simulation using LAMMPS successful
+15:02:49: 30/39 monomers added
+15:02:49: starting relax_030 LAMMPS simulation
+15:03:02: relax_030 simulation using LAMMPS successful
+15:03:02: 31/39 monomers added
+15:03:02: starting relax_031 LAMMPS simulation
+15:03:18: relax_031 simulation using LAMMPS successful
+15:03:19: 32/39 monomers added
+15:03:19: starting relax_032 LAMMPS simulation
+15:03:34: relax_032 simulation using LAMMPS successful
+15:03:34: 33/39 monomers added
+15:03:34: starting relax_033 LAMMPS simulation
+15:03:49: relax_033 simulation using LAMMPS successful
+15:03:49: 34/39 monomers added
+15:03:50: starting relax_034 LAMMPS simulation
+15:04:06: relax_034 simulation using LAMMPS successful
+15:04:06: 35/39 monomers added
+15:04:06: starting relax_035 LAMMPS simulation
+15:04:22: relax_035 simulation using LAMMPS successful
+15:04:22: 36/39 monomers added
+15:04:22: starting relax_036 LAMMPS simulation
+15:04:39: relax_036 simulation using LAMMPS successful
+15:04:39: 37/39 monomers added
+15:04:39: starting relax_037 LAMMPS simulation
+15:04:56: relax_037 simulation using LAMMPS successful
+15:04:56: 38/39 monomers added
+15:04:56: starting relax_038 LAMMPS simulation
+15:05:13: relax_038 simulation using LAMMPS successful
+15:05:14: 39/39 monomers added
+15:05:14: starting relax_039 LAMMPS simulation
+15:05:33: relax_039 simulation using LAMMPS successful
+polymerlength= 39 pe1, pe2, pe2, pe2, pe2, pe1, pe2, pe1, pe1, pe2, pe1, pe2, pe1, pe2, pe1, pe1, pe1, pe1, pe1, pe1, pe2, pe2, pe1, pe2, pe1, pe2, pe1, pe1, pe2, pe2, pe1, pe1, pe1, pe2, pe1, pe2, pe2, pe1, pe2, pe2
+15:05:39: starting LAMMPS simulation
+15:05:51: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:05:51: 1/40 monomers added
+15:05:51: 2/40 monomers added
+15:05:51: starting relax_002 LAMMPS simulation
+15:06:54: relax_002 simulation using LAMMPS successful
+15:06:54: 3/40 monomers added
+15:06:54: starting relax_003 LAMMPS simulation
+15:07:57: relax_003 simulation using LAMMPS successful
+15:07:57: 4/40 monomers added
+15:07:57: starting relax_004 LAMMPS simulation
+15:08:57: relax_004 simulation using LAMMPS successful
+15:08:58: 5/40 monomers added
+15:08:58: starting relax_005 LAMMPS simulation
+15:10:03: relax_005 simulation using LAMMPS successful
+15:10:03: 6/40 monomers added
+15:10:03: starting relax_006 LAMMPS simulation
+15:10:05: relax_006 simulation using LAMMPS successful
+15:10:05: 7/40 monomers added
+15:10:05: starting relax_007 LAMMPS simulation
+15:10:08: relax_007 simulation using LAMMPS successful
+15:10:08: 8/40 monomers added
+15:10:08: starting relax_008 LAMMPS simulation
+15:10:11: relax_008 simulation using LAMMPS successful
+15:10:11: 9/40 monomers added
+15:10:11: starting relax_009 LAMMPS simulation
+15:10:16: relax_009 simulation using LAMMPS successful
+15:10:16: 10/40 monomers added
+15:10:16: starting relax_010 LAMMPS simulation
+15:10:20: relax_010 simulation using LAMMPS successful
+15:10:20: 11/40 monomers added
+15:10:20: starting relax_011 LAMMPS simulation
+15:10:25: relax_011 simulation using LAMMPS successful
+15:10:25: 12/40 monomers added
+15:10:25: starting relax_012 LAMMPS simulation
+15:10:31: relax_012 simulation using LAMMPS successful
+15:10:32: 13/40 monomers added
+15:10:32: starting relax_013 LAMMPS simulation
+15:10:39: relax_013 simulation using LAMMPS successful
+15:10:39: 14/40 monomers added
+15:10:39: starting relax_014 LAMMPS simulation
+15:10:46: relax_014 simulation using LAMMPS successful
+15:10:46: 15/40 monomers added
+15:10:46: starting relax_015 LAMMPS simulation
+15:10:55: relax_015 simulation using LAMMPS successful
+15:10:56: 16/40 monomers added
+15:10:56: starting relax_016 LAMMPS simulation
+15:11:05: relax_016 simulation using LAMMPS successful
+15:11:05: 17/40 monomers added
+15:11:05: starting relax_017 LAMMPS simulation
+15:11:15: relax_017 simulation using LAMMPS successful
+15:11:16: 18/40 monomers added
+15:11:16: starting relax_018 LAMMPS simulation
+15:11:26: relax_018 simulation using LAMMPS successful
+15:11:26: 19/40 monomers added
+15:11:26: starting relax_019 LAMMPS simulation
+15:11:36: relax_019 simulation using LAMMPS successful
+15:11:36: 20/40 monomers added
+15:11:36: starting relax_020 LAMMPS simulation
+15:11:47: relax_020 simulation using LAMMPS successful
+15:11:47: 21/40 monomers added
+15:11:47: starting relax_021 LAMMPS simulation
+15:11:58: relax_021 simulation using LAMMPS successful
+15:11:58: 22/40 monomers added
+15:11:59: starting relax_022 LAMMPS simulation
+15:12:11: relax_022 simulation using LAMMPS successful
+15:12:11: 23/40 monomers added
+15:12:11: starting relax_023 LAMMPS simulation
+15:12:23: relax_023 simulation using LAMMPS successful
+15:12:23: 24/40 monomers added
+15:12:23: starting relax_024 LAMMPS simulation
+15:12:35: relax_024 simulation using LAMMPS successful
+15:12:35: 25/40 monomers added
+15:12:35: starting relax_025 LAMMPS simulation
+15:12:47: relax_025 simulation using LAMMPS successful
+15:12:47: 26/40 monomers added
+15:12:47: starting relax_026 LAMMPS simulation
+15:13:00: relax_026 simulation using LAMMPS successful
+15:13:00: 27/40 monomers added
+15:13:00: starting relax_027 LAMMPS simulation
+15:13:14: relax_027 simulation using LAMMPS successful
+15:13:14: 28/40 monomers added
+15:13:14: starting relax_028 LAMMPS simulation
+15:13:27: relax_028 simulation using LAMMPS successful
+15:13:27: 29/40 monomers added
+15:13:27: starting relax_029 LAMMPS simulation
+15:13:41: relax_029 simulation using LAMMPS successful
+15:13:41: 30/40 monomers added
+15:13:41: starting relax_030 LAMMPS simulation
+15:13:57: relax_030 simulation using LAMMPS successful
+15:13:57: 31/40 monomers added
+15:13:57: starting relax_031 LAMMPS simulation
+15:14:13: relax_031 simulation using LAMMPS successful
+15:14:13: 32/40 monomers added
+15:14:13: starting relax_032 LAMMPS simulation
+15:14:29: relax_032 simulation using LAMMPS successful
+15:14:30: 33/40 monomers added
+15:14:30: starting relax_033 LAMMPS simulation
+15:14:47: relax_033 simulation using LAMMPS successful
+15:14:47: 34/40 monomers added
+15:14:47: starting relax_034 LAMMPS simulation
+15:15:03: relax_034 simulation using LAMMPS successful
+15:15:03: 35/40 monomers added
+15:15:03: starting relax_035 LAMMPS simulation
+15:15:19: relax_035 simulation using LAMMPS successful
+15:15:19: 36/40 monomers added
+15:15:19: starting relax_036 LAMMPS simulation
+15:15:36: relax_036 simulation using LAMMPS successful
+15:15:36: 37/40 monomers added
+15:15:36: starting relax_037 LAMMPS simulation
+15:15:55: relax_037 simulation using LAMMPS successful
+15:15:55: 38/40 monomers added
+15:15:55: starting relax_038 LAMMPS simulation
+15:16:14: relax_038 simulation using LAMMPS successful
+15:16:14: 39/40 monomers added
+15:16:14: starting relax_039 LAMMPS simulation
+15:16:33: relax_039 simulation using LAMMPS successful
+15:16:33: 40/40 monomers added
+15:16:33: starting relax_040 LAMMPS simulation
+15:16:53: relax_040 simulation using LAMMPS successful
+polymerlength= 40 pe1, pe1, pe1, pe2, pe1, pe1, pe2, pe1, pe1, pe2, pe1, pe2, pe1, pe1, pe1, pe2, pe2, pe2, pe2, pe1, pe1, pe2, pe2, pe1, pe2, pe2, pe2, pe1, pe1, pe1, pe1, pe2, pe2, pe1, pe1, pe1, pe1, pe1, pe1, pe2, pe2
+15:16:59: starting LAMMPS simulation
+15:17:12: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:17:12: 1/41 monomers added
+15:17:12: 2/41 monomers added
+15:17:12: starting relax_002 LAMMPS simulation
+15:18:12: relax_002 simulation using LAMMPS successful
+15:18:13: 3/41 monomers added
+15:18:13: starting relax_003 LAMMPS simulation
+15:19:20: relax_003 simulation using LAMMPS successful
+15:19:20: 4/41 monomers added
+15:19:20: starting relax_004 LAMMPS simulation
+15:20:26: relax_004 simulation using LAMMPS successful
+15:20:26: 5/41 monomers added
+15:20:26: starting relax_005 LAMMPS simulation
+15:21:28: relax_005 simulation using LAMMPS successful
+15:21:28: 6/41 monomers added
+15:21:28: starting relax_006 LAMMPS simulation
+15:22:31: relax_006 simulation using LAMMPS successful
+15:22:31: 7/41 monomers added
+15:22:31: starting relax_007 LAMMPS simulation
+15:23:38: relax_007 simulation using LAMMPS successful
+15:23:38: 8/41 monomers added
+15:23:39: starting relax_008 LAMMPS simulation
+15:23:41: relax_008 simulation using LAMMPS successful
+15:23:41: 9/41 monomers added
+15:23:41: starting relax_009 LAMMPS simulation
+15:23:44: relax_009 simulation using LAMMPS successful
+15:23:44: 10/41 monomers added
+15:23:44: starting relax_010 LAMMPS simulation
+15:23:48: relax_010 simulation using LAMMPS successful
+15:23:48: 11/41 monomers added
+15:23:48: starting relax_011 LAMMPS simulation
+15:23:52: relax_011 simulation using LAMMPS successful
+15:23:52: 12/41 monomers added
+15:23:52: starting relax_012 LAMMPS simulation
+15:23:57: relax_012 simulation using LAMMPS successful
+15:23:57: 13/41 monomers added
+15:23:57: starting relax_013 LAMMPS simulation
+15:24:02: relax_013 simulation using LAMMPS successful
+15:24:02: 14/41 monomers added
+15:24:03: starting relax_014 LAMMPS simulation
+15:24:09: relax_014 simulation using LAMMPS successful
+15:24:09: 15/41 monomers added
+15:24:09: starting relax_015 LAMMPS simulation
+15:24:15: relax_015 simulation using LAMMPS successful
+15:24:15: 16/41 monomers added
+15:24:15: starting relax_016 LAMMPS simulation
+15:24:21: relax_016 simulation using LAMMPS successful
+15:24:21: 17/41 monomers added
+15:24:21: starting relax_017 LAMMPS simulation
+15:24:30: relax_017 simulation using LAMMPS successful
+15:24:30: 18/41 monomers added
+15:24:30: starting relax_018 LAMMPS simulation
+15:24:38: relax_018 simulation using LAMMPS successful
+15:24:38: 19/41 monomers added
+15:24:38: starting relax_019 LAMMPS simulation
+15:24:47: relax_019 simulation using LAMMPS successful
+15:24:47: 20/41 monomers added
+15:24:47: starting relax_020 LAMMPS simulation
+15:24:58: relax_020 simulation using LAMMPS successful
+15:24:58: 21/41 monomers added
+15:24:58: starting relax_021 LAMMPS simulation
+15:25:09: relax_021 simulation using LAMMPS successful
+15:25:09: 22/41 monomers added
+15:25:09: starting relax_022 LAMMPS simulation
+15:25:21: relax_022 simulation using LAMMPS successful
+15:25:21: 23/41 monomers added
+15:25:21: starting relax_023 LAMMPS simulation
+15:25:35: relax_023 simulation using LAMMPS successful
+15:25:35: 24/41 monomers added
+15:25:35: starting relax_024 LAMMPS simulation
+15:25:47: relax_024 simulation using LAMMPS successful
+15:25:47: 25/41 monomers added
+15:25:47: starting relax_025 LAMMPS simulation
+15:26:00: relax_025 simulation using LAMMPS successful
+15:26:00: 26/41 monomers added
+15:26:00: starting relax_026 LAMMPS simulation
+15:26:11: relax_026 simulation using LAMMPS successful
+15:26:12: 27/41 monomers added
+15:26:12: starting relax_027 LAMMPS simulation
+15:26:23: relax_027 simulation using LAMMPS successful
+15:26:23: 28/41 monomers added
+15:26:24: starting relax_028 LAMMPS simulation
+15:26:36: relax_028 simulation using LAMMPS successful
+15:26:36: 29/41 monomers added
+15:26:36: starting relax_029 LAMMPS simulation
+15:26:49: relax_029 simulation using LAMMPS successful
+15:26:49: 30/41 monomers added
+15:26:49: starting relax_030 LAMMPS simulation
+15:27:02: relax_030 simulation using LAMMPS successful
+15:27:02: 31/41 monomers added
+15:27:02: starting relax_031 LAMMPS simulation
+15:27:16: relax_031 simulation using LAMMPS successful
+15:27:16: 32/41 monomers added
+15:27:16: starting relax_032 LAMMPS simulation
+15:27:30: relax_032 simulation using LAMMPS successful
+15:27:30: 33/41 monomers added
+15:27:30: starting relax_033 LAMMPS simulation
+15:27:45: relax_033 simulation using LAMMPS successful
+15:27:45: 34/41 monomers added
+15:27:45: starting relax_034 LAMMPS simulation
+15:28:00: relax_034 simulation using LAMMPS successful
+15:28:00: 35/41 monomers added
+15:28:00: starting relax_035 LAMMPS simulation
+15:28:18: relax_035 simulation using LAMMPS successful
+15:28:19: 36/41 monomers added
+15:28:19: starting relax_036 LAMMPS simulation
+15:28:39: relax_036 simulation using LAMMPS successful
+15:28:39: 37/41 monomers added
+15:28:39: starting relax_037 LAMMPS simulation
+15:28:58: relax_037 simulation using LAMMPS successful
+15:28:58: 38/41 monomers added
+15:28:58: starting relax_038 LAMMPS simulation
+15:29:18: relax_038 simulation using LAMMPS successful
+15:29:18: 39/41 monomers added
+15:29:18: starting relax_039 LAMMPS simulation
+15:29:39: relax_039 simulation using LAMMPS successful
+15:29:39: 40/41 monomers added
+15:29:39: starting relax_040 LAMMPS simulation
+15:30:00: relax_040 simulation using LAMMPS successful
+15:30:00: 41/41 monomers added
+15:30:00: starting relax_041 LAMMPS simulation
+15:30:20: relax_041 simulation using LAMMPS successful
+polymerlength= 41 pe2, pe1, pe1, pe2, pe2, pe2, pe2, pe1, pe2, pe2, pe2, pe1, pe2, pe2, pe1, pe2, pe1, pe1, pe2, pe1, pe2, pe2, pe1, pe1, pe2, pe2, pe1, pe2, pe2, pe1, pe2, pe2, pe2, pe1, pe1, pe2, pe1, pe2, pe2, pe1, pe1, pe1
+15:30:28: starting LAMMPS simulation
+15:30:43: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:30:44: 1/42 monomers added
+15:30:44: 2/42 monomers added
+15:30:44: starting relax_002 LAMMPS simulation
+15:31:49: relax_002 simulation using LAMMPS successful
+15:31:49: 3/42 monomers added
+15:31:49: starting relax_003 LAMMPS simulation
+15:32:55: relax_003 simulation using LAMMPS successful
+15:32:55: 4/42 monomers added
+15:32:55: starting relax_004 LAMMPS simulation
+15:33:58: relax_004 simulation using LAMMPS successful
+15:33:58: 5/42 monomers added
+15:33:58: starting relax_005 LAMMPS simulation
+15:35:03: relax_005 simulation using LAMMPS successful
+15:35:03: 6/42 monomers added
+15:35:03: starting relax_006 LAMMPS simulation
+15:36:09: relax_006 simulation using LAMMPS successful
+15:36:09: 7/42 monomers added
+15:36:09: starting relax_007 LAMMPS simulation
+15:37:17: relax_007 simulation using LAMMPS successful
+15:37:17: 8/42 monomers added
+15:37:17: starting relax_008 LAMMPS simulation
+15:38:38: relax_008 simulation using LAMMPS successful
+15:38:38: 9/42 monomers added
+15:38:38: starting relax_009 LAMMPS simulation
+15:38:42: relax_009 simulation using LAMMPS successful
+15:38:42: 10/42 monomers added
+15:38:42: starting relax_010 LAMMPS simulation
+15:38:46: relax_010 simulation using LAMMPS successful
+15:38:46: 11/42 monomers added
+15:38:46: starting relax_011 LAMMPS simulation
+15:38:50: relax_011 simulation using LAMMPS successful
+15:38:50: 12/42 monomers added
+15:38:50: starting relax_012 LAMMPS simulation
+15:38:55: relax_012 simulation using LAMMPS successful
+15:38:55: 13/42 monomers added
+15:38:55: starting relax_013 LAMMPS simulation
+15:39:00: relax_013 simulation using LAMMPS successful
+15:39:01: 14/42 monomers added
+15:39:01: starting relax_014 LAMMPS simulation
+15:39:06: relax_014 simulation using LAMMPS successful
+15:39:06: 15/42 monomers added
+15:39:06: starting relax_015 LAMMPS simulation
+15:39:14: relax_015 simulation using LAMMPS successful
+15:39:14: 16/42 monomers added
+15:39:14: starting relax_016 LAMMPS simulation
+15:39:21: relax_016 simulation using LAMMPS successful
+15:39:21: 17/42 monomers added
+15:39:21: starting relax_017 LAMMPS simulation
+15:39:28: relax_017 simulation using LAMMPS successful
+15:39:28: 18/42 monomers added
+15:39:28: starting relax_018 LAMMPS simulation
+15:39:38: relax_018 simulation using LAMMPS successful
+15:39:38: 19/42 monomers added
+15:39:38: starting relax_019 LAMMPS simulation
+15:39:48: relax_019 simulation using LAMMPS successful
+15:39:49: 20/42 monomers added
+15:39:49: starting relax_020 LAMMPS simulation
+15:39:59: relax_020 simulation using LAMMPS successful
+15:39:59: 21/42 monomers added
+15:39:59: starting relax_021 LAMMPS simulation
+15:40:10: relax_021 simulation using LAMMPS successful
+15:40:10: 22/42 monomers added
+15:40:10: starting relax_022 LAMMPS simulation
+15:40:21: relax_022 simulation using LAMMPS successful
+15:40:21: 23/42 monomers added
+15:40:21: starting relax_023 LAMMPS simulation
+15:40:31: relax_023 simulation using LAMMPS successful
+15:40:32: 24/42 monomers added
+15:40:32: starting relax_024 LAMMPS simulation
+15:40:42: relax_024 simulation using LAMMPS successful
+15:40:42: 25/42 monomers added
+15:40:42: starting relax_025 LAMMPS simulation
+15:40:53: relax_025 simulation using LAMMPS successful
+15:40:53: 26/42 monomers added
+15:40:53: starting relax_026 LAMMPS simulation
+15:41:03: relax_026 simulation using LAMMPS successful
+15:41:04: 27/42 monomers added
+15:41:04: starting relax_027 LAMMPS simulation
+15:41:16: relax_027 simulation using LAMMPS successful
+15:41:16: 28/42 monomers added
+15:41:16: starting relax_028 LAMMPS simulation
+15:41:28: relax_028 simulation using LAMMPS successful
+15:41:29: 29/42 monomers added
+15:41:29: starting relax_029 LAMMPS simulation
+15:41:42: relax_029 simulation using LAMMPS successful
+15:41:42: 30/42 monomers added
+15:41:43: starting relax_030 LAMMPS simulation
+15:41:55: relax_030 simulation using LAMMPS successful
+15:41:56: 31/42 monomers added
+15:41:56: starting relax_031 LAMMPS simulation
+15:42:09: relax_031 simulation using LAMMPS successful
+15:42:09: 32/42 monomers added
+15:42:09: starting relax_032 LAMMPS simulation
+15:42:26: relax_032 simulation using LAMMPS successful
+15:42:26: 33/42 monomers added
+15:42:27: starting relax_033 LAMMPS simulation
+15:42:43: relax_033 simulation using LAMMPS successful
+15:42:44: 34/42 monomers added
+15:42:44: starting relax_034 LAMMPS simulation
+15:43:01: relax_034 simulation using LAMMPS successful
+15:43:01: 35/42 monomers added
+15:43:01: starting relax_035 LAMMPS simulation
+15:43:20: relax_035 simulation using LAMMPS successful
+15:43:21: 36/42 monomers added
+15:43:21: starting relax_036 LAMMPS simulation
+15:43:39: relax_036 simulation using LAMMPS successful
+15:43:39: 37/42 monomers added
+15:43:39: starting relax_037 LAMMPS simulation
+15:43:57: relax_037 simulation using LAMMPS successful
+15:43:57: 38/42 monomers added
+15:43:58: starting relax_038 LAMMPS simulation
+15:44:16: relax_038 simulation using LAMMPS successful
+15:44:16: 39/42 monomers added
+15:44:16: starting relax_039 LAMMPS simulation
+15:44:35: relax_039 simulation using LAMMPS successful
+15:44:36: 40/42 monomers added
+15:44:36: starting relax_040 LAMMPS simulation
+15:44:55: relax_040 simulation using LAMMPS successful
+15:44:55: 41/42 monomers added
+15:44:55: starting relax_041 LAMMPS simulation
+15:45:17: relax_041 simulation using LAMMPS successful
+15:45:17: 42/42 monomers added
+15:45:17: starting relax_042 LAMMPS simulation
+15:45:39: relax_042 simulation using LAMMPS successful
+polymerlength= 42 pe2, pe2, pe2, pe2, pe2, pe1, pe1, pe2, pe1, pe2, pe1, pe2, pe1, pe1, pe2, pe1, pe1, pe1, pe1, pe2, pe1, pe1, pe2, pe2, pe2, pe2, pe2, pe1, pe1, pe2, pe2, pe1, pe1, pe1, pe1, pe2, pe2, pe2, pe1, pe2, pe1, pe2, pe1
+15:45:47: starting LAMMPS simulation
+15:46:05: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:46:06: 1/43 monomers added
+15:46:06: 2/43 monomers added
+15:46:06: starting relax_002 LAMMPS simulation
+15:47:07: relax_002 simulation using LAMMPS successful
+15:47:07: 3/43 monomers added
+15:47:07: starting relax_003 LAMMPS simulation
+15:48:07: relax_003 simulation using LAMMPS successful
+15:48:07: 4/43 monomers added
+15:48:07: starting relax_004 LAMMPS simulation
+15:49:08: relax_004 simulation using LAMMPS successful
+15:49:08: 5/43 monomers added
+15:49:08: starting relax_005 LAMMPS simulation
+15:50:10: relax_005 simulation using LAMMPS successful
+15:50:10: 6/43 monomers added
+15:50:10: starting relax_006 LAMMPS simulation
+15:50:13: relax_006 simulation using LAMMPS successful
+15:50:13: 7/43 monomers added
+15:50:13: starting relax_007 LAMMPS simulation
+15:50:16: relax_007 simulation using LAMMPS successful
+15:50:16: 8/43 monomers added
+15:50:16: starting relax_008 LAMMPS simulation
+15:50:20: relax_008 simulation using LAMMPS successful
+15:50:20: 9/43 monomers added
+15:50:20: starting relax_009 LAMMPS simulation
+15:50:24: relax_009 simulation using LAMMPS successful
+15:50:24: 10/43 monomers added
+15:50:24: starting relax_010 LAMMPS simulation
+15:50:29: relax_010 simulation using LAMMPS successful
+15:50:29: 11/43 monomers added
+15:50:29: starting relax_011 LAMMPS simulation
+15:50:33: relax_011 simulation using LAMMPS successful
+15:50:33: 12/43 monomers added
+15:50:33: starting relax_012 LAMMPS simulation
+15:50:39: relax_012 simulation using LAMMPS successful
+15:50:39: 13/43 monomers added
+15:50:39: starting relax_013 LAMMPS simulation
+15:50:44: relax_013 simulation using LAMMPS successful
+15:50:44: 14/43 monomers added
+15:50:44: starting relax_014 LAMMPS simulation
+15:50:50: relax_014 simulation using LAMMPS successful
+15:50:50: 15/43 monomers added
+15:50:50: starting relax_015 LAMMPS simulation
+15:50:56: relax_015 simulation using LAMMPS successful
+15:50:56: 16/43 monomers added
+15:50:56: starting relax_016 LAMMPS simulation
+15:51:04: relax_016 simulation using LAMMPS successful
+15:51:04: 17/43 monomers added
+15:51:04: starting relax_017 LAMMPS simulation
+15:51:10: relax_017 simulation using LAMMPS successful
+15:51:10: 18/43 monomers added
+15:51:10: starting relax_018 LAMMPS simulation
+15:51:20: relax_018 simulation using LAMMPS successful
+15:51:20: 19/43 monomers added
+15:51:20: starting relax_019 LAMMPS simulation
+15:51:30: relax_019 simulation using LAMMPS successful
+15:51:30: 20/43 monomers added
+15:51:30: starting relax_020 LAMMPS simulation
+15:51:41: relax_020 simulation using LAMMPS successful
+15:51:41: 21/43 monomers added
+15:51:41: starting relax_021 LAMMPS simulation
+15:51:52: relax_021 simulation using LAMMPS successful
+15:51:53: 22/43 monomers added
+15:51:53: starting relax_022 LAMMPS simulation
+15:52:04: relax_022 simulation using LAMMPS successful
+15:52:04: 23/43 monomers added
+15:52:04: starting relax_023 LAMMPS simulation
+15:52:16: relax_023 simulation using LAMMPS successful
+15:52:16: 24/43 monomers added
+15:52:16: starting relax_024 LAMMPS simulation
+15:52:28: relax_024 simulation using LAMMPS successful
+15:52:28: 25/43 monomers added
+15:52:28: starting relax_025 LAMMPS simulation
+15:52:42: relax_025 simulation using LAMMPS successful
+15:52:42: 26/43 monomers added
+15:52:42: starting relax_026 LAMMPS simulation
+15:52:55: relax_026 simulation using LAMMPS successful
+15:52:55: 27/43 monomers added
+15:52:55: starting relax_027 LAMMPS simulation
+15:53:08: relax_027 simulation using LAMMPS successful
+15:53:08: 28/43 monomers added
+15:53:08: starting relax_028 LAMMPS simulation
+15:53:23: relax_028 simulation using LAMMPS successful
+15:53:23: 29/43 monomers added
+15:53:23: starting relax_029 LAMMPS simulation
+15:53:41: relax_029 simulation using LAMMPS successful
+15:53:41: 30/43 monomers added
+15:53:41: starting relax_030 LAMMPS simulation
+15:53:58: relax_030 simulation using LAMMPS successful
+15:53:58: 31/43 monomers added
+15:53:58: starting relax_031 LAMMPS simulation
+15:54:16: relax_031 simulation using LAMMPS successful
+15:54:16: 32/43 monomers added
+15:54:16: starting relax_032 LAMMPS simulation
+15:54:34: relax_032 simulation using LAMMPS successful
+15:54:34: 33/43 monomers added
+15:54:34: starting relax_033 LAMMPS simulation
+15:54:53: relax_033 simulation using LAMMPS successful
+15:54:53: 34/43 monomers added
+15:54:53: starting relax_034 LAMMPS simulation
+15:55:12: relax_034 simulation using LAMMPS successful
+15:55:12: 35/43 monomers added
+15:55:12: starting relax_035 LAMMPS simulation
+15:55:31: relax_035 simulation using LAMMPS successful
+15:55:31: 36/43 monomers added
+15:55:31: starting relax_036 LAMMPS simulation
+15:55:51: relax_036 simulation using LAMMPS successful
+15:55:52: 37/43 monomers added
+15:55:52: starting relax_037 LAMMPS simulation
+15:56:14: relax_037 simulation using LAMMPS successful
+15:56:14: 38/43 monomers added
+15:56:14: starting relax_038 LAMMPS simulation
+15:56:36: relax_038 simulation using LAMMPS successful
+15:56:36: 39/43 monomers added
+15:56:36: starting relax_039 LAMMPS simulation
+15:56:58: relax_039 simulation using LAMMPS successful
+15:56:58: 40/43 monomers added
+15:56:58: starting relax_040 LAMMPS simulation
+15:57:20: relax_040 simulation using LAMMPS successful
+15:57:20: 41/43 monomers added
+15:57:21: starting relax_041 LAMMPS simulation
+15:57:43: relax_041 simulation using LAMMPS successful
+15:57:43: 42/43 monomers added
+15:57:43: starting relax_042 LAMMPS simulation
+15:58:06: relax_042 simulation using LAMMPS successful
+15:58:06: 43/43 monomers added
+15:58:06: starting relax_043 LAMMPS simulation
+15:58:29: relax_043 simulation using LAMMPS successful
+polymerlength= 43 pe2, pe1, pe1, pe1, pe2, pe1, pe2, pe2, pe1, pe2, pe2, pe2, pe1, pe2, pe1, pe1, pe1, pe1, pe2, pe1, pe1, pe2, pe1, pe1, pe1, pe2, pe2, pe1, pe1, pe1, pe1, pe1, pe2, pe2, pe1, pe1, pe2, pe1, pe1, pe2, pe2, pe2, pe1, pe2
+15:58:35: starting LAMMPS simulation
+15:58:52: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:58:52: 1/44 monomers added
+15:58:52: 2/44 monomers added
+15:58:52: starting relax_002 LAMMPS simulation
+15:59:58: relax_002 simulation using LAMMPS successful
+15:59:58: 3/44 monomers added
+15:59:58: starting relax_003 LAMMPS simulation
+16:01:01: relax_003 simulation using LAMMPS successful
+16:01:01: 4/44 monomers added
+16:01:01: starting relax_004 LAMMPS simulation
+16:02:09: relax_004 simulation using LAMMPS successful
+16:02:09: 5/44 monomers added
+16:02:09: starting relax_005 LAMMPS simulation
+16:03:13: relax_005 simulation using LAMMPS successful
+16:03:13: 6/44 monomers added
+16:03:13: starting relax_006 LAMMPS simulation
+16:04:17: relax_006 simulation using LAMMPS successful
+16:04:17: 7/44 monomers added
+16:04:17: starting relax_007 LAMMPS simulation
+16:05:20: relax_007 simulation using LAMMPS successful
+16:05:20: 8/44 monomers added
+16:05:20: starting relax_008 LAMMPS simulation
+16:06:26: relax_008 simulation using LAMMPS successful
+16:06:26: 9/44 monomers added
+16:06:26: starting relax_009 LAMMPS simulation
+16:06:30: relax_009 simulation using LAMMPS successful
+16:06:30: 10/44 monomers added
+16:06:30: starting relax_010 LAMMPS simulation
+16:06:34: relax_010 simulation using LAMMPS successful
+16:06:34: 11/44 monomers added
+16:06:34: starting relax_011 LAMMPS simulation
+16:06:39: relax_011 simulation using LAMMPS successful
+16:06:40: 12/44 monomers added
+16:06:40: starting relax_012 LAMMPS simulation
+16:06:46: relax_012 simulation using LAMMPS successful
+16:06:46: 13/44 monomers added
+16:06:46: starting relax_013 LAMMPS simulation
+16:06:50: relax_013 simulation using LAMMPS successful
+16:06:50: 14/44 monomers added
+16:06:50: starting relax_014 LAMMPS simulation
+16:06:56: relax_014 simulation using LAMMPS successful
+16:06:56: 15/44 monomers added
+16:06:57: starting relax_015 LAMMPS simulation
+16:07:04: relax_015 simulation using LAMMPS successful
+16:07:04: 16/44 monomers added
+16:07:05: starting relax_016 LAMMPS simulation
+16:07:12: relax_016 simulation using LAMMPS successful
+16:07:12: 17/44 monomers added
+16:07:12: starting relax_017 LAMMPS simulation
+16:07:19: relax_017 simulation using LAMMPS successful
+16:07:20: 18/44 monomers added
+16:07:20: starting relax_018 LAMMPS simulation
+16:07:27: relax_018 simulation using LAMMPS successful
+16:07:27: 19/44 monomers added
+16:07:27: starting relax_019 LAMMPS simulation
+16:07:35: relax_019 simulation using LAMMPS successful
+16:07:35: 20/44 monomers added
+16:07:35: starting relax_020 LAMMPS simulation
+16:07:43: relax_020 simulation using LAMMPS successful
+16:07:44: 21/44 monomers added
+16:07:44: starting relax_021 LAMMPS simulation
+16:07:52: relax_021 simulation using LAMMPS successful
+16:07:52: 22/44 monomers added
+16:07:53: starting relax_022 LAMMPS simulation
+16:08:04: relax_022 simulation using LAMMPS successful
+16:08:04: 23/44 monomers added
+16:08:04: starting relax_023 LAMMPS simulation
+16:08:15: relax_023 simulation using LAMMPS successful
+16:08:15: 24/44 monomers added
+16:08:15: starting relax_024 LAMMPS simulation
+16:08:27: relax_024 simulation using LAMMPS successful
+16:08:27: 25/44 monomers added
+16:08:27: starting relax_025 LAMMPS simulation
+16:08:39: relax_025 simulation using LAMMPS successful
+16:08:39: 26/44 monomers added
+16:08:39: starting relax_026 LAMMPS simulation
+16:08:52: relax_026 simulation using LAMMPS successful
+16:08:52: 27/44 monomers added
+16:08:52: starting relax_027 LAMMPS simulation
+16:09:06: relax_027 simulation using LAMMPS successful
+16:09:06: 28/44 monomers added
+16:09:06: starting relax_028 LAMMPS simulation
+16:09:19: relax_028 simulation using LAMMPS successful
+16:09:19: 29/44 monomers added
+16:09:19: starting relax_029 LAMMPS simulation
+16:09:33: relax_029 simulation using LAMMPS successful
+16:09:34: 30/44 monomers added
+16:09:34: starting relax_030 LAMMPS simulation
+16:09:48: relax_030 simulation using LAMMPS successful
+16:09:48: 31/44 monomers added
+16:09:48: starting relax_031 LAMMPS simulation
+16:10:03: relax_031 simulation using LAMMPS successful
+16:10:03: 32/44 monomers added
+16:10:03: starting relax_032 LAMMPS simulation
+16:10:20: relax_032 simulation using LAMMPS successful
+16:10:20: 33/44 monomers added
+16:10:20: starting relax_033 LAMMPS simulation
+16:10:36: relax_033 simulation using LAMMPS successful
+16:10:36: 34/44 monomers added
+16:10:36: starting relax_034 LAMMPS simulation
+16:10:54: relax_034 simulation using LAMMPS successful
+16:10:54: 35/44 monomers added
+16:10:54: starting relax_035 LAMMPS simulation
+16:11:13: relax_035 simulation using LAMMPS successful
+16:11:13: 36/44 monomers added
+16:11:13: starting relax_036 LAMMPS simulation
+16:11:31: relax_036 simulation using LAMMPS successful
+16:11:31: 37/44 monomers added
+16:11:31: starting relax_037 LAMMPS simulation
+16:11:50: relax_037 simulation using LAMMPS successful
+16:11:51: 38/44 monomers added
+16:11:51: starting relax_038 LAMMPS simulation
+16:12:10: relax_038 simulation using LAMMPS successful
+16:12:10: 39/44 monomers added
+16:12:10: starting relax_039 LAMMPS simulation
+16:12:32: relax_039 simulation using LAMMPS successful
+16:12:32: 40/44 monomers added
+16:12:32: starting relax_040 LAMMPS simulation
+16:12:53: relax_040 simulation using LAMMPS successful
+16:12:53: 41/44 monomers added
+16:12:53: starting relax_041 LAMMPS simulation
+16:13:14: relax_041 simulation using LAMMPS successful
+16:13:14: 42/44 monomers added
+16:13:14: starting relax_042 LAMMPS simulation
+16:13:34: relax_042 simulation using LAMMPS successful
+16:13:34: 43/44 monomers added
+16:13:34: starting relax_043 LAMMPS simulation
+16:13:56: relax_043 simulation using LAMMPS successful
+16:13:56: 44/44 monomers added
+16:13:56: starting relax_044 LAMMPS simulation
+16:14:18: relax_044 simulation using LAMMPS successful
+polymerlength= 44 pe2, pe1, pe1, pe2, pe2, pe2, pe2, pe2, pe1, pe2, pe1, pe1, pe2, pe2, pe2, pe1, pe2, pe2, pe2, pe2, pe1, pe1, pe2, pe2, pe1, pe2, pe1, pe1, pe2, pe2, pe1, pe1, pe1, pe2, pe2, pe2, pe2, pe1, pe2, pe2, pe2, pe2, pe2, pe1, pe2
+16:14:26: starting LAMMPS simulation
+16:14:41: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+16:14:42: 1/45 monomers added
+16:14:42: 2/45 monomers added
+16:14:42: starting relax_002 LAMMPS simulation
+16:15:58: relax_002 simulation using LAMMPS successful
+16:15:58: 3/45 monomers added
+16:15:58: starting relax_003 LAMMPS simulation
+16:17:18: relax_003 simulation using LAMMPS successful
+16:17:18: 4/45 monomers added
+16:17:18: starting relax_004 LAMMPS simulation
+16:18:35: relax_004 simulation using LAMMPS successful
+16:18:35: 5/45 monomers added
+16:18:35: starting relax_005 LAMMPS simulation
+16:19:55: relax_005 simulation using LAMMPS successful
+16:19:55: 6/45 monomers added
+16:19:55: starting relax_006 LAMMPS simulation
+16:21:20: relax_006 simulation using LAMMPS successful
+16:21:21: 7/45 monomers added
+16:21:21: starting relax_007 LAMMPS simulation
+16:22:41: relax_007 simulation using LAMMPS successful
+16:22:41: 8/45 monomers added
+16:22:41: starting relax_008 LAMMPS simulation
+16:22:43: relax_008 simulation using LAMMPS successful
+16:22:43: 9/45 monomers added
+16:22:43: starting relax_009 LAMMPS simulation
+16:22:46: relax_009 simulation using LAMMPS successful
+16:22:46: 10/45 monomers added
+16:22:46: starting relax_010 LAMMPS simulation
+16:22:51: relax_010 simulation using LAMMPS successful
+16:22:51: 11/45 monomers added
+16:22:51: starting relax_011 LAMMPS simulation
+16:22:56: relax_011 simulation using LAMMPS successful
+16:22:56: 12/45 monomers added
+16:22:56: starting relax_012 LAMMPS simulation
+16:23:00: relax_012 simulation using LAMMPS successful
+16:23:00: 13/45 monomers added
+16:23:00: starting relax_013 LAMMPS simulation
+16:23:06: relax_013 simulation using LAMMPS successful
+16:23:06: 14/45 monomers added
+16:23:06: starting relax_014 LAMMPS simulation
+16:23:12: relax_014 simulation using LAMMPS successful
+16:23:12: 15/45 monomers added
+16:23:12: starting relax_015 LAMMPS simulation
+16:23:19: relax_015 simulation using LAMMPS successful
+16:23:19: 16/45 monomers added
+16:23:19: starting relax_016 LAMMPS simulation
+16:23:27: relax_016 simulation using LAMMPS successful
+16:23:27: 17/45 monomers added
+16:23:27: starting relax_017 LAMMPS simulation
+16:23:35: relax_017 simulation using LAMMPS successful
+16:23:35: 18/45 monomers added
+16:23:35: starting relax_018 LAMMPS simulation
+16:23:47: relax_018 simulation using LAMMPS successful
+16:23:47: 19/45 monomers added
+16:23:47: starting relax_019 LAMMPS simulation
+16:23:58: relax_019 simulation using LAMMPS successful
+16:23:58: 20/45 monomers added
+16:23:58: starting relax_020 LAMMPS simulation
+16:24:10: relax_020 simulation using LAMMPS successful
+16:24:10: 21/45 monomers added
+16:24:10: starting relax_021 LAMMPS simulation
+16:24:20: relax_021 simulation using LAMMPS successful
+16:24:21: 22/45 monomers added
+16:24:21: starting relax_022 LAMMPS simulation
+16:24:31: relax_022 simulation using LAMMPS successful
+16:24:32: 23/45 monomers added
+16:24:32: starting relax_023 LAMMPS simulation
+16:24:43: relax_023 simulation using LAMMPS successful
+16:24:43: 24/45 monomers added
+16:24:43: starting relax_024 LAMMPS simulation
+16:24:55: relax_024 simulation using LAMMPS successful
+16:24:55: 25/45 monomers added
+16:24:55: starting relax_025 LAMMPS simulation
+16:25:05: relax_025 simulation using LAMMPS successful
+16:25:05: 26/45 monomers added
+16:25:06: starting relax_026 LAMMPS simulation
+16:25:16: relax_026 simulation using LAMMPS successful
+16:25:17: 27/45 monomers added
+16:25:17: starting relax_027 LAMMPS simulation
+16:25:29: relax_027 simulation using LAMMPS successful
+16:25:29: 28/45 monomers added
+16:25:29: starting relax_028 LAMMPS simulation
+16:25:42: relax_028 simulation using LAMMPS successful
+16:25:42: 29/45 monomers added
+16:25:42: starting relax_029 LAMMPS simulation
+16:25:58: relax_029 simulation using LAMMPS successful
+16:25:58: 30/45 monomers added
+16:25:58: starting relax_030 LAMMPS simulation
+16:26:14: relax_030 simulation using LAMMPS successful
+16:26:14: 31/45 monomers added
+16:26:14: starting relax_031 LAMMPS simulation
+16:26:29: relax_031 simulation using LAMMPS successful
+16:26:29: 32/45 monomers added
+16:26:29: starting relax_032 LAMMPS simulation
+16:26:45: relax_032 simulation using LAMMPS successful
+16:26:45: 33/45 monomers added
+16:26:45: starting relax_033 LAMMPS simulation
+16:27:02: relax_033 simulation using LAMMPS successful
+16:27:02: 34/45 monomers added
+16:27:02: starting relax_034 LAMMPS simulation
+16:27:18: relax_034 simulation using LAMMPS successful
+16:27:18: 35/45 monomers added
+16:27:18: starting relax_035 LAMMPS simulation
+16:27:35: relax_035 simulation using LAMMPS successful
+16:27:35: 36/45 monomers added
+16:27:35: starting relax_036 LAMMPS simulation
+16:27:51: relax_036 simulation using LAMMPS successful
+16:27:51: 37/45 monomers added
+16:27:51: starting relax_037 LAMMPS simulation
+16:28:09: relax_037 simulation using LAMMPS successful
+16:28:09: 38/45 monomers added
+16:28:09: starting relax_038 LAMMPS simulation
+16:28:28: relax_038 simulation using LAMMPS successful
+16:28:29: 39/45 monomers added
+16:28:29: starting relax_039 LAMMPS simulation
+16:28:49: relax_039 simulation using LAMMPS successful
+16:28:49: 40/45 monomers added
+16:28:49: starting relax_040 LAMMPS simulation
+16:29:09: relax_040 simulation using LAMMPS successful
+16:29:09: 41/45 monomers added
+16:29:09: starting relax_041 LAMMPS simulation
+16:29:29: relax_041 simulation using LAMMPS successful
+16:29:29: 42/45 monomers added
+16:29:29: starting relax_042 LAMMPS simulation
+16:29:50: relax_042 simulation using LAMMPS successful
+16:29:50: 43/45 monomers added
+16:29:50: starting relax_043 LAMMPS simulation
+16:30:13: relax_043 simulation using LAMMPS successful
+16:30:13: 44/45 monomers added
+16:30:13: starting relax_044 LAMMPS simulation
+16:30:36: relax_044 simulation using LAMMPS successful
+16:30:37: 45/45 monomers added
+16:30:37: starting relax_045 LAMMPS simulation
+16:31:00: relax_045 simulation using LAMMPS successful
+polymerlength= 45 pe1, pe1, pe2, pe1, pe2, pe2, pe1, pe1, pe1, pe2, pe2, pe1, pe2, pe1, pe1, pe2, pe2, pe1, pe1, pe2, pe1, pe2, pe1, pe1, pe1, pe2, pe2, pe1, pe1, pe1, pe2, pe1, pe2, pe1, pe2, pe1, pe1, pe2, pe1, pe2, pe2, pe2, pe1, pe1, pe2, pe2
+16:31:08: starting LAMMPS simulation
+16:31:26: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+16:31:27: 1/46 monomers added
+16:31:27: 2/46 monomers added
+16:31:27: starting relax_002 LAMMPS simulation
+16:32:46: relax_002 simulation using LAMMPS successful
+16:32:46: 3/46 monomers added
+16:32:46: starting relax_003 LAMMPS simulation
+16:34:05: relax_003 simulation using LAMMPS successful
+16:34:05: 4/46 monomers added
+16:34:05: starting relax_004 LAMMPS simulation
+16:35:25: relax_004 simulation using LAMMPS successful
+16:35:25: 5/46 monomers added
+16:35:25: starting relax_005 LAMMPS simulation
+16:36:45: relax_005 simulation using LAMMPS successful
+16:36:45: 6/46 monomers added
+16:36:45: starting relax_006 LAMMPS simulation
+16:38:03: relax_006 simulation using LAMMPS successful
+16:38:03: 7/46 monomers added
+16:38:03: starting relax_007 LAMMPS simulation
+16:38:05: relax_007 simulation using LAMMPS successful
+16:38:05: 8/46 monomers added
+16:38:05: starting relax_008 LAMMPS simulation
+16:38:09: relax_008 simulation using LAMMPS successful
+16:38:09: 9/46 monomers added
+16:38:09: starting relax_009 LAMMPS simulation
+16:38:12: relax_009 simulation using LAMMPS successful
+16:38:13: 10/46 monomers added
+16:38:13: starting relax_010 LAMMPS simulation
+16:38:16: relax_010 simulation using LAMMPS successful
+16:38:16: 11/46 monomers added
+16:38:16: starting relax_011 LAMMPS simulation
+16:38:22: relax_011 simulation using LAMMPS successful
+16:38:22: 12/46 monomers added
+16:38:22: starting relax_012 LAMMPS simulation
+16:38:27: relax_012 simulation using LAMMPS successful
+16:38:27: 13/46 monomers added
+16:38:27: starting relax_013 LAMMPS simulation
+16:38:32: relax_013 simulation using LAMMPS successful
+16:38:32: 14/46 monomers added
+16:38:32: starting relax_014 LAMMPS simulation
+16:38:38: relax_014 simulation using LAMMPS successful
+16:38:38: 15/46 monomers added
+16:38:38: starting relax_015 LAMMPS simulation
+16:38:45: relax_015 simulation using LAMMPS successful
+16:38:45: 16/46 monomers added
+16:38:45: starting relax_016 LAMMPS simulation
+16:38:52: relax_016 simulation using LAMMPS successful
+16:38:52: 17/46 monomers added
+16:38:52: starting relax_017 LAMMPS simulation
+16:39:01: relax_017 simulation using LAMMPS successful
+16:39:01: 18/46 monomers added
+16:39:01: starting relax_018 LAMMPS simulation
+16:39:11: relax_018 simulation using LAMMPS successful
+16:39:12: 19/46 monomers added
+16:39:12: starting relax_019 LAMMPS simulation
+16:39:22: relax_019 simulation using LAMMPS successful
+16:39:22: 20/46 monomers added
+16:39:22: starting relax_020 LAMMPS simulation
+16:39:33: relax_020 simulation using LAMMPS successful
+16:39:33: 21/46 monomers added
+16:39:33: starting relax_021 LAMMPS simulation
+16:39:43: relax_021 simulation using LAMMPS successful
+16:39:43: 22/46 monomers added
+16:39:43: starting relax_022 LAMMPS simulation
+16:39:54: relax_022 simulation using LAMMPS successful
+16:39:54: 23/46 monomers added
+16:39:54: starting relax_023 LAMMPS simulation
+16:40:05: relax_023 simulation using LAMMPS successful
+16:40:05: 24/46 monomers added
+16:40:06: starting relax_024 LAMMPS simulation
+16:40:18: relax_024 simulation using LAMMPS successful
+16:40:18: 25/46 monomers added
+16:40:18: starting relax_025 LAMMPS simulation
+16:40:29: relax_025 simulation using LAMMPS successful
+16:40:29: 26/46 monomers added
+16:40:29: starting relax_026 LAMMPS simulation
+16:40:42: relax_026 simulation using LAMMPS successful
+16:40:42: 27/46 monomers added
+16:40:42: starting relax_027 LAMMPS simulation
+16:40:58: relax_027 simulation using LAMMPS successful
+16:40:58: 28/46 monomers added
+16:40:58: starting relax_028 LAMMPS simulation
+16:41:14: relax_028 simulation using LAMMPS successful
+16:41:14: 29/46 monomers added
+16:41:14: starting relax_029 LAMMPS simulation
+16:41:29: relax_029 simulation using LAMMPS successful
+16:41:29: 30/46 monomers added
+16:41:30: starting relax_030 LAMMPS simulation
+16:41:45: relax_030 simulation using LAMMPS successful
+16:41:45: 31/46 monomers added
+16:41:45: starting relax_031 LAMMPS simulation
+16:42:00: relax_031 simulation using LAMMPS successful
+16:42:00: 32/46 monomers added
+16:42:00: starting relax_032 LAMMPS simulation
+16:42:17: relax_032 simulation using LAMMPS successful
+16:42:17: 33/46 monomers added
+16:42:17: starting relax_033 LAMMPS simulation
+16:42:35: relax_033 simulation using LAMMPS successful
+16:42:35: 34/46 monomers added
+16:42:35: starting relax_034 LAMMPS simulation
+16:42:53: relax_034 simulation using LAMMPS successful
+16:42:53: 35/46 monomers added
+16:42:53: starting relax_035 LAMMPS simulation
+16:43:10: relax_035 simulation using LAMMPS successful
+16:43:10: 36/46 monomers added
+16:43:10: starting relax_036 LAMMPS simulation
+16:43:27: relax_036 simulation using LAMMPS successful
+16:43:27: 37/46 monomers added
+16:43:28: starting relax_037 LAMMPS simulation
+16:43:46: relax_037 simulation using LAMMPS successful
+16:43:46: 38/46 monomers added
+16:43:47: starting relax_038 LAMMPS simulation
+16:44:07: relax_038 simulation using LAMMPS successful
+16:44:07: 39/46 monomers added
+16:44:07: starting relax_039 LAMMPS simulation
+16:44:28: relax_039 simulation using LAMMPS successful
+16:44:28: 40/46 monomers added
+16:44:28: starting relax_040 LAMMPS simulation
+16:44:49: relax_040 simulation using LAMMPS successful
+16:44:49: 41/46 monomers added
+16:44:50: starting relax_041 LAMMPS simulation
+16:45:11: relax_041 simulation using LAMMPS successful
+16:45:11: 42/46 monomers added
+16:45:12: starting relax_042 LAMMPS simulation
+16:45:34: relax_042 simulation using LAMMPS successful
+16:45:34: 43/46 monomers added
+16:45:34: starting relax_043 LAMMPS simulation
+16:45:57: relax_043 simulation using LAMMPS successful
+16:45:57: 44/46 monomers added
+16:45:57: starting relax_044 LAMMPS simulation
+16:46:22: relax_044 simulation using LAMMPS successful
+16:46:22: 45/46 monomers added
+16:46:22: starting relax_045 LAMMPS simulation
+16:46:47: relax_045 simulation using LAMMPS successful
+16:46:47: 46/46 monomers added
+16:46:47: starting relax_046 LAMMPS simulation
+16:47:13: relax_046 simulation using LAMMPS successful
+polymerlength= 46 pe2, pe2, pe2, pe1, pe1, pe1, pe1, pe1, pe1, pe1, pe2, pe1, pe1, pe1, pe2, pe2, pe1, pe1, pe1, pe1, pe1, pe1, pe1, pe2, pe2, pe2, pe1, pe1, pe2, pe2, pe2, pe2, pe1, pe2, pe2, pe2, pe1, pe2, pe1, pe1, pe1, pe2, pe2, pe1, pe2, pe1, pe1
+16:47:22: starting LAMMPS simulation
+16:47:48: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+16:47:48: 1/47 monomers added
+16:47:48: 2/47 monomers added
+16:47:48: starting relax_002 LAMMPS simulation
+16:49:07: relax_002 simulation using LAMMPS successful
+16:49:07: 3/47 monomers added
+16:49:07: starting relax_003 LAMMPS simulation
+16:50:27: relax_003 simulation using LAMMPS successful
+16:50:27: 4/47 monomers added
+16:50:27: starting relax_004 LAMMPS simulation
+16:51:48: relax_004 simulation using LAMMPS successful
+16:51:48: 5/47 monomers added
+16:51:48: starting relax_005 LAMMPS simulation
+16:53:07: relax_005 simulation using LAMMPS successful
+16:53:07: 6/47 monomers added
+16:53:07: starting relax_006 LAMMPS simulation
+16:54:27: relax_006 simulation using LAMMPS successful
+16:54:27: 7/47 monomers added
+16:54:27: starting relax_007 LAMMPS simulation
+16:55:47: relax_007 simulation using LAMMPS successful
+16:55:47: 8/47 monomers added
+16:55:47: starting relax_008 LAMMPS simulation
+16:55:51: relax_008 simulation using LAMMPS successful
+16:55:51: 9/47 monomers added
+16:55:51: starting relax_009 LAMMPS simulation
+16:55:54: relax_009 simulation using LAMMPS successful
+16:55:54: 10/47 monomers added
+16:55:54: starting relax_010 LAMMPS simulation
+16:55:58: relax_010 simulation using LAMMPS successful
+16:55:58: 11/47 monomers added
+16:55:58: starting relax_011 LAMMPS simulation
+16:56:03: relax_011 simulation using LAMMPS successful
+16:56:03: 12/47 monomers added
+16:56:03: starting relax_012 LAMMPS simulation
+16:56:07: relax_012 simulation using LAMMPS successful
+16:56:07: 13/47 monomers added
+16:56:07: starting relax_013 LAMMPS simulation
+16:56:14: relax_013 simulation using LAMMPS successful
+16:56:15: 14/47 monomers added
+16:56:15: starting relax_014 LAMMPS simulation
+16:56:22: relax_014 simulation using LAMMPS successful
+16:56:22: 15/47 monomers added
+16:56:22: starting relax_015 LAMMPS simulation
+16:56:29: relax_015 simulation using LAMMPS successful
+16:56:29: 16/47 monomers added
+16:56:29: starting relax_016 LAMMPS simulation
+16:56:36: relax_016 simulation using LAMMPS successful
+16:56:36: 17/47 monomers added
+16:56:36: starting relax_017 LAMMPS simulation
+16:56:44: relax_017 simulation using LAMMPS successful
+16:56:44: 18/47 monomers added
+16:56:44: starting relax_018 LAMMPS simulation
+16:56:55: relax_018 simulation using LAMMPS successful
+16:56:55: 19/47 monomers added
+16:56:55: starting relax_019 LAMMPS simulation
+16:57:05: relax_019 simulation using LAMMPS successful
+16:57:05: 20/47 monomers added
+16:57:05: starting relax_020 LAMMPS simulation
+16:57:16: relax_020 simulation using LAMMPS successful
+16:57:16: 21/47 monomers added
+16:57:16: starting relax_021 LAMMPS simulation
+16:57:27: relax_021 simulation using LAMMPS successful
+16:57:27: 22/47 monomers added
+16:57:27: starting relax_022 LAMMPS simulation
+16:57:39: relax_022 simulation using LAMMPS successful
+16:57:39: 23/47 monomers added
+16:57:39: starting relax_023 LAMMPS simulation
+16:57:50: relax_023 simulation using LAMMPS successful
+16:57:50: 24/47 monomers added
+16:57:51: starting relax_024 LAMMPS simulation
+16:58:02: relax_024 simulation using LAMMPS successful
+16:58:02: 25/47 monomers added
+16:58:02: starting relax_025 LAMMPS simulation
+16:58:15: relax_025 simulation using LAMMPS successful
+16:58:15: 26/47 monomers added
+16:58:15: starting relax_026 LAMMPS simulation
+16:58:28: relax_026 simulation using LAMMPS successful
+16:58:28: 27/47 monomers added
+16:58:28: starting relax_027 LAMMPS simulation
+16:58:41: relax_027 simulation using LAMMPS successful
+16:58:41: 28/47 monomers added
+16:58:41: starting relax_028 LAMMPS simulation
+16:58:55: relax_028 simulation using LAMMPS successful
+16:58:55: 29/47 monomers added
+16:58:55: starting relax_029 LAMMPS simulation
+16:59:13: relax_029 simulation using LAMMPS successful
+16:59:13: 30/47 monomers added
+16:59:13: starting relax_030 LAMMPS simulation
+16:59:31: relax_030 simulation using LAMMPS successful
+16:59:31: 31/47 monomers added
+16:59:31: starting relax_031 LAMMPS simulation
+16:59:48: relax_031 simulation using LAMMPS successful
+16:59:48: 32/47 monomers added
+16:59:48: starting relax_032 LAMMPS simulation
+17:00:06: relax_032 simulation using LAMMPS successful
+17:00:06: 33/47 monomers added
+17:00:06: starting relax_033 LAMMPS simulation
+17:00:24: relax_033 simulation using LAMMPS successful
+17:00:24: 34/47 monomers added
+17:00:24: starting relax_034 LAMMPS simulation
+17:00:42: relax_034 simulation using LAMMPS successful
+17:00:42: 35/47 monomers added
+17:00:42: starting relax_035 LAMMPS simulation
+17:00:59: relax_035 simulation using LAMMPS successful
+17:00:59: 36/47 monomers added
+17:00:59: starting relax_036 LAMMPS simulation
+17:01:18: relax_036 simulation using LAMMPS successful
+17:01:18: 37/47 monomers added
+17:01:18: starting relax_037 LAMMPS simulation
+17:01:36: relax_037 simulation using LAMMPS successful
+17:01:36: 38/47 monomers added
+17:01:36: starting relax_038 LAMMPS simulation
+17:01:55: relax_038 simulation using LAMMPS successful
+17:01:55: 39/47 monomers added
+17:01:56: starting relax_039 LAMMPS simulation
+17:02:16: relax_039 simulation using LAMMPS successful
+17:02:16: 40/47 monomers added
+17:02:16: starting relax_040 LAMMPS simulation
+17:02:36: relax_040 simulation using LAMMPS successful
+17:02:37: 41/47 monomers added
+17:02:37: starting relax_041 LAMMPS simulation
+17:02:56: relax_041 simulation using LAMMPS successful
+17:02:56: 42/47 monomers added
+17:02:56: starting relax_042 LAMMPS simulation
+17:03:16: relax_042 simulation using LAMMPS successful
+17:03:16: 43/47 monomers added
+17:03:17: starting relax_043 LAMMPS simulation
+17:03:38: relax_043 simulation using LAMMPS successful
+17:03:38: 44/47 monomers added
+17:03:38: starting relax_044 LAMMPS simulation
+17:04:00: relax_044 simulation using LAMMPS successful
+17:04:00: 45/47 monomers added
+17:04:00: starting relax_045 LAMMPS simulation
+17:04:22: relax_045 simulation using LAMMPS successful
+17:04:22: 46/47 monomers added
+17:04:22: starting relax_046 LAMMPS simulation
+17:04:44: relax_046 simulation using LAMMPS successful
+17:04:44: 47/47 monomers added
+17:04:45: starting relax_047 LAMMPS simulation
+17:05:06: relax_047 simulation using LAMMPS successful
+polymerlength= 47 pe2, pe1, pe1, pe1, pe2, pe1, pe2, pe1, pe1, pe2, pe2, pe2, pe1, pe1, pe1, pe1, pe2, pe1, pe2, pe1, pe1, pe2, pe2, pe2, pe1, pe1, pe1, pe1, pe1, pe2, pe1, pe1, pe2, pe2, pe1, pe1, pe1, pe2, pe1, pe1, pe1, pe2, pe2, pe1, pe2, pe1, pe1, pe2
+17:05:16: starting LAMMPS simulation
+17:05:35: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+17:05:36: 1/48 monomers added
+17:05:36: 2/48 monomers added
+17:05:36: starting relax_002 LAMMPS simulation
+17:06:53: relax_002 simulation using LAMMPS successful
+17:06:53: 3/48 monomers added
+17:06:53: starting relax_003 LAMMPS simulation
+17:08:13: relax_003 simulation using LAMMPS successful
+17:08:13: 4/48 monomers added
+17:08:13: starting relax_004 LAMMPS simulation
+17:09:31: relax_004 simulation using LAMMPS successful
+17:09:31: 5/48 monomers added
+17:09:31: starting relax_005 LAMMPS simulation
+17:10:52: relax_005 simulation using LAMMPS successful
+17:10:52: 6/48 monomers added
+17:10:52: starting relax_006 LAMMPS simulation
+17:12:12: relax_006 simulation using LAMMPS successful
+17:12:13: 7/48 monomers added
+17:12:13: starting relax_007 LAMMPS simulation
+17:13:34: relax_007 simulation using LAMMPS successful
+17:13:34: 8/48 monomers added
+17:13:34: starting relax_008 LAMMPS simulation
+17:14:55: relax_008 simulation using LAMMPS successful
+17:14:55: 9/48 monomers added
+17:14:55: starting relax_009 LAMMPS simulation
+17:16:16: relax_009 simulation using LAMMPS successful
+17:16:16: 10/48 monomers added
+17:16:16: starting relax_010 LAMMPS simulation
+17:16:19: relax_010 simulation using LAMMPS successful
+17:16:19: 11/48 monomers added
+17:16:19: starting relax_011 LAMMPS simulation
+17:16:22: relax_011 simulation using LAMMPS successful
+17:16:22: 12/48 monomers added
+17:16:22: starting relax_012 LAMMPS simulation
+17:16:26: relax_012 simulation using LAMMPS successful
+17:16:26: 13/48 monomers added
+17:16:26: starting relax_013 LAMMPS simulation
+17:16:31: relax_013 simulation using LAMMPS successful
+17:16:31: 14/48 monomers added
+17:16:31: starting relax_014 LAMMPS simulation
+17:16:38: relax_014 simulation using LAMMPS successful
+17:16:38: 15/48 monomers added
+17:16:38: starting relax_015 LAMMPS simulation
+17:16:45: relax_015 simulation using LAMMPS successful
+17:16:45: 16/48 monomers added
+17:16:45: starting relax_016 LAMMPS simulation
+17:16:52: relax_016 simulation using LAMMPS successful
+17:16:52: 17/48 monomers added
+17:16:52: starting relax_017 LAMMPS simulation
+17:16:59: relax_017 simulation using LAMMPS successful
+17:16:59: 18/48 monomers added
+17:16:59: starting relax_018 LAMMPS simulation
+17:17:06: relax_018 simulation using LAMMPS successful
+17:17:06: 19/48 monomers added
+17:17:06: starting relax_019 LAMMPS simulation
+17:17:14: relax_019 simulation using LAMMPS successful
+17:17:14: 20/48 monomers added
+17:17:14: starting relax_020 LAMMPS simulation
+17:17:23: relax_020 simulation using LAMMPS successful
+17:17:23: 21/48 monomers added
+17:17:23: starting relax_021 LAMMPS simulation
+17:17:34: relax_021 simulation using LAMMPS successful
+17:17:34: 22/48 monomers added
+17:17:34: starting relax_022 LAMMPS simulation
+17:17:45: relax_022 simulation using LAMMPS successful
+17:17:45: 23/48 monomers added
+17:17:45: starting relax_023 LAMMPS simulation
+17:17:57: relax_023 simulation using LAMMPS successful
+17:17:57: 24/48 monomers added
+17:17:57: starting relax_024 LAMMPS simulation
+17:18:10: relax_024 simulation using LAMMPS successful
+17:18:10: 25/48 monomers added
+17:18:10: starting relax_025 LAMMPS simulation
+17:18:22: relax_025 simulation using LAMMPS successful
+17:18:22: 26/48 monomers added
+17:18:22: starting relax_026 LAMMPS simulation
+17:18:35: relax_026 simulation using LAMMPS successful
+17:18:35: 27/48 monomers added
+17:18:35: starting relax_027 LAMMPS simulation
+17:18:48: relax_027 simulation using LAMMPS successful
+17:18:48: 28/48 monomers added
+17:18:48: starting relax_028 LAMMPS simulation
+17:19:03: relax_028 simulation using LAMMPS successful
+17:19:03: 29/48 monomers added
+17:19:03: starting relax_029 LAMMPS simulation
+17:19:17: relax_029 simulation using LAMMPS successful
+17:19:17: 30/48 monomers added
+17:19:17: starting relax_030 LAMMPS simulation
+17:19:34: relax_030 simulation using LAMMPS successful
+17:19:34: 31/48 monomers added
+17:19:34: starting relax_031 LAMMPS simulation
+17:19:50: relax_031 simulation using LAMMPS successful
+17:19:50: 32/48 monomers added
+17:19:50: starting relax_032 LAMMPS simulation
+17:20:06: relax_032 simulation using LAMMPS successful
+17:20:06: 33/48 monomers added
+17:20:06: starting relax_033 LAMMPS simulation
+17:20:24: relax_033 simulation using LAMMPS successful
+17:20:24: 34/48 monomers added
+17:20:24: starting relax_034 LAMMPS simulation
+17:20:43: relax_034 simulation using LAMMPS successful
+17:20:43: 35/48 monomers added
+17:20:43: starting relax_035 LAMMPS simulation
+17:21:01: relax_035 simulation using LAMMPS successful
+17:21:02: 36/48 monomers added
+17:21:02: starting relax_036 LAMMPS simulation
+17:21:20: relax_036 simulation using LAMMPS successful
+17:21:21: 37/48 monomers added
+17:21:21: starting relax_037 LAMMPS simulation
+17:21:41: relax_037 simulation using LAMMPS successful
+17:21:41: 38/48 monomers added
+17:21:41: starting relax_038 LAMMPS simulation
+17:22:04: relax_038 simulation using LAMMPS successful
+17:22:04: 39/48 monomers added
+17:22:05: starting relax_039 LAMMPS simulation
+17:22:26: relax_039 simulation using LAMMPS successful
+17:22:26: 40/48 monomers added
+17:22:26: starting relax_040 LAMMPS simulation
+17:22:48: relax_040 simulation using LAMMPS successful
+17:22:48: 41/48 monomers added
+17:22:48: starting relax_041 LAMMPS simulation
+17:23:11: relax_041 simulation using LAMMPS successful
+17:23:11: 42/48 monomers added
+17:23:11: starting relax_042 LAMMPS simulation
+17:23:34: relax_042 simulation using LAMMPS successful
+17:23:34: 43/48 monomers added
+17:23:34: starting relax_043 LAMMPS simulation
+17:23:58: relax_043 simulation using LAMMPS successful
+17:23:58: 44/48 monomers added
+17:23:58: starting relax_044 LAMMPS simulation
+17:24:22: relax_044 simulation using LAMMPS successful
+17:24:22: 45/48 monomers added
+17:24:22: starting relax_045 LAMMPS simulation
+17:24:47: relax_045 simulation using LAMMPS successful
+17:24:47: 46/48 monomers added
+17:24:47: starting relax_046 LAMMPS simulation
+17:25:12: relax_046 simulation using LAMMPS successful
+17:25:12: 47/48 monomers added
+17:25:12: starting relax_047 LAMMPS simulation
+17:25:35: relax_047 simulation using LAMMPS successful
+17:25:35: 48/48 monomers added
+17:25:36: starting relax_048 LAMMPS simulation
+17:25:58: relax_048 simulation using LAMMPS successful
+polymerlength= 48 pe1, pe1, pe2, pe2, pe2, pe2, pe2, pe2, pe1, pe1, pe2, pe2, pe1, pe1, pe2, pe2, pe2, pe1, pe1, pe1, pe2, pe1, pe1, pe2, pe1, pe2, pe2, pe1, pe2, pe1, pe1, pe2, pe1, pe1, pe1, pe1, pe1, pe1, pe2, pe2, pe2, pe2, pe2, pe1, pe1, pe2, pe1, pe1, pe2
+17:26:07: starting LAMMPS simulation
+17:26:32: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+17:26:33: 1/49 monomers added
+17:26:33: 2/49 monomers added
+17:26:33: starting relax_002 LAMMPS simulation
+17:27:51: relax_002 simulation using LAMMPS successful
+17:27:51: 3/49 monomers added
+17:27:51: starting relax_003 LAMMPS simulation
+17:29:09: relax_003 simulation using LAMMPS successful
+17:29:09: 4/49 monomers added
+17:29:09: starting relax_004 LAMMPS simulation
+17:30:26: relax_004 simulation using LAMMPS successful
+17:30:26: 5/49 monomers added
+17:30:26: starting relax_005 LAMMPS simulation
+17:31:48: relax_005 simulation using LAMMPS successful
+17:31:49: 6/49 monomers added
+17:31:49: starting relax_006 LAMMPS simulation
+17:33:12: relax_006 simulation using LAMMPS successful
+17:33:12: 7/49 monomers added
+17:33:12: starting relax_007 LAMMPS simulation
+17:33:14: relax_007 simulation using LAMMPS successful
+17:33:14: 8/49 monomers added
+17:33:14: starting relax_008 LAMMPS simulation
+17:33:17: relax_008 simulation using LAMMPS successful
+17:33:17: 9/49 monomers added
+17:33:17: starting relax_009 LAMMPS simulation
+17:33:23: relax_009 simulation using LAMMPS successful
+17:33:23: 10/49 monomers added
+17:33:23: starting relax_010 LAMMPS simulation
+17:33:28: relax_010 simulation using LAMMPS successful
+17:33:28: 11/49 monomers added
+17:33:28: starting relax_011 LAMMPS simulation
+17:33:33: relax_011 simulation using LAMMPS successful
+17:33:33: 12/49 monomers added
+17:33:33: starting relax_012 LAMMPS simulation
+17:33:38: relax_012 simulation using LAMMPS successful
+17:33:38: 13/49 monomers added
+17:33:38: starting relax_013 LAMMPS simulation
+17:33:44: relax_013 simulation using LAMMPS successful
+17:33:44: 14/49 monomers added
+17:33:44: starting relax_014 LAMMPS simulation
+17:33:51: relax_014 simulation using LAMMPS successful
+17:33:51: 15/49 monomers added
+17:33:51: starting relax_015 LAMMPS simulation
+17:33:58: relax_015 simulation using LAMMPS successful
+17:33:59: 16/49 monomers added
+17:33:59: starting relax_016 LAMMPS simulation
+17:34:07: relax_016 simulation using LAMMPS successful
+17:34:07: 17/49 monomers added
+17:34:07: starting relax_017 LAMMPS simulation
+17:34:18: relax_017 simulation using LAMMPS successful
+17:34:18: 18/49 monomers added
+17:34:18: starting relax_018 LAMMPS simulation
+17:34:29: relax_018 simulation using LAMMPS successful
+17:34:29: 19/49 monomers added
+17:34:29: starting relax_019 LAMMPS simulation
+17:34:42: relax_019 simulation using LAMMPS successful
+17:34:42: 20/49 monomers added
+17:34:42: starting relax_020 LAMMPS simulation
+17:34:53: relax_020 simulation using LAMMPS successful
+17:34:53: 21/49 monomers added
+17:34:53: starting relax_021 LAMMPS simulation
+17:35:04: relax_021 simulation using LAMMPS successful
+17:35:04: 22/49 monomers added
+17:35:04: starting relax_022 LAMMPS simulation
+17:35:16: relax_022 simulation using LAMMPS successful
+17:35:16: 23/49 monomers added
+17:35:16: starting relax_023 LAMMPS simulation
+17:35:28: relax_023 simulation using LAMMPS successful
+17:35:28: 24/49 monomers added
+17:35:28: starting relax_024 LAMMPS simulation
+17:35:40: relax_024 simulation using LAMMPS successful
+17:35:41: 25/49 monomers added
+17:35:41: starting relax_025 LAMMPS simulation
+17:35:53: relax_025 simulation using LAMMPS successful
+17:35:54: 26/49 monomers added
+17:35:54: starting relax_026 LAMMPS simulation
+17:36:07: relax_026 simulation using LAMMPS successful
+17:36:07: 27/49 monomers added
+17:36:08: starting relax_027 LAMMPS simulation
+17:36:22: relax_027 simulation using LAMMPS successful
+17:36:22: 28/49 monomers added
+17:36:22: starting relax_028 LAMMPS simulation
+17:36:37: relax_028 simulation using LAMMPS successful
+17:36:37: 29/49 monomers added
+17:36:37: starting relax_029 LAMMPS simulation
+17:36:52: relax_029 simulation using LAMMPS successful
+17:36:52: 30/49 monomers added
+17:36:52: starting relax_030 LAMMPS simulation
+17:37:08: relax_030 simulation using LAMMPS successful
+17:37:08: 31/49 monomers added
+17:37:08: starting relax_031 LAMMPS simulation
+17:37:26: relax_031 simulation using LAMMPS successful
+17:37:26: 32/49 monomers added
+17:37:27: starting relax_032 LAMMPS simulation
+17:37:46: relax_032 simulation using LAMMPS successful
+17:37:46: 33/49 monomers added
+17:37:46: starting relax_033 LAMMPS simulation
+17:38:05: relax_033 simulation using LAMMPS successful
+17:38:05: 34/49 monomers added
+17:38:05: starting relax_034 LAMMPS simulation
+17:38:26: relax_034 simulation using LAMMPS successful
+17:38:26: 35/49 monomers added
+17:38:26: starting relax_035 LAMMPS simulation
+17:38:46: relax_035 simulation using LAMMPS successful
+17:38:46: 36/49 monomers added
+17:38:47: starting relax_036 LAMMPS simulation
+17:39:08: relax_036 simulation using LAMMPS successful
+17:39:08: 37/49 monomers added
+17:39:08: starting relax_037 LAMMPS simulation
+17:39:29: relax_037 simulation using LAMMPS successful
+17:39:29: 38/49 monomers added
+17:39:29: starting relax_038 LAMMPS simulation
+17:39:51: relax_038 simulation using LAMMPS successful
+17:39:51: 39/49 monomers added
+17:39:51: starting relax_039 LAMMPS simulation
+17:40:14: relax_039 simulation using LAMMPS successful
+17:40:14: 40/49 monomers added
+17:40:14: starting relax_040 LAMMPS simulation
+17:40:38: relax_040 simulation using LAMMPS successful
+17:40:38: 41/49 monomers added
+17:40:38: starting relax_041 LAMMPS simulation
+17:41:03: relax_041 simulation using LAMMPS successful
+17:41:03: 42/49 monomers added
+17:41:03: starting relax_042 LAMMPS simulation
+17:41:28: relax_042 simulation using LAMMPS successful
+17:41:28: 43/49 monomers added
+17:41:28: starting relax_043 LAMMPS simulation
+17:41:53: relax_043 simulation using LAMMPS successful
+17:41:53: 44/49 monomers added
+17:41:53: starting relax_044 LAMMPS simulation
+17:42:18: relax_044 simulation using LAMMPS successful
+17:42:18: 45/49 monomers added
+17:42:18: starting relax_045 LAMMPS simulation
+17:42:44: relax_045 simulation using LAMMPS successful
+17:42:44: 46/49 monomers added
+17:42:44: starting relax_046 LAMMPS simulation
+17:43:10: relax_046 simulation using LAMMPS successful
+17:43:10: 47/49 monomers added
+17:43:10: starting relax_047 LAMMPS simulation
+17:43:36: relax_047 simulation using LAMMPS successful
+17:43:36: 48/49 monomers added
+17:43:36: starting relax_048 LAMMPS simulation
+17:44:02: relax_048 simulation using LAMMPS successful
+17:44:02: 49/49 monomers added
+17:44:02: starting relax_049 LAMMPS simulation
+17:44:29: relax_049 simulation using LAMMPS successful
+polymerlength= 49 pe1, pe2, pe1, pe1, pe2, pe1, pe1, pe1, pe1, pe1, pe2, pe2, pe1, pe1, pe2, pe1, pe1, pe1, pe2, pe2, pe2, pe2, pe2, pe2, pe1, pe2, pe1, pe2, pe2, pe1, pe2, pe2, pe1, pe1, pe2, pe1, pe1, pe2, pe1, pe1, pe2, pe2, pe1, pe1, pe1, pe2, pe2, pe2, pe1, pe2
+17:44:38: starting LAMMPS simulation
+17:45:05: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+17:45:06: 1/50 monomers added
+17:45:07: 2/50 monomers added
+17:45:07: starting relax_002 LAMMPS simulation
+17:46:25: relax_002 simulation using LAMMPS successful
+17:46:25: 3/50 monomers added
+17:46:25: starting relax_003 LAMMPS simulation
+17:47:46: relax_003 simulation using LAMMPS successful
+17:47:46: 4/50 monomers added
+17:47:46: starting relax_004 LAMMPS simulation
+17:49:06: relax_004 simulation using LAMMPS successful
+17:49:06: 5/50 monomers added
+17:49:06: starting relax_005 LAMMPS simulation
+17:50:28: relax_005 simulation using LAMMPS successful
+17:50:28: 6/50 monomers added
+17:50:28: starting relax_006 LAMMPS simulation
+17:51:47: relax_006 simulation using LAMMPS successful
+17:51:47: 7/50 monomers added
+17:51:47: starting relax_007 LAMMPS simulation
+17:53:05: relax_007 simulation using LAMMPS successful
+17:53:05: 8/50 monomers added
+17:53:05: starting relax_008 LAMMPS simulation
+17:53:08: relax_008 simulation using LAMMPS successful
+17:53:08: 9/50 monomers added
+17:53:08: starting relax_009 LAMMPS simulation
+17:53:11: relax_009 simulation using LAMMPS successful
+17:53:12: 10/50 monomers added
+17:53:12: starting relax_010 LAMMPS simulation
+17:53:16: relax_010 simulation using LAMMPS successful
+17:53:16: 11/50 monomers added
+17:53:16: starting relax_011 LAMMPS simulation
+17:53:21: relax_011 simulation using LAMMPS successful
+17:53:21: 12/50 monomers added
+17:53:21: starting relax_012 LAMMPS simulation
+17:53:27: relax_012 simulation using LAMMPS successful
+17:53:27: 13/50 monomers added
+17:53:27: starting relax_013 LAMMPS simulation
+17:53:32: relax_013 simulation using LAMMPS successful
+17:53:32: 14/50 monomers added
+17:53:32: starting relax_014 LAMMPS simulation
+17:53:38: relax_014 simulation using LAMMPS successful
+17:53:39: 15/50 monomers added
+17:53:39: starting relax_015 LAMMPS simulation
+17:53:45: relax_015 simulation using LAMMPS successful
+17:53:45: 16/50 monomers added
+17:53:46: starting relax_016 LAMMPS simulation
+17:53:53: relax_016 simulation using LAMMPS successful
+17:53:53: 17/50 monomers added
+17:53:53: starting relax_017 LAMMPS simulation
+17:54:01: relax_017 simulation using LAMMPS successful
+17:54:01: 18/50 monomers added
+17:54:01: starting relax_018 LAMMPS simulation
+17:54:11: relax_018 simulation using LAMMPS successful
+17:54:12: 19/50 monomers added
+17:54:12: starting relax_019 LAMMPS simulation
+17:54:23: relax_019 simulation using LAMMPS successful
+17:54:23: 20/50 monomers added
+17:54:23: starting relax_020 LAMMPS simulation
+17:54:34: relax_020 simulation using LAMMPS successful
+17:54:34: 21/50 monomers added
+17:54:34: starting relax_021 LAMMPS simulation
+17:54:45: relax_021 simulation using LAMMPS successful
+17:54:45: 22/50 monomers added
+17:54:45: starting relax_022 LAMMPS simulation
+17:54:56: relax_022 simulation using LAMMPS successful
+17:54:56: 23/50 monomers added
+17:54:56: starting relax_023 LAMMPS simulation
+17:55:07: relax_023 simulation using LAMMPS successful
+17:55:07: 24/50 monomers added
+17:55:07: starting relax_024 LAMMPS simulation
+17:55:19: relax_024 simulation using LAMMPS successful
+17:55:19: 25/50 monomers added
+17:55:19: starting relax_025 LAMMPS simulation
+17:55:31: relax_025 simulation using LAMMPS successful
+17:55:31: 26/50 monomers added
+17:55:31: starting relax_026 LAMMPS simulation
+17:55:44: relax_026 simulation using LAMMPS successful
+17:55:44: 27/50 monomers added
+17:55:44: starting relax_027 LAMMPS simulation
+17:55:57: relax_027 simulation using LAMMPS successful
+17:55:57: 28/50 monomers added
+17:55:57: starting relax_028 LAMMPS simulation
+17:56:14: relax_028 simulation using LAMMPS successful
+17:56:14: 29/50 monomers added
+17:56:14: starting relax_029 LAMMPS simulation
+17:56:32: relax_029 simulation using LAMMPS successful
+17:56:32: 30/50 monomers added
+17:56:32: starting relax_030 LAMMPS simulation
+17:56:50: relax_030 simulation using LAMMPS successful
+17:56:50: 31/50 monomers added
+17:56:50: starting relax_031 LAMMPS simulation
+17:57:07: relax_031 simulation using LAMMPS successful
+17:57:07: 32/50 monomers added
+17:57:07: starting relax_032 LAMMPS simulation
+17:57:24: relax_032 simulation using LAMMPS successful
+17:57:24: 33/50 monomers added
+17:57:24: starting relax_033 LAMMPS simulation
+17:57:41: relax_033 simulation using LAMMPS successful
+17:57:41: 34/50 monomers added
+17:57:41: starting relax_034 LAMMPS simulation
+17:57:58: relax_034 simulation using LAMMPS successful
+17:57:58: 35/50 monomers added
+17:57:58: starting relax_035 LAMMPS simulation
+17:58:16: relax_035 simulation using LAMMPS successful
+17:58:16: 36/50 monomers added
+17:58:16: starting relax_036 LAMMPS simulation
+17:58:36: relax_036 simulation using LAMMPS successful
+17:58:36: 37/50 monomers added
+17:58:36: starting relax_037 LAMMPS simulation
+17:58:55: relax_037 simulation using LAMMPS successful
+17:58:56: 38/50 monomers added
+17:58:56: starting relax_038 LAMMPS simulation
+17:59:15: relax_038 simulation using LAMMPS successful
+17:59:16: 39/50 monomers added
+17:59:16: starting relax_039 LAMMPS simulation
+17:59:36: relax_039 simulation using LAMMPS successful
+17:59:36: 40/50 monomers added
+17:59:37: starting relax_040 LAMMPS simulation
+17:59:58: relax_040 simulation using LAMMPS successful
+17:59:58: 41/50 monomers added
+17:59:59: starting relax_041 LAMMPS simulation
+18:00:20: relax_041 simulation using LAMMPS successful
+18:00:20: 42/50 monomers added
+18:00:21: starting relax_042 LAMMPS simulation
+18:00:41: relax_042 simulation using LAMMPS successful
+18:00:41: 43/50 monomers added
+18:00:42: starting relax_043 LAMMPS simulation
+18:01:03: relax_043 simulation using LAMMPS successful
+18:01:03: 44/50 monomers added
+18:01:03: starting relax_044 LAMMPS simulation
+18:01:24: relax_044 simulation using LAMMPS successful
+18:01:24: 45/50 monomers added
+18:01:24: starting relax_045 LAMMPS simulation
+18:01:48: relax_045 simulation using LAMMPS successful
+18:01:48: 46/50 monomers added
+18:01:48: starting relax_046 LAMMPS simulation
+18:02:11: relax_046 simulation using LAMMPS successful
+18:02:12: 47/50 monomers added
+18:02:12: starting relax_047 LAMMPS simulation
+18:02:37: relax_047 simulation using LAMMPS successful
+18:02:37: 48/50 monomers added
+18:02:37: starting relax_048 LAMMPS simulation
+18:03:03: relax_048 simulation using LAMMPS successful
+18:03:03: 49/50 monomers added
+18:03:03: starting relax_049 LAMMPS simulation
+18:03:30: relax_049 simulation using LAMMPS successful
+18:03:30: 50/50 monomers added
+18:03:30: starting relax_050 LAMMPS simulation
+18:03:55: relax_050 simulation using LAMMPS successful
+polymerlength= 50 pe1, pe1, pe2, pe2, pe1, pe1, pe1, pe1, pe2, pe1, pe1, pe1, pe2, pe2, pe1, pe2, pe2, pe1, pe2, pe1, pe2, pe1, pe1, pe2, pe1, pe1, pe1, pe1, pe1, pe2, pe2, pe1, pe1, pe2, pe1, pe1, pe1, pe1, pe2, pe2, pe2, pe2, pe1, pe2, pe1, pe1, pe2, pe2, pe2, pe2, pe1
+18:04:06: starting LAMMPS simulation
+18:04:26: simulation using LAMMPS successful

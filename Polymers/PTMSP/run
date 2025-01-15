@@ -1,0 +1,43 @@
+#>>>>>>>>>>>>>>>1. PBS job control<<<<<<<<<<<<<<<<#
+#PBS -l nodes=1:ppn=1
+#PBS -q fun
+#PBS -o pbs.log
+#PBS -e pbs.err
+#PBS -r n
+#PBS -m e
+#PBS -j oe
+#PBS -l walltime=10000:00:00
+#PBS -N PTMSP
+NP=`cat $PBS_NODEFILE|wc -l`
+NNODES=`uniq $PBS_NODEFILE | wc -l`
+NPROCS=`wc -l < $PBS_NODEFILE`
+echo "The used cpu number is $PROCS"
+echo "The used node name is $NNODES"
+echo "The nodefile is $PBS_NODEFILE"
+NODE_LIST=`uniq $PBS_NODEFILE | sort`
+echo "The node_list is $NODE_LIST"
+echo "$PBS_JOBID started on $PBS_O_HOST at `date`"
+#=================================================#
+#>>>>>>>>>>>>>2. Job specification<<<<<<<<<<<<<<<<#
+cd $PBS_O_WORKDIR
+ulimit -s unlimited
+ulimit -m unlimited
+export OMP_NUM_THREADS=20
+export PATH="/home/snaskar/software/anaconda3/bin:$PATH"
+source /home/snaskar/software/anaconda3/etc/profile.d/conda.sh
+export PYTHONPATH=$PYTHONPATH:/home/snaskar/software/pysimm
+export PATH=$PATH:/home/snaskar/software/pysimm/bin
+export LAMMPS_EXEC=/home/dfan/Src/LAMMPS/lammps-27Feb2020/src/lmp_mpi
+export ANTECHAMBER_EXEC=~/software/anaconda3/bin/antechamber
+
+#python build-polymer.py > log_optimize
+python build-polymer_v2.py > log_polymer
+#
+#
+#
+#input="21-step.in"
+#lammps_2020="/home/dfan/Src/LAMMPS/lammps-27Feb2020/src"
+#mpi="/home/dfan/intel/compilers_and_libraries_2018.5.274/linux/mpi/intel64/bin/mpirun"
+#$mpi -n 20 $lammps_2020/lmp_mpi -in $input > log 2>&1
+
+

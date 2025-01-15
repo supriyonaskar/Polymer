@@ -1,0 +1,68 @@
+Electrostatic potential parameters
+    van der Waals radii (Angstrom):
+                                      C   1.500
+                                      O   1.400
+                                      H   1.200
+    VDW scale factors:                1.40  1.60  1.80  2.00
+    VDW point density:                1.000
+    ESP method:                       scf
+    ESP basis set:                    6-31g*
+
+Grid information (see 1_optimized_grid.dat in Angstrom)
+    Number of grid points:            1630
+
+Quantum electrostatic potential (see 1_optimized_grid_esp.dat)
+
+Constraints
+    Charge constraints
+        Total charge of   0.00000000 on the set  11  16  17  18  29  30  36
+        Total charge of   0.00000000 on the set   5   6   8  23  24  27  28
+        Total charge of   0.00000000 on the set   4  13   9  15  35  14  33  34
+
+Restraint
+    Hyperbolic restraint to a charge of zero
+    Hydrogen atoms are not restrained
+    resp_a:                           0.0005
+    resp_b:                           0.1000
+
+Fit
+
+Electrostatic Potential Charges
+   Center  Symbol       ESP      RESP
+      1    C       0.41053268  0.09614538
+      2    C      -0.87731663 -0.75693487
+      3    O      -0.44653052 -0.32753359
+      4    O      -0.15646715 -0.10475558
+      5    C       0.05241318 -0.00000776
+      6    O      -0.47242016 -0.40014532
+      7    C       0.19682516  0.07820052
+      8    C       0.17332311  0.05382539
+      9    O      -0.59777195 -0.56921343
+     10    O      -0.20485886 -0.21482671
+     11    C      -0.23681531 -0.23244103
+     12    C      -0.07332548 -0.01171659
+     13    C       0.91096098  0.78914647
+     14    C      -0.14230785 -0.15422808
+     15    C      -0.47326193 -0.38964189
+     16    C       0.45308543  0.44433574
+     17    C      -0.10644581 -0.09682285
+     18    O      -0.49482011 -0.49191075
+     19    H       0.00518906  0.07661863
+     20    H       0.03296530  0.10291183
+     21    H       0.32052813  0.30268833
+     22    H       0.33207801  0.31344643
+     23    H       0.07428223  0.09578949
+     24    H       0.07388495  0.09519636
+     25    H       0.04712197  0.07103473
+     26    H       0.00202828  0.03652168
+     27    H       0.05544097  0.08420197
+     28    H       0.04307572  0.07113987
+     29    H       0.15176938  0.14831574
+     30    H       0.16715403  0.16389829
+     31    H       0.12657349  0.11766159
+     32    H       0.12818941  0.11578265
+     33    H       0.16128824  0.15732547
+     34    H       0.13664090  0.13828923
+     35    H       0.16091875  0.13307781
+     36    H       0.06607238  0.06462486
+Total Charge:     -0.00000000 -0.00000000

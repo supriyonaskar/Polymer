@@ -1,0 +1,125 @@
+
+Host: node22
+
+Timers On : Tue Jan 17 12:16:15 2023
+Timers Off: Tue Jan 17 12:16:16 2023
+
+Wall Time:        1.04 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+
+--------------------------------------------------------------------------------------
+
+**************************************************************************************
+
+Host: node22
+
+Timers On : Tue Jan 17 13:30:43 2023
+Timers Off: Tue Jan 17 13:30:44 2023
+
+Wall Time:        1.00 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+
+--------------------------------------------------------------------------------------
+
+**************************************************************************************
+
+Host: node22
+
+Timers On : Tue Jan 17 13:31:09 2023
+Timers Off: Tue Jan 17 15:27:28 2023
+
+Wall Time:     6979.57 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+DFH: sparsity prep                  :    275.667u      0.050s    165.344w     40 calls
+Libint2ERI::Libint2ERI              :   1138.533u     21.100s    410.080w   1731 calls
+DFH: initialize()                   :  28646.867u    525.067s   1080.158w     40 calls
+DFH: AO Construction                :   6054.533u     79.900s    214.243w     40 calls
+DFH: AO-Met. Contraction            :  13040.950u    179.500s    461.428w     40 calls
+HF: Form core H                     :   1287.883u     13.183s     41.114w     40 calls
+HF: Form S/X                        :    243.250u      8.083s      7.932w     40 calls
+HF: Guess                           :     36.367u      1.533s      1.192w     40 calls
+SAD Guess                           :     31.133u      1.267s      1.022w      4 calls
+HF: Form G                          :  53504.950u   1080.267s   2307.133w    467 calls
+JK: D                               :     30.883u      0.833s      1.010w    467 calls
+JK: USO2AO                          :      2.517u      0.150s      0.082w    467 calls
+JK: JK                              :  53355.850u   1074.133s   2302.169w    467 calls
+DFH: compute_JK()                   :  53322.283u   1072.683s   2301.056w    467 calls
+DFH: Grabbing AOs                   :      0.000u      0.000s      0.001w    467 calls
+DFH: compute_J                      :   3029.667u     11.417s     96.015w    467 calls
+DFH: compute_K                      :  47510.917u    145.283s   1618.193w    467 calls
+JK: AO2USO                          :      0.000u      0.000s      0.001w    467 calls
+HF: Form F                          :     24.917u      1.067s      0.821w    467 calls
+HF: Form D                          :     29.417u      0.967s      0.961w    467 calls
+HF: DIIS                            :   1065.467u     56.567s     38.710w    463 calls
+HF: Form C                          :   2279.100u     70.417s     74.185w    463 calls
+Grad: V T Perturb                   :   1222.500u     12.167s     39.160w     37 calls
+Grad: S                             :    271.317u      5.933s      8.747w     37 calls
+Grad: JK                            :  47959.850u   1317.650s   2649.432w     37 calls
+JKGrad: Amn                         :  13330.383u    464.383s    947.440w     37 calls
+JKGrad: Awmn                        :      0.000u      0.000s      0.000w     37 calls
+JKGrad: AB                          :  10861.617u    299.967s    407.807w     37 calls
+JKGrad: UV                          :   3885.433u    110.067s    168.021w     37 calls
+JKGrad: ABx                         :    485.650u     12.800s     15.892w     37 calls
+JKGrad: Amnx                        :  19288.050u    415.550s   1103.177w     37 calls
+Grad: XC                            :      0.000u      0.000s      0.000w     37 calls
+
+--------------------------------------------------------------------------------------
+DFH: sparsity prep                  :    275.667u      0.050s    165.344w     40 calls
+| Libint2ERI::Libint2ERI            :    186.767u      0.050s    112.032w     40 calls
+DFH: initialize()                   :  28646.867u    525.067s   1080.158w     40 calls
+| Libint2ERI::Libint2ERI            :    249.700u      3.600s     99.037w    840 calls
+| DFH: AO Construction              :   6054.533u     79.900s    214.243w     40 calls
+| DFH: AO-Met. Contraction          :  13040.950u    179.500s    461.428w     40 calls
+HF: Form core H                     :   1287.883u     13.183s     41.114w     40 calls
+HF: Form S/X                        :    243.250u      8.083s      7.932w     40 calls
+HF: Guess                           :     36.367u      1.533s      1.192w     40 calls
+| SAD Guess                         :     31.133u      1.267s      1.022w      4 calls
+HF: Form G                          :  53504.950u   1080.267s   2307.133w    467 calls
+| JK: D                             :     30.883u      0.833s      1.010w    467 calls
+| JK: USO2AO                        :      2.517u      0.150s      0.082w    467 calls
+| JK: JK                            :  53355.850u   1074.133s   2302.169w    467 calls
+| | DFH: compute_JK()               :  53322.283u   1072.683s   2301.056w    467 calls
+| | | DFH: Grabbing AOs             :      0.000u      0.000s      0.001w    467 calls
+| | | DFH: compute_J                :   3029.667u     11.417s     96.015w    467 calls
+| | | DFH: compute_K                :  47510.917u    145.283s   1618.193w    467 calls
+| JK: AO2USO                        :      0.000u      0.000s      0.001w    467 calls
+HF: Form F                          :     24.917u      1.067s      0.821w    467 calls
+HF: Form D                          :     29.417u      0.967s      0.961w    467 calls
+HF: DIIS                            :   1065.467u     56.567s     38.710w    463 calls
+HF: Form C                          :   2279.100u     70.417s     74.185w    463 calls
+Grad: V T Perturb                   :   1222.500u     12.167s     39.160w     37 calls
+Grad: S                             :    271.317u      5.933s      8.747w     37 calls
+Grad: JK                            :  47959.850u   1317.650s   2649.432w     37 calls
+| JKGrad: Amn                       :  13330.383u    464.383s    947.440w     37 calls
+| | Libint2ERI::Libint2ERI          :    343.533u      8.333s     99.972w     37 calls
+| JKGrad: Awmn                      :      0.000u      0.000s      0.000w     37 calls
+| JKGrad: AB                        :  10861.617u    299.967s    407.807w     37 calls
+| | Libint2ERI::Libint2ERI          :      0.867u      0.000s      0.500w    740 calls
+| JKGrad: UV                        :   3885.433u    110.067s    168.021w     37 calls
+| JKGrad: ABx                       :    485.650u     12.800s     15.892w     37 calls
+| | Libint2ERI::Libint2ERI          :      0.983u      0.083s      0.031w     37 calls
+| JKGrad: Amnx                      :  19288.050u    415.550s   1103.177w     37 calls
+| | Libint2ERI::Libint2ERI          :    356.683u      9.033s     98.508w     37 calls
+Grad: XC                            :      0.000u      0.000s      0.000w     37 calls
+
+**************************************************************************************
+
+Host: chesdens.d3.icgm.fr
+
+Timers On : Tue Jan 17 18:38:05 2023
+Timers Off: Tue Jan 17 18:56:49 2023
+
+Wall Time:     1124.04 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+
+--------------------------------------------------------------------------------------
+
+**************************************************************************************

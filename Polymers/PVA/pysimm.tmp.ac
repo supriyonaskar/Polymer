@@ -1,0 +1,19 @@
+CHARGE      0.00 ( 0 )
+Formula: H6 C2 O1 
+ATOM      1  C   RES     1      -0.972   0.363  -0.774  0.000000        c3
+ATOM      2  C1  RES     1       0.428  -0.051  -0.356  0.000000        c3
+ATOM      3  H   RES     1      -1.695  -0.410  -0.505  0.000000        hc
+ATOM      4  O   RES     1       0.521  -0.335   1.014  0.000000        oh
+ATOM      5  H1  RES     1       0.329   0.449   1.506  0.000000        ho
+ATOM      6  H2  RES     1      -1.022   0.528  -1.853  0.000000        hc
+ATOM      7  H3  RES     1      -1.270   1.293  -0.280  0.000000        hc
+ATOM      8  H4  RES     1       0.717  -0.968  -0.871  0.000000        h1
+ATOM      9  H5  RES     1       1.151   0.721  -0.644  0.000000        h1
+BOND    1    1    2    1      C   C1
+BOND    2    1    3    1      C    H
+BOND    3    1    6    1      C   H2
+BOND    4    1    7    1      C   H3
+BOND    5    2    4    1     C1    O
+BOND    6    2    8    1     C1   H4
+BOND    7    2    9    1     C1   H5
+BOND    8    4    5    1      O   H1

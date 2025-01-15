@@ -1,0 +1,4633 @@
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-116.049 -116.049 -116.049) to (116.049 116.049 116.049)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  852 atoms
+  reading velocities ...
+  852 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  921 bonds
+  reading angles ...
+  1620 angles
+  reading dihedrals ...
+  2496 dihedrals
+  reading impropers ...
+  280 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.000818968 secs
+  read_data CPU = 0.0106142 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0809201
+  grid = 16 16 16
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0344192
+  estimated relative force accuracy = 0.000103652
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 9261 4096
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 34 34 34
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 19.86 | 19.86 | 19.86 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    100.55977    406.17395    827.06561    1488.3265  -0.70201754 
+       7    100.55977    404.55635    650.99673      1310.64    1.1522389 
+Loop time of 0.237343 on 1 procs for 7 steps with 852 atoms
+
+99.8% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         1233.23956782      1055.55307273      1055.55307273
+  Force two-norm initial, final = 727.117 39.0185
+  Force max component initial, final = 303.376 9.85251
+  Final line search alpha, max atom move = 7.64563e-12 7.53286e-11
+  Iterations, force evaluations = 7 71
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.10276    | 0.10276    | 0.10276    |   0.0 | 43.30
+Bond    | 0.030318   | 0.030318   | 0.030318   |   0.0 | 12.77
+Kspace  | 0.10328    | 0.10328    | 0.10328    |   0.0 | 43.51
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 3.5763e-05 | 3.5763e-05 | 3.5763e-05 |   0.0 |  0.02
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.0009484  |            |       |  0.40
+
+Nlocal:    852 ave 852 max 852 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    38366 ave 38366 max 38366 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 38366
+Ave neighs/atom = 45.0305
+Ave special neighs/atom = 11.2371
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-146.213 -146.213 -146.213) to (146.213 146.213 146.213)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  937 atoms
+  reading velocities ...
+  937 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  1013 bonds
+  reading angles ...
+  1782 angles
+  reading dihedrals ...
+  2746 dihedrals
+  reading impropers ...
+  308 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.000864983 secs
+  read_data CPU = 0.0113339 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0636745
+  grid = 15 15 15
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0365599
+  estimated relative force accuracy = 0.000110099
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 8000 3375
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 42 42 42
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 19.93 | 19.93 | 19.93 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    1830.2189    469.76893    1192.3382    6768.4879    6.3207511 
+      10    1830.2189     468.6814    1003.1891    6578.2512    7.4533914 
+Loop time of 0.26948 on 1 procs for 10 steps with 937 atoms
+
+99.8% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         1662.10712286      1471.87051574      1471.87051574
+  Force two-norm initial, final = 733.066 59.5742
+  Force max component initial, final = 364.765 14.1298
+  Final line search alpha, max atom move = 2.80955e-12 3.96983e-11
+  Iterations, force evaluations = 10 78
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.12896    | 0.12896    | 0.12896    |   0.0 | 47.85
+Bond    | 0.036353   | 0.036353   | 0.036353   |   0.0 | 13.49
+Kspace  | 0.10296    | 0.10296    | 0.10296    |   0.0 | 38.21
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 2.861e-05  | 2.861e-05  | 2.861e-05  |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.001177   |            |       |  0.44
+
+Nlocal:    937 ave 937 max 937 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    46851 ave 46851 max 46851 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 46851
+Ave neighs/atom = 50.0011
+Ave special neighs/atom = 11.2401
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-150.933 -150.933 -150.933) to (150.933 150.933 150.933)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  1022 atoms
+  reading velocities ...
+  1022 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  1105 bonds
+  reading angles ...
+  1944 angles
+  reading dihedrals ...
+  2996 dihedrals
+  reading impropers ...
+  336 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.000959158 secs
+  read_data CPU = 0.0120401 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.061997
+  grid = 15 15 15
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.037532
+  estimated relative force accuracy = 0.000113026
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 8000 3375
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 44 44 44
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 19.99 | 19.99 | 19.99 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    1425.5581    488.00049    1693.7615    6520.3156   -2.2090185 
+      29    1425.5581    477.72251    1441.7111    6257.9873  -0.54132627 
+Loop time of 0.414157 on 1 procs for 29 steps with 1022 atoms
+
+99.9% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         2181.76195352      1919.43356849      1919.43356849
+  Force two-norm initial, final = 735.459 67.4701
+  Force max component initial, final = 330.594 10.2262
+  Final line search alpha, max atom move = 1.59074e-12 1.62673e-11
+  Iterations, force evaluations = 29 117
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.18889    | 0.18889    | 0.18889    |   0.0 | 45.61
+Bond    | 0.057924   | 0.057924   | 0.057924   |   0.0 | 13.99
+Kspace  | 0.16515    | 0.16515    | 0.16515    |   0.0 | 39.88
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 5.2691e-05 | 5.2691e-05 | 5.2691e-05 |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.002144   |            |       |  0.52
+
+Nlocal:    1022 ave 1022 max 1022 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    46031 ave 46031 max 46031 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 46031
+Ave neighs/atom = 45.0401
+Ave special neighs/atom = 11.2427
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-155.375 -155.375 -155.375) to (155.375 155.375 155.375)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  1107 atoms
+  reading velocities ...
+  1107 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  1197 bonds
+  reading angles ...
+  2106 angles
+  reading dihedrals ...
+  3246 dihedrals
+  reading impropers ...
+  364 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.000980139 secs
+  read_data CPU = 0.012888 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0604963
+  grid = 15 15 15
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0384072
+  estimated relative force accuracy = 0.000115662
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 8000 3375
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 45 45 45
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 20.03 | 20.03 | 20.03 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    1490.0027    548.72817    1232.6941    6693.6273    5.5040311 
+      23    1490.0027    539.30531    1016.8342    6468.3445    6.7008916 
+Loop time of 0.406605 on 1 procs for 23 steps with 1107 atoms
+
+99.8% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         1781.42230496      1556.13956149      1556.13956149
+  Force two-norm initial, final = 731.362 68.6651
+  Force max component initial, final = 286.577 12.4301
+  Final line search alpha, max atom move = 2.20466e-12 2.74042e-11
+  Iterations, force evaluations = 23 103
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.20236    | 0.20236    | 0.20236    |   0.0 | 49.77
+Bond    | 0.055726   | 0.055726   | 0.055726   |   0.0 | 13.71
+Kspace  | 0.14647    | 0.14647    | 0.14647    |   0.0 | 36.02
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 5.0545e-05 | 5.0545e-05 | 5.0545e-05 |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.002004   |            |       |  0.49
+
+Nlocal:    1107 ave 1107 max 1107 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    55452 ave 55452 max 55452 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 55452
+Ave neighs/atom = 50.0921
+Ave special neighs/atom = 11.2448
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-159.576 -159.576 -159.576) to (159.576 159.576 159.576)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  1192 atoms
+  reading velocities ...
+  1192 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  1289 bonds
+  reading angles ...
+  2268 angles
+  reading dihedrals ...
+  3496 dihedrals
+  reading impropers ...
+  392 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00105405 secs
+  read_data CPU = 0.0136518 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0624616
+  grid = 16 16 16
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.036989
+  estimated relative force accuracy = 0.000111391
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 9261 4096
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 46 46 46
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 20.18 | 20.18 | 20.18 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0     1513.484    653.98326    1622.2214    7649.2919    3.5304157 
+      25     1513.484    594.45605    1386.2115    7353.7548    3.4656704 
+Loop time of 0.495815 on 1 procs for 25 steps with 1192 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         2276.20464148      1980.66752885      1980.66752885
+  Force two-norm initial, final = 734.913 92.912
+  Force max component initial, final = 317.592 19.3442
+  Final line search alpha, max atom move = 7.79259e-13 1.50742e-11
+  Iterations, force evaluations = 25 109
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.26072    | 0.26072    | 0.26072    |   0.0 | 52.58
+Bond    | 0.063043   | 0.063043   | 0.063043   |   0.0 | 12.71
+Kspace  | 0.16974    | 0.16974    | 0.16974    |   0.0 | 34.23
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 5.9128e-05 | 5.9128e-05 | 5.9128e-05 |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.002252   |            |       |  0.45
+
+Nlocal:    1192 ave 1192 max 1192 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    68886 ave 68886 max 68886 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 68886
+Ave neighs/atom = 57.7903
+Ave special neighs/atom = 11.2466
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-163.567 -163.567 -163.567) to (163.567 163.567 163.567)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  1277 atoms
+  reading velocities ...
+  1277 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  1381 bonds
+  reading angles ...
+  2430 angles
+  reading dihedrals ...
+  3746 dihedrals
+  reading impropers ...
+  420 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00110698 secs
+  read_data CPU = 0.0143809 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0611735
+  grid = 16 16 16
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0377502
+  estimated relative force accuracy = 0.000113684
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 9261 4096
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 47 47 47
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 20.22 | 20.22 | 20.22 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    1094.3911    659.43155    1316.5326    6138.4956     4.235078 
+      32    1094.3911    635.58759    1091.1139     5889.233    4.6505229 
+Loop time of 0.542445 on 1 procs for 32 steps with 1277 atoms
+
+100.1% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         1975.96412662      1726.70147555      1726.70147555
+  Force two-norm initial, final = 732.701 69.8853
+  Force max component initial, final = 372.092 14.4948
+  Final line search alpha, max atom move = 2.21684e-12 3.21328e-11
+  Iterations, force evaluations = 32 120
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.26948    | 0.26948    | 0.26948    |   0.0 | 49.68
+Bond    | 0.075235   | 0.075235   | 0.075235   |   0.0 | 13.87
+Kspace  | 0.19488    | 0.19488    | 0.19488    |   0.0 | 35.93
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 4.7207e-05 | 4.7207e-05 | 4.7207e-05 |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.002804   |            |       |  0.52
+
+Nlocal:    1277 ave 1277 max 1277 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    62195 ave 62195 max 62195 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 62195
+Ave neighs/atom = 48.704
+Ave special neighs/atom = 11.2482
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-167.372 -167.372 -167.372) to (167.372 167.372 167.372)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  1362 atoms
+  reading velocities ...
+  1362 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  1473 bonds
+  reading angles ...
+  2592 angles
+  reading dihedrals ...
+  3996 dihedrals
+  reading impropers ...
+  448 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00121808 secs
+  read_data CPU = 0.119788 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0599936
+  grid = 16 16 16
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.038451
+  estimated relative force accuracy = 0.000115794
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 9261 4096
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 48 48 48
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 20.26 | 20.26 | 20.26 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    1229.8392    723.36858    1522.1961    7234.8778    4.3272717 
+      16    1229.8392    718.50139    1291.7172    6999.5317    5.2375019 
+Loop time of 0.452546 on 1 procs for 16 steps with 1362 atoms
+
+100.1% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         2245.56466486      2010.21860524      2010.21860524
+  Force two-norm initial, final = 731.589 88.5638
+  Force max component initial, final = 347.205 16.9025
+  Final line search alpha, max atom move = 1.36124e-12 2.30084e-11
+  Iterations, force evaluations = 16 90
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.23443    | 0.23443    | 0.23443    |   0.0 | 51.80
+Bond    | 0.060414   | 0.060414   | 0.060414   |   0.0 | 13.35
+Kspace  | 0.15566    | 0.15566    | 0.15566    |   0.0 | 34.40
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 3.9101e-05 | 3.9101e-05 | 3.9101e-05 |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.002005   |            |       |  0.44
+
+Nlocal:    1362 ave 1362 max 1362 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    71401 ave 71401 max 71401 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 71401
+Ave neighs/atom = 52.4236
+Ave special neighs/atom = 11.2496
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-171.012 -171.012 -171.012) to (171.012 171.012 171.012)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  1447 atoms
+  reading velocities ...
+  1447 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  1565 bonds
+  reading angles ...
+  2754 angles
+  reading dihedrals ...
+  4246 dihedrals
+  reading impropers ...
+  476 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00118303 secs
+  read_data CPU = 0.015692 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.065053
+  grid = 18 18 18
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0350357
+  estimated relative force accuracy = 0.000105509
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 12167 5832
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 49 49 49
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 20.56 | 20.56 | 20.56 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    1342.5845    768.58189    1607.6959    8163.1544    5.1724171 
+      60    1342.5845    718.36402    1263.6963     7768.937    5.9729625 
+Loop time of 1.09626 on 1 procs for 60 steps with 1447 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+          2376.2777522      1982.06033579      1982.06033579
+  Force two-norm initial, final = 734.071 62.8712
+  Force max component initial, final = 367.39 12.519
+  Final line search alpha, max atom move = 2.34205e-12 2.93201e-11
+  Iterations, force evaluations = 60 193
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.50648    | 0.50648    | 0.50648    |   0.0 | 46.20
+Bond    | 0.13782    | 0.13782    | 0.13782    |   0.0 | 12.57
+Kspace  | 0.4411     | 0.4411     | 0.4411     |   0.0 | 40.24
+Neigh   | 0.0052762  | 0.0052762  | 0.0052762  |   0.0 |  0.48
+Comm    | 0.00014567 | 0.00014567 | 0.00014567 |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.005432   |            |       |  0.50
+
+Nlocal:    1447 ave 1447 max 1447 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    72812 ave 72812 max 72812 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 72812
+Ave neighs/atom = 50.3193
+Ave special neighs/atom = 11.2509
+Neighbor list builds = 2
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-174.503 -174.503 -174.503) to (174.503 174.503 174.503)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  1532 atoms
+  reading velocities ...
+  1532 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  1657 bonds
+  reading angles ...
+  2916 angles
+  reading dihedrals ...
+  4496 dihedrals
+  reading impropers ...
+  504 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00125098 secs
+  read_data CPU = 0.0166631 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0639646
+  grid = 18 18 18
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0356907
+  estimated relative force accuracy = 0.000107482
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 12167 5832
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 50 50 50
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 20.99 | 20.99 | 20.99 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    1090.1851    731.80918    1685.5982    7392.5982    4.1460281 
+      16    1090.1851    727.01408    1482.9525    7185.1574    4.6205477 
+Loop time of 0.659784 on 1 procs for 16 steps with 1532 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         2417.40736925      2209.96657255      2209.96657255
+  Force two-norm initial, final = 732.893 60.4074
+  Force max component initial, final = 347.983 11.1048
+  Final line search alpha, max atom move = 2.76128e-12 3.06636e-11
+  Iterations, force evaluations = 16 91
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.37296    | 0.37296    | 0.37296    |   0.0 | 56.53
+Bond    | 0.070324   | 0.070324   | 0.070324   |   0.0 | 10.66
+Kspace  | 0.21417    | 0.21417    | 0.21417    |   0.0 | 32.46
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 3.7193e-05 | 3.7193e-05 | 3.7193e-05 |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.002291   |            |       |  0.35
+
+Nlocal:    1532 ave 1532 max 1532 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    121713 ave 121713 max 121713 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 121713
+Ave neighs/atom = 79.4471
+Ave special neighs/atom = 11.252
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-177.86 -177.86 -177.86) to (177.86 177.86 177.86)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  1617 atoms
+  reading velocities ...
+  1617 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  1749 bonds
+  reading angles ...
+  3078 angles
+  reading dihedrals ...
+  4746 dihedrals
+  reading impropers ...
+  532 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00133204 secs
+  read_data CPU = 0.017231 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0629512
+  grid = 18 18 18
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.036303
+  estimated relative force accuracy = 0.000109325
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 12167 5832
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 51 51 51
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 21.03 | 21.03 | 21.03 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0     1037.528    797.33659    1728.3568    7523.4543    4.0774268 
+      18     1037.528    798.87147    1504.6246     7301.257    4.9447561 
+Loop time of 0.631044 on 1 procs for 18 steps with 1617 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         2525.69334445      2303.49603757      2303.49603757
+  Force two-norm initial, final = 735.461 69.2024
+  Force max component initial, final = 375.329 13.6644
+  Final line search alpha, max atom move = 1.51121e-12 2.06498e-11
+  Iterations, force evaluations = 18 94
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.33892    | 0.33892    | 0.33892    |   0.0 | 53.71
+Bond    | 0.073467   | 0.073467   | 0.073467   |   0.0 | 11.64
+Kspace  | 0.21615    | 0.21615    | 0.21615    |   0.0 | 34.25
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 4.8161e-05 | 4.8161e-05 | 4.8161e-05 |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.002462   |            |       |  0.39
+
+Nlocal:    1617 ave 1617 max 1617 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    104395 ave 104395 max 104395 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 104395
+Ave neighs/atom = 64.5609
+Ave special neighs/atom = 11.2529
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-181.094 -181.094 -181.094) to (181.094 181.094 181.094)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  1702 atoms
+  reading velocities ...
+  1702 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  1841 bonds
+  reading angles ...
+  3240 angles
+  reading dihedrals ...
+  4996 dihedrals
+  reading impropers ...
+  560 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00139999 secs
+  read_data CPU = 0.0181389 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0620042
+  grid = 18 18 18
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0368769
+  estimated relative force accuracy = 0.000111054
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 12167 5832
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 52 52 52
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 21.08 | 21.08 | 21.08 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    920.52828    868.43583    1665.3817    7201.2253    3.6458114 
+      20    920.52828    869.26392    1432.6947    6969.3665    4.6299933 
+Loop time of 0.669643 on 1 procs for 20 steps with 1702 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         2533.81749259       2301.9586595       2301.9586595
+  Force two-norm initial, final = 730.957 58.4422
+  Force max component initial, final = 308.441 10.4013
+  Final line search alpha, max atom move = 2.17333e-12 2.26054e-11
+  Iterations, force evaluations = 20 99
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.35729    | 0.35729    | 0.35729    |   0.0 | 53.35
+Bond    | 0.081738   | 0.081738   | 0.081738   |   0.0 | 12.21
+Kspace  | 0.22782    | 0.22782    | 0.22782    |   0.0 | 34.02
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 4.8161e-05 | 4.8161e-05 | 4.8161e-05 |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.002753   |            |       |  0.41
+
+Nlocal:    1702 ave 1702 max 1702 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    102783 ave 102783 max 102783 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 102783
+Ave neighs/atom = 60.3895
+Ave special neighs/atom = 11.2538
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-184.217 -184.217 -184.217) to (184.217 184.217 184.217)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  1787 atoms
+  reading velocities ...
+  1787 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  1933 bonds
+  reading angles ...
+  3402 angles
+  reading dihedrals ...
+  5246 dihedrals
+  reading impropers ...
+  588 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00151801 secs
+  read_data CPU = 0.0188751 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0611172
+  grid = 18 18 18
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0374193
+  estimated relative force accuracy = 0.000112687
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 12167 5832
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 53 53 53
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 21.13 | 21.13 | 21.13 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0      863.233    906.65847    1893.3779    7395.6529    3.7841027 
+      42      863.233    848.34289    1545.3131    6989.2726    3.9498208 
+Loop time of 1.50599 on 1 procs for 42 steps with 1787 atoms
+
+100.1% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         2800.03634039      2393.65602477      2393.65602477
+  Force two-norm initial, final = 737.275 80.1714
+  Force max component initial, final = 290.673 11.8826
+  Final line search alpha, max atom move = 1.88416e-12 2.23886e-11
+  Iterations, force evaluations = 42 203
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.84271    | 0.84271    | 0.84271    |   0.0 | 55.96
+Bond    | 0.17535    | 0.17535    | 0.17535    |   0.0 | 11.64
+Kspace  | 0.47782    | 0.47782    | 0.47782    |   0.0 | 31.73
+Neigh   | 0.004004   | 0.004004   | 0.004004   |   0.0 |  0.27
+Comm    | 0.00010729 | 0.00010729 | 0.00010729 |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.005995   |            |       |  0.40
+
+Nlocal:    1787 ave 1787 max 1787 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    123647 ave 123647 max 123647 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 123647
+Ave neighs/atom = 69.1925
+Ave special neighs/atom = 11.2546
+Neighbor list builds = 1
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-187.238 -187.238 -187.238) to (187.238 187.238 187.238)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  1872 atoms
+  reading velocities ...
+  1872 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  2025 bonds
+  reading angles ...
+  3564 angles
+  reading dihedrals ...
+  5496 dihedrals
+  reading impropers ...
+  616 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00154996 secs
+  read_data CPU = 0.019635 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0602809
+  grid = 18 18 18
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0379258
+  estimated relative force accuracy = 0.000114212
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 12167 5832
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 54 54 54
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 21.18 | 21.18 | 21.18 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    821.53303    956.11571    1915.7806    7453.6646    3.1233083 
+       9    821.53303    947.71535    1727.4662    7256.9498     3.593738 
+Loop time of 0.559026 on 1 procs for 9 steps with 1872 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         2871.89633027      2675.18154172      2675.18154172
+  Force two-norm initial, final = 733.694 83.7771
+  Force max component initial, final = 304.091 22.4419
+  Final line search alpha, max atom move = 1.68904e-12 3.79052e-11
+  Iterations, force evaluations = 9 77
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.29919    | 0.29919    | 0.29919    |   0.0 | 53.52
+Bond    | 0.070142   | 0.070142   | 0.070142   |   0.0 | 12.55
+Kspace  | 0.18759    | 0.18759    | 0.18759    |   0.0 | 33.56
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 3.9339e-05 | 3.9339e-05 | 3.9339e-05 |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.00206    |            |       |  0.37
+
+Nlocal:    1872 ave 1872 max 1872 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    112810 ave 112810 max 112810 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 112810
+Ave neighs/atom = 60.2618
+Ave special neighs/atom = 11.2553
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-190.164 -190.164 -190.164) to (190.164 190.164 190.164)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  1957 atoms
+  reading velocities ...
+  1957 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  2117 bonds
+  reading angles ...
+  3726 angles
+  reading dihedrals ...
+  5746 dihedrals
+  reading impropers ...
+  644 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00162697 secs
+  read_data CPU = 0.02036 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0594924
+  grid = 18 18 18
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0384053
+  estimated relative force accuracy = 0.000115656
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 12167 5832
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 55 55 55
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 21.23 | 21.23 | 21.23 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    899.26589    963.81579    1890.7263    8097.6799    3.3003478 
+      17    899.26589    961.06827    1682.5902    7886.7963    3.9754847 
+Loop time of 0.676794 on 1 procs for 17 steps with 1957 atoms
+
+99.9% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         2854.54207583      2643.65844226      2643.65844226
+  Force two-norm initial, final = 733.196 56.6646
+  Force max component initial, final = 306.82 10.3146
+  Final line search alpha, max atom move = 2.68179e-12 2.76616e-11
+  Iterations, force evaluations = 17 92
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.35365    | 0.35365    | 0.35365    |   0.0 | 52.25
+Bond    | 0.089361   | 0.089361   | 0.089361   |   0.0 | 13.20
+Kspace  | 0.23091    | 0.23091    | 0.23091    |   0.0 | 34.12
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 3.6955e-05 | 3.6955e-05 | 3.6955e-05 |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.002837   |            |       |  0.42
+
+Nlocal:    1957 ave 1957 max 1957 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    105934 ave 105934 max 105934 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 105934
+Ave neighs/atom = 54.1308
+Ave special neighs/atom = 11.256
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-193.002 -193.002 -193.002) to (193.002 193.002 193.002)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  2042 atoms
+  reading velocities ...
+  2042 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  2209 bonds
+  reading angles ...
+  3888 angles
+  reading dihedrals ...
+  5996 dihedrals
+  reading impropers ...
+  672 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00166512 secs
+  read_data CPU = 0.02109 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0587468
+  grid = 18 18 18
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0388597
+  estimated relative force accuracy = 0.000117025
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 12167 5832
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 56 56 56
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 21.28 | 21.28 | 21.28 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    775.89998    1014.0183    1963.9536     7698.418    2.2432994 
+      16    775.89998    1007.3746    1753.3469    7481.1676    2.8534081 
+Loop time of 0.717034 on 1 procs for 16 steps with 2042 atoms
+
+99.7% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         2977.97188486      2760.72148439      2760.72148439
+  Force two-norm initial, final = 733.301 61.8649
+  Force max component initial, final = 300.816 14.4619
+  Final line search alpha, max atom move = 2.14274e-12 3.09881e-11
+  Iterations, force evaluations = 16 91
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.38139    | 0.38139    | 0.38139    |   0.0 | 53.19
+Bond    | 0.093872   | 0.093872   | 0.093872   |   0.0 | 13.09
+Kspace  | 0.23878    | 0.23878    | 0.23878    |   0.0 | 33.30
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 4.3631e-05 | 4.3631e-05 | 4.3631e-05 |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.002954   |            |       |  0.41
+
+Nlocal:    2042 ave 2042 max 2042 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    113768 ave 113768 max 113768 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 113768
+Ave neighs/atom = 55.714
+Ave special neighs/atom = 11.2566
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-195.76 -195.76 -195.76) to (195.76 195.76 195.76)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  2127 atoms
+  reading velocities ...
+  2127 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  2301 bonds
+  reading angles ...
+  4050 angles
+  reading dihedrals ...
+  6246 dihedrals
+  reading impropers ...
+  700 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00171113 secs
+  read_data CPU = 0.021735 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0634532
+  grid = 20 20 20
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0357407
+  estimated relative force accuracy = 0.000107632
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 15625 8000
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 56 56 56
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 21.61 | 21.61 | 21.61 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    683.63676    1036.4781    2105.6155    7474.4379    2.2400615 
+      16    683.63676    1028.4898    1898.5917    7259.4259    2.8609906 
+Loop time of 0.789685 on 1 procs for 16 steps with 2127 atoms
+
+99.9% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         3142.09360029      2927.08152129      2927.08152129
+  Force two-norm initial, final = 734.029 75.4801
+  Force max component initial, final = 376.941 19.3585
+  Final line search alpha, max atom move = 1.36219e-12 2.637e-11
+  Iterations, force evaluations = 16 90
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.42943    | 0.42943    | 0.42943    |   0.0 | 54.38
+Bond    | 0.095577   | 0.095577   | 0.095577   |   0.0 | 12.10
+Kspace  | 0.26158    | 0.26158    | 0.26158    |   0.0 | 33.12
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 5.1498e-05 | 5.1498e-05 | 5.1498e-05 |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.003041   |            |       |  0.39
+
+Nlocal:    2127 ave 2127 max 2127 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    133190 ave 133190 max 133190 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 133190
+Ave neighs/atom = 62.6187
+Ave special neighs/atom = 11.2572
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-198.442 -198.442 -198.442) to (198.442 198.442 198.442)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  2212 atoms
+  reading velocities ...
+  2212 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  2393 bonds
+  reading angles ...
+  4212 angles
+  reading dihedrals ...
+  6496 dihedrals
+  reading impropers ...
+  728 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00177503 secs
+  read_data CPU = 0.022665 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0627326
+  grid = 20 20 20
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0361834
+  estimated relative force accuracy = 0.000108965
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 15625 8000
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 57 57 57
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 21.66 | 21.66 | 21.66 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    564.88162    1125.8639    2116.1621    6964.9184    2.2661117 
+      16    564.88162    1113.2711    1898.6975     6734.861    2.8262681 
+Loop time of 0.769202 on 1 procs for 16 steps with 2212 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         3242.02602719      3011.96860631      3011.96860631
+  Force two-norm initial, final = 732.544 67.1476
+  Force max component initial, final = 353.225 15.195
+  Final line search alpha, max atom move = 2.30953e-12 3.50933e-11
+  Iterations, force evaluations = 16 90
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.40194    | 0.40194    | 0.40194    |   0.0 | 52.25
+Bond    | 0.099005   | 0.099005   | 0.099005   |   0.0 | 12.87
+Kspace  | 0.26508    | 0.26508    | 0.26508    |   0.0 | 34.46
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 3.9339e-05 | 3.9339e-05 | 3.9339e-05 |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.003133   |            |       |  0.41
+
+Nlocal:    2212 ave 2212 max 2212 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    124769 ave 124769 max 124769 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 124769
+Ave neighs/atom = 56.4055
+Ave special neighs/atom = 11.2577
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-201.053 -201.053 -201.053) to (201.053 201.053 201.053)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  2297 atoms
+  reading velocities ...
+  2297 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  2485 bonds
+  reading angles ...
+  4374 angles
+  reading dihedrals ...
+  6746 dihedrals
+  reading impropers ...
+  756 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00182509 secs
+  read_data CPU = 0.02318 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0620464
+  grid = 20 20 20
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0366058
+  estimated relative force accuracy = 0.000110237
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 15625 8000
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 58 58 58
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 21.71 | 21.71 | 21.71 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    464.13657    1150.6556    2081.5837    6408.7621    1.6733803 
+      23    464.13657    1128.1523    1869.8658    6174.5408    1.7816843 
+Loop time of 0.936529 on 1 procs for 23 steps with 2297 atoms
+
+99.9% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         3232.23928387      2998.01807765      2998.01807765
+  Force two-norm initial, final = 736.016 80.9694
+  Force max component initial, final = 332.457 14.0633
+  Final line search alpha, max atom move = 1.32762e-12 1.86708e-11
+  Iterations, force evaluations = 23 105
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.50289    | 0.50289    | 0.50289    |   0.0 | 53.70
+Bond    | 0.11802    | 0.11802    | 0.11802    |   0.0 | 12.60
+Kspace  | 0.31157    | 0.31157    | 0.31157    |   0.0 | 33.27
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 4.7445e-05 | 4.7445e-05 | 4.7445e-05 |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.003996   |            |       |  0.43
+
+Nlocal:    2297 ave 2297 max 2297 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    138743 ave 138743 max 138743 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 138743
+Ave neighs/atom = 60.4018
+Ave special neighs/atom = 11.2582
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-203.598 -203.598 -203.598) to (203.598 203.598 203.598)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  2382 atoms
+  reading velocities ...
+  2382 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  2577 bonds
+  reading angles ...
+  4536 angles
+  reading dihedrals ...
+  6996 dihedrals
+  reading impropers ...
+  784 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00184298 secs
+  read_data CPU = 0.0238838 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0613916
+  grid = 20 20 20
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0370095
+  estimated relative force accuracy = 0.000111453
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 15625 8000
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 59 59 59
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 21.77 | 21.77 | 21.77 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    828.43451    1237.4236    2243.7144    9360.7935    3.2239261 
+      24    828.43451    1212.5452    2016.1126    9108.3133     3.495459 
+Loop time of 0.939524 on 1 procs for 24 steps with 2382 atoms
+
+99.9% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         3481.13799406       3228.6578419       3228.6578419
+  Force two-norm initial, final = 734.337 82.4252
+  Force max component initial, final = 356.345 15.8148
+  Final line search alpha, max atom move = 1.23419e-12 1.95184e-11
+  Iterations, force evaluations = 24 106
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.49083    | 0.49083    | 0.49083    |   0.0 | 52.24
+Bond    | 0.12394    | 0.12394    | 0.12394    |   0.0 | 13.19
+Kspace  | 0.32044    | 0.32044    | 0.32044    |   0.0 | 34.11
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 5.2691e-05 | 5.2691e-05 | 5.2691e-05 |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.004255   |            |       |  0.45
+
+Nlocal:    2382 ave 2382 max 2382 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    129148 ave 129148 max 129148 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 129148
+Ave neighs/atom = 54.2183
+Ave special neighs/atom = 11.2586
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-206.082 -206.082 -206.082) to (206.082 206.082 206.082)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  2467 atoms
+  reading velocities ...
+  2467 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  2669 bonds
+  reading angles ...
+  4698 angles
+  reading dihedrals ...
+  7246 dihedrals
+  reading impropers ...
+  812 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00194883 secs
+  read_data CPU = 0.0245841 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0607657
+  grid = 20 20 20
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0373959
+  estimated relative force accuracy = 0.000112617
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 15625 8000
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 59 59 59
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 21.78 | 21.78 | 21.78 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    768.93405    1226.6148    2336.5636    9215.3647     3.252339 
+      24    768.93405    1205.9942    2114.1421    8972.3226    3.3865418 
+Loop time of 1.03151 on 1 procs for 24 steps with 2467 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+          3563.1784658      3320.13633637      3320.13633637
+  Force two-norm initial, final = 734.393 76.5066
+  Force max component initial, final = 346.515 18.1725
+  Final line search alpha, max atom move = 1.64345e-12 2.98658e-11
+  Iterations, force evaluations = 24 107
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.56534    | 0.56534    | 0.56534    |   0.0 | 54.81
+Bond    | 0.12935    | 0.12935    | 0.12935    |   0.0 | 12.54
+Kspace  | 0.33244    | 0.33244    | 0.33244    |   0.0 | 32.23
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 5.7697e-05 | 5.7697e-05 | 5.7697e-05 |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.004323   |            |       |  0.42
+
+Nlocal:    2467 ave 2467 max 2467 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    155461 ave 155461 max 155461 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 155461
+Ave neighs/atom = 63.0162
+Ave special neighs/atom = 11.259
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-208.506 -208.506 -208.506) to (208.506 208.506 208.506)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  2552 atoms
+  reading velocities ...
+  2552 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  2761 bonds
+  reading angles ...
+  4860 angles
+  reading dihedrals ...
+  7496 dihedrals
+  reading impropers ...
+  840 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00197005 secs
+  read_data CPU = 0.025419 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0601677
+  grid = 20 20 20
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0377689
+  estimated relative force accuracy = 0.00011374
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 15625 8000
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 60 60 60
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 21.84 | 21.84 | 21.84 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    809.52474     1265.537    2384.9903    9806.1909    3.5086421 
+      14    809.52474    1255.9305    2175.0161    9586.6103     3.836091 
+Loop time of 0.910942 on 1 procs for 14 steps with 2552 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         3650.52723104      3430.94661294      3430.94661294
+  Force two-norm initial, final = 731.842 79.329
+  Force max component initial, final = 365.739 18.0975
+  Final line search alpha, max atom move = 1.72248e-12 3.11726e-11
+  Iterations, force evaluations = 14 86
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.52589    | 0.52589    | 0.52589    |   0.0 | 57.73
+Bond    | 0.10816    | 0.10816    | 0.10816    |   0.0 | 11.87
+Kspace  | 0.27342    | 0.27342    | 0.27342    |   0.0 | 30.01
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 3.5524e-05 | 3.5524e-05 | 3.5524e-05 |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.003443   |            |       |  0.38
+
+Nlocal:    2552 ave 2552 max 2552 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    166230 ave 166230 max 166230 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 166230
+Ave neighs/atom = 65.1371
+Ave special neighs/atom = 11.2594
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-210.876 -210.876 -210.876) to (210.876 210.876 210.876)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  2637 atoms
+  reading velocities ...
+  2637 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  2853 bonds
+  reading angles ...
+  5022 angles
+  reading dihedrals ...
+  7746 dihedrals
+  reading impropers ...
+  868 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00213194 secs
+  read_data CPU = 0.0267479 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0595927
+  grid = 20 20 20
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0381226
+  estimated relative force accuracy = 0.000114805
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 15625 8000
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 61 61 61
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 21.9 | 21.9 | 21.9 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0      729.195    1316.4864    2556.2646    9602.3389    2.9070872 
+      30      729.195    1269.0505    2289.4559    9288.0944      2.88795 
+Loop time of 1.19938 on 1 procs for 30 steps with 2637 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         3872.75097125      3558.50643407      3558.50643407
+  Force two-norm initial, final = 733.964 85.4899
+  Force max component initial, final = 391.192 14.9113
+  Final line search alpha, max atom move = 1.06771e-12 1.5921e-11
+  Iterations, force evaluations = 30 118
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.66741    | 0.66741    | 0.66741    |   0.0 | 55.65
+Bond    | 0.15044    | 0.15044    | 0.15044    |   0.0 | 12.54
+Kspace  | 0.37094    | 0.37094    | 0.37094    |   0.0 | 30.93
+Neigh   | 0.0051889  | 0.0051889  | 0.0051889  |   0.0 |  0.43
+Comm    | 9.3937e-05 | 9.3937e-05 | 9.3937e-05 |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.00531    |            |       |  0.44
+
+Nlocal:    2637 ave 2637 max 2637 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    158335 ave 158335 max 158335 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 158335
+Ave neighs/atom = 60.0436
+Ave special neighs/atom = 11.2598
+Neighbor list builds = 1
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-213.193 -213.193 -213.193) to (213.193 213.193 213.193)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  2722 atoms
+  reading velocities ...
+  2722 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  2945 bonds
+  reading angles ...
+  5184 angles
+  reading dihedrals ...
+  7996 dihedrals
+  reading impropers ...
+  896 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00206208 secs
+  read_data CPU = 0.0270228 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0590411
+  grid = 20 20 20
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0384631
+  estimated relative force accuracy = 0.00011583
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 15625 8000
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 61 61 61
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 21.91 | 21.91 | 21.91 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    503.24855    1344.8441    2427.1888    7853.7733    2.2763322 
+      28    503.24855    1286.1673    2209.1438    7577.0514    2.1921324 
+Loop time of 1.21225 on 1 procs for 28 steps with 2722 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         3772.03287891      3495.31101063      3495.31101063
+  Force two-norm initial, final = 733.329 92.5754
+  Force max component initial, final = 378.581 18.1731
+  Final line search alpha, max atom move = 9.15123e-13 1.66306e-11
+  Iterations, force evaluations = 28 114
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.68632    | 0.68632    | 0.68632    |   0.0 | 56.62
+Bond    | 0.15213    | 0.15213    | 0.15213    |   0.0 | 12.55
+Kspace  | 0.36846    | 0.36846    | 0.36846    |   0.0 | 30.40
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 8.1539e-05 | 8.1539e-05 | 8.1539e-05 |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.005254   |            |       |  0.43
+
+Nlocal:    2722 ave 2722 max 2722 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    168400 ave 168400 max 168400 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 168400
+Ave neighs/atom = 61.8663
+Ave special neighs/atom = 11.2601
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-215.462 -215.462 -215.462) to (215.462 215.462 215.462)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  2807 atoms
+  reading velocities ...
+  2807 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  3037 bonds
+  reading angles ...
+  5346 angles
+  reading dihedrals ...
+  8246 dihedrals
+  reading impropers ...
+  924 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00213695 secs
+  read_data CPU = 0.029552 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.058511
+  grid = 20 20 20
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0387908
+  estimated relative force accuracy = 0.000116817
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 15625 8000
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 62 62 62
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 21.97 | 21.97 | 21.97 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    589.12873    1383.6783    2485.5548     8796.796    2.5405233 
+      16    589.12873     1364.711    2288.5888    8580.8627     2.796857 
+Loop time of 0.990174 on 1 procs for 16 steps with 2807 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         3869.23314056      3653.29980026      3653.29980026
+  Force two-norm initial, final = 731.588 59.8103
+  Force max component initial, final = 286.719 11.4272
+  Final line search alpha, max atom move = 2.26887e-12 2.59269e-11
+  Iterations, force evaluations = 16 91
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.55731    | 0.55731    | 0.55731    |   0.0 | 56.28
+Bond    | 0.12522    | 0.12522    | 0.12522    |   0.0 | 12.65
+Kspace  | 0.3036     | 0.3036     | 0.3036     |   0.0 | 30.66
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 5.722e-05  | 5.722e-05  | 5.722e-05  |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.003986   |            |       |  0.40
+
+Nlocal:    2807 ave 2807 max 2807 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    168902 ave 168902 max 168902 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 168902
+Ave neighs/atom = 60.1717
+Ave special neighs/atom = 11.2604
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-217.683 -217.683 -217.683) to (217.683 217.683 217.683)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  2892 atoms
+  reading velocities ...
+  2892 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  3129 bonds
+  reading angles ...
+  5508 angles
+  reading dihedrals ...
+  8496 dihedrals
+  reading impropers ...
+  952 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00214696 secs
+  read_data CPU = 0.027488 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0580009
+  grid = 20 20 20
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0391065
+  estimated relative force accuracy = 0.000117768
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 15625 8000
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 63 63 63
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 22.03 | 22.03 | 22.03 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    509.17309    1424.7625    2588.8842     8401.457    2.1035285 
+      15    509.17309    1424.4795    2386.2058    8198.4955     2.471025 
+Loop time of 0.998526 on 1 procs for 15 steps with 2892 atoms
+
+99.9% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+          4013.6467692      3810.68528546      3810.68528546
+  Force two-norm initial, final = 730.876 64.1653
+  Force max component initial, final = 336.051 18.7649
+  Final line search alpha, max atom move = 2.13786e-12 4.01169e-11
+  Iterations, force evaluations = 15 89
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.57266    | 0.57266    | 0.57266    |   0.0 | 57.35
+Bond    | 0.12598    | 0.12598    | 0.12598    |   0.0 | 12.62
+Kspace  | 0.29597    | 0.29597    | 0.29597    |   0.0 | 29.64
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 5.0306e-05 | 5.0306e-05 | 5.0306e-05 |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.00387    |            |       |  0.39
+
+Nlocal:    2892 ave 2892 max 2892 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    176414 ave 176414 max 176414 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 176414
+Ave neighs/atom = 61.0007
+Ave special neighs/atom = 11.2607
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-219.86 -219.86 -219.86) to (219.86 219.86 219.86)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  2977 atoms
+  reading velocities ...
+  2977 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  3221 bonds
+  reading angles ...
+  5670 angles
+  reading dihedrals ...
+  8746 dihedrals
+  reading impropers ...
+  980 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00223398 secs
+  read_data CPU = 0.0288692 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0670518
+  grid = 24 24 24
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0332149
+  estimated relative force accuracy = 0.000100026
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 24389 13824
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 63 63 63
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 22.87 | 22.87 | 22.87 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    465.57714    1482.5382    2623.2917    8235.9139    1.8551176 
+      36    465.57714    1432.6696    2361.6593    7924.4129    1.9608923 
+Loop time of 1.67202 on 1 procs for 36 steps with 2977 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         4105.82991561       3794.3289438       3794.3289438
+  Force two-norm initial, final = 734.459 73.7232
+  Force max component initial, final = 349.058 13.1047
+  Final line search alpha, max atom move = 1.55413e-12 2.03665e-11
+  Iterations, force evaluations = 36 131
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.8381     | 0.8381     | 0.8381     |   0.0 | 50.12
+Bond    | 0.19085    | 0.19085    | 0.19085    |   0.0 | 11.41
+Kspace  | 0.63008    | 0.63008    | 0.63008    |   0.0 | 37.68
+Neigh   | 0.006032   | 0.006032   | 0.006032   |   0.0 |  0.36
+Comm    | 0.0001173  | 0.0001173  | 0.0001173  |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.006845   |            |       |  0.41
+
+Nlocal:    2977 ave 2977 max 2977 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    185021 ave 185021 max 185021 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 185021
+Ave neighs/atom = 62.1502
+Ave special neighs/atom = 11.261
+Neighbor list builds = 1
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-221.995 -221.995 -221.995) to (221.995 221.995 221.995)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  3062 atoms
+  reading velocities ...
+  3062 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  3313 bonds
+  reading angles ...
+  5832 angles
+  reading dihedrals ...
+  8996 dihedrals
+  reading impropers ...
+  1008 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00228786 secs
+  read_data CPU = 0.029582 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0665173
+  grid = 24 24 24
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0335441
+  estimated relative force accuracy = 0.000101017
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 24389 13824
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 64 64 64
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 22.93 | 22.93 | 22.93 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    574.69026    1495.4091    2610.1406    9349.1729    2.4530128 
+       9    574.69026    1487.6707    2418.9423    9150.2361    2.7622669 
+Loop time of 0.961017 on 1 procs for 9 steps with 3062 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         4105.54974719      3906.61296938      3906.61296938
+  Force two-norm initial, final = 732.587 71.0115
+  Force max component initial, final = 387.444 19.9548
+  Final line search alpha, max atom move = 2.40572e-12 4.80055e-11
+  Iterations, force evaluations = 9 76
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.47959    | 0.47959    | 0.47959    |   0.0 | 49.90
+Bond    | 0.11304    | 0.11304    | 0.11304    |   0.0 | 11.76
+Kspace  | 0.36511    | 0.36511    | 0.36511    |   0.0 | 37.99
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 3.7909e-05 | 3.7909e-05 | 3.7909e-05 |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.00325    |            |       |  0.34
+
+Nlocal:    3062 ave 3062 max 3062 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    189054 ave 189054 max 189054 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 189054
+Ave neighs/atom = 61.742
+Ave special neighs/atom = 11.2613
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-224.089 -224.089 -224.089) to (224.089 224.089 224.089)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  3147 atoms
+  reading velocities ...
+  3147 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  3405 bonds
+  reading angles ...
+  5994 angles
+  reading dihedrals ...
+  9246 dihedrals
+  reading impropers ...
+  1036 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00230408 secs
+  read_data CPU = 0.0299389 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0660009
+  grid = 24 24 24
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0338628
+  estimated relative force accuracy = 0.000101977
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 24389 13824
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 65 65 65
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 23.38 | 23.38 | 23.38 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    557.91367    1527.1277    2847.4047    9606.4394      2.36811 
+      17    557.91367    1514.7571    2603.6983    9350.3625    2.8287523 
+Loop time of 1.24082 on 1 procs for 17 steps with 3147 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         4374.53230807      4118.45540183      4118.45540183
+  Force two-norm initial, final = 732.859 93.4269
+  Force max component initial, final = 307.341 19.3653
+  Final line search alpha, max atom move = 1.2022e-12 2.3281e-11
+  Iterations, force evaluations = 17 92
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.65411    | 0.65411    | 0.65411    |   0.0 | 52.72
+Bond    | 0.13998    | 0.13998    | 0.13998    |   0.0 | 11.28
+Kspace  | 0.44224    | 0.44224    | 0.44224    |   0.0 | 35.64
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 4.8876e-05 | 4.8876e-05 | 4.8876e-05 |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.004445   |            |       |  0.36
+
+Nlocal:    3147 ave 3147 max 3147 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    209751 ave 209751 max 209751 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 209751
+Ave neighs/atom = 66.6511
+Ave special neighs/atom = 11.2615
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-226.145 -226.145 -226.145) to (226.145 226.145 226.145)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  3232 atoms
+  reading velocities ...
+  3232 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  3497 bonds
+  reading angles ...
+  6156 angles
+  reading dihedrals ...
+  9496 dihedrals
+  reading impropers ...
+  1064 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00240088 secs
+  read_data CPU = 0.030853 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0655016
+  grid = 24 24 24
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0341717
+  estimated relative force accuracy = 0.000102907
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 24389 13824
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 65 65 65
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 23.39 | 23.39 | 23.39 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    557.37017    1603.3906    2885.0394    9856.4606    2.1820433 
+       9    557.37017    1597.3131    2696.3097    9661.6534    2.4604714 
+Loop time of 1.08695 on 1 procs for 9 steps with 3232 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         4488.43001272      4293.62277106      4293.62277106
+  Force two-norm initial, final = 729.106 74.3479
+  Force max component initial, final = 304.511 23.721
+  Final line search alpha, max atom move = 1.13293e-12 2.68742e-11
+  Iterations, force evaluations = 9 79
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.56051    | 0.56051    | 0.56051    |   0.0 | 51.57
+Bond    | 0.1259     | 0.1259     | 0.1259     |   0.0 | 11.58
+Kspace  | 0.39694    | 0.39694    | 0.39694    |   0.0 | 36.52
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 3.0756e-05 | 3.0756e-05 | 3.0756e-05 |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.00357    |            |       |  0.33
+
+Nlocal:    3232 ave 3232 max 3232 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    207703 ave 207703 max 207703 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 207703
+Ave neighs/atom = 64.2645
+Ave special neighs/atom = 11.2618
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-228.164 -228.164 -228.164) to (228.164 228.164 228.164)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  3317 atoms
+  reading velocities ...
+  3317 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  3589 bonds
+  reading angles ...
+  6318 angles
+  reading dihedrals ...
+  9746 dihedrals
+  reading impropers ...
+  1092 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00259709 secs
+  read_data CPU = 0.0321422 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0650183
+  grid = 24 24 24
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0344712
+  estimated relative force accuracy = 0.000103809
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 24389 13824
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 66 66 66
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 23.46 | 23.46 | 23.46 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    426.57943     1642.191    2826.7486    8685.4069    1.7244171 
+      20    426.57943     1632.035    2588.2471    8436.7494    2.1094502 
+Loop time of 1.35296 on 1 procs for 20 steps with 3317 atoms
+
+100.1% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         4468.93955788      4220.28209395      4220.28209395
+  Force two-norm initial, final = 735.258 62.6809
+  Force max component initial, final = 344.633 14.1048
+  Final line search alpha, max atom move = 2.85891e-12 4.03244e-11
+  Iterations, force evaluations = 20 99
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.69774    | 0.69774    | 0.69774    |   0.0 | 51.57
+Bond    | 0.15899    | 0.15899    | 0.15899    |   0.0 | 11.75
+Kspace  | 0.49091    | 0.49091    | 0.49091    |   0.0 | 36.28
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 3.9816e-05 | 3.9816e-05 | 3.9816e-05 |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.005273   |            |       |  0.39
+
+Nlocal:    3317 ave 3317 max 3317 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    211238 ave 211238 max 211238 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 211238
+Ave neighs/atom = 63.6834
+Ave special neighs/atom = 11.262
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-230.148 -230.148 -230.148) to (230.148 230.148 230.148)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  3402 atoms
+  reading velocities ...
+  3402 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  3681 bonds
+  reading angles ...
+  6480 angles
+  reading dihedrals ...
+  9996 dihedrals
+  reading impropers ...
+  1120 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00263 secs
+  read_data CPU = 0.032299 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0645503
+  grid = 24 24 24
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.034762
+  estimated relative force accuracy = 0.000104685
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 24389 13824
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 66 66 66
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 23.47 | 23.47 | 23.47 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    510.70913    1647.7299    3047.9023     9873.066    1.8896399 
+       8    510.70913    1643.2733     2859.012    9679.7191    2.1901655 
+Loop time of 1.06162 on 1 procs for 8 steps with 3402 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         4695.63223045      4502.28529295      4502.28529295
+  Force two-norm initial, final = 734.593 67.1659
+  Force max component initial, final = 271.6 20.8803
+  Final line search alpha, max atom move = 2.73767e-12 5.71634e-11
+  Iterations, force evaluations = 8 75
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.54613    | 0.54613    | 0.54613    |   0.0 | 51.44
+Bond    | 0.12606    | 0.12606    | 0.12606    |   0.0 | 11.87
+Kspace  | 0.38582    | 0.38582    | 0.38582    |   0.0 | 36.34
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 4.4107e-05 | 4.4107e-05 | 4.4107e-05 |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.003561   |            |       |  0.34
+
+Nlocal:    3402 ave 3402 max 3402 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    212788 ave 212788 max 212788 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 212788
+Ave neighs/atom = 62.5479
+Ave special neighs/atom = 11.2622
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-232.099 -232.099 -232.099) to (232.099 232.099 232.099)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  3487 atoms
+  reading velocities ...
+  3487 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  3773 bonds
+  reading angles ...
+  6642 angles
+  reading dihedrals ...
+  10246 dihedrals
+  reading impropers ...
+  1148 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00271201 secs
+  read_data CPU = 0.0334699 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0640966
+  grid = 24 24 24
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0350443
+  estimated relative force accuracy = 0.000105535
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 24389 13824
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 67 67 67
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 23.54 | 23.54 | 23.54 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    488.87154    1676.7741    3055.3259    9812.0149    1.9042197 
+      24    488.87154    1649.5005    2808.7176    9538.1329    2.1606952 
+Loop time of 1.55487 on 1 procs for 24 steps with 3487 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         4732.09997817      4458.21801509      4458.21801509
+  Force two-norm initial, final = 736.082 78.0371
+  Force max component initial, final = 409.259 12.8264
+  Final line search alpha, max atom move = 1.25048e-12 1.60392e-11
+  Iterations, force evaluations = 24 106
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.81554    | 0.81554    | 0.81554    |   0.0 | 52.45
+Bond    | 0.18341    | 0.18341    | 0.18341    |   0.0 | 11.80
+Kspace  | 0.54959    | 0.54959    | 0.54959    |   0.0 | 35.35
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 5.9843e-05 | 5.9843e-05 | 5.9843e-05 |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.006269   |            |       |  0.40
+
+Nlocal:    3487 ave 3487 max 3487 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    223678 ave 223678 max 223678 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 223678
+Ave neighs/atom = 64.1463
+Ave special neighs/atom = 11.2624
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-234.017 -234.017 -234.017) to (234.017 234.017 234.017)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  3572 atoms
+  reading velocities ...
+  3572 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  3865 bonds
+  reading angles ...
+  6804 angles
+  reading dihedrals ...
+  10496 dihedrals
+  reading impropers ...
+  1176 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00275612 secs
+  read_data CPU = 0.0359271 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0636565
+  grid = 24 24 24
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0353186
+  estimated relative force accuracy = 0.000106361
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 24389 13824
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 67 67 67
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 23.55 | 23.55 | 23.55 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    617.39132    1682.7241     3163.274    11417.803    2.6030219 
+      11    617.39132    1682.3534    2958.3985    11212.557    2.8866779 
+Loop time of 1.27278 on 1 procs for 11 steps with 3572 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         4845.99810507      4640.75195262      4640.75195262
+  Force two-norm initial, final = 736.789 88.9538
+  Force max component initial, final = 319.942 16.2463
+  Final line search alpha, max atom move = 1.47887e-12 2.40261e-11
+  Iterations, force evaluations = 11 81
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.69815    | 0.69815    | 0.69815    |   0.0 | 54.85
+Bond    | 0.14478    | 0.14478    | 0.14478    |   0.0 | 11.38
+Kspace  | 0.42557    | 0.42557    | 0.42557    |   0.0 | 33.44
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 4.3631e-05 | 4.3631e-05 | 4.3631e-05 |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.00424    |            |       |  0.33
+
+Nlocal:    3572 ave 3572 max 3572 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    253324 ave 253324 max 253324 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 253324
+Ave neighs/atom = 70.9194
+Ave special neighs/atom = 11.2626
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-235.905 -235.905 -235.905) to (235.905 235.905 235.905)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  3657 atoms
+  reading velocities ...
+  3657 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  3957 bonds
+  reading angles ...
+  6966 angles
+  reading dihedrals ...
+  10746 dihedrals
+  reading impropers ...
+  1204 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00283408 secs
+  read_data CPU = 0.03528 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0632293
+  grid = 24 24 24
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0355853
+  estimated relative force accuracy = 0.000107164
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 24389 13824
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 68 68 68
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 23.62 | 23.62 | 23.62 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    575.59279    1729.8203     3172.745    11175.284    2.3024854 
+      15    575.59279    1720.9527    2965.0257    10958.697    2.6072664 
+Loop time of 1.42472 on 1 procs for 15 steps with 3657 atoms
+
+99.9% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         4902.56526396      4685.97838742      4685.97838742
+  Force two-norm initial, final = 734.971 68.3681
+  Force max component initial, final = 284.764 15.3628
+  Final line search alpha, max atom move = 1.92578e-12 2.95855e-11
+  Iterations, force evaluations = 15 89
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.783      | 0.783      | 0.783      |   0.0 | 54.96
+Bond    | 0.16218    | 0.16218    | 0.16218    |   0.0 | 11.38
+Kspace  | 0.47447    | 0.47447    | 0.47447    |   0.0 | 33.30
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 3.8862e-05 | 3.8862e-05 | 3.8862e-05 |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.005035   |            |       |  0.35
+
+Nlocal:    3657 ave 3657 max 3657 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    261445 ave 261445 max 261445 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 261445
+Ave neighs/atom = 71.4917
+Ave special neighs/atom = 11.2628
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-237.762 -237.762 -237.762) to (237.762 237.762 237.762)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  3742 atoms
+  reading velocities ...
+  3742 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  4049 bonds
+  reading angles ...
+  7128 angles
+  reading dihedrals ...
+  10996 dihedrals
+  reading impropers ...
+  1232 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00293708 secs
+  read_data CPU = 0.035954 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0628143
+  grid = 24 24 24
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0358448
+  estimated relative force accuracy = 0.000107946
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 24389 13824
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 68 68 68
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 23.63 | 23.63 | 23.63 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    458.98042    1745.1362    3311.3075    10174.631    1.8936973 
+      37    458.98042    1684.1748    3001.0828    9803.4449    1.9532148 
+Loop time of 2.18728 on 1 procs for 37 steps with 3742 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         5056.44364371      4685.25767354      4685.25767354
+  Force two-norm initial, final = 738.652 91.4381
+  Force max component initial, final = 324.516 13.9969
+  Final line search alpha, max atom move = 1.25467e-12 1.75615e-11
+  Iterations, force evaluations = 37 132
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 1.2383     | 1.2383     | 1.2383     |   0.0 | 56.62
+Bond    | 0.24059    | 0.24059    | 0.24059    |   0.0 | 11.00
+Kspace  | 0.6904     | 0.6904     | 0.6904     |   0.0 | 31.56
+Neigh   | 0.0089681  | 0.0089681  | 0.0089681  |   0.0 |  0.41
+Comm    | 0.00012684 | 0.00012684 | 0.00012684 |   0.0 |  0.01
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.008851   |            |       |  0.40
+
+Nlocal:    3742 ave 3742 max 3742 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    284336 ave 284336 max 284336 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 284336
+Ave neighs/atom = 75.985
+Ave special neighs/atom = 11.263
+Neighbor list builds = 1
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-239.591 -239.591 -239.591) to (239.591 239.591 239.591)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  3827 atoms
+  reading velocities ...
+  3827 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  4141 bonds
+  reading angles ...
+  7290 angles
+  reading dihedrals ...
+  11246 dihedrals
+  reading impropers ...
+  1260 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00294805 secs
+  read_data CPU = 0.0364668 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0624109
+  grid = 24 24 24
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0360973
+  estimated relative force accuracy = 0.000108706
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 24389 13824
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 69 69 69
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 23.7 | 23.7 | 23.7 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    509.43765    1852.5394    3247.7367    10910.198    1.9128402 
+      13    509.43765    1837.1513    3049.2394    10696.313     2.127127 
+Loop time of 1.40948 on 1 procs for 13 steps with 3827 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         5100.27607851      4886.39070337      4886.39070337
+  Force two-norm initial, final = 732.101 88.1025
+  Force max component initial, final = 304.298 21.9414
+  Final line search alpha, max atom move = 1.0329e-12 2.26633e-11
+  Iterations, force evaluations = 13 85
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.79444    | 0.79444    | 0.79444    |   0.0 | 56.36
+Bond    | 0.15856    | 0.15856    | 0.15856    |   0.0 | 11.25
+Kspace  | 0.45166    | 0.45166    | 0.45166    |   0.0 | 32.04
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 4.4346e-05 | 4.4346e-05 | 4.4346e-05 |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.004775   |            |       |  0.34
+
+Nlocal:    3827 ave 3827 max 3827 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    284876 ave 284876 max 284876 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 284876
+Ave neighs/atom = 74.4385
+Ave special neighs/atom = 11.2631
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-241.393 -241.393 -241.393) to (241.393 241.393 241.393)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  3912 atoms
+  reading velocities ...
+  3912 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  4233 bonds
+  reading angles ...
+  7452 angles
+  reading dihedrals ...
+  11496 dihedrals
+  reading impropers ...
+  1288 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00299621 secs
+  read_data CPU = 0.0370951 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0620185
+  grid = 24 24 24
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0363431
+  estimated relative force accuracy = 0.000109446
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 24389 13824
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 69 69 69
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 24.09 | 24.09 | 24.09 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    500.88475     1824.953    3378.4935    11042.735    1.9826605 
+      19    500.88475    1818.7642    3141.1949    10799.248    2.1444932 
+Loop time of 1.79086 on 1 procs for 19 steps with 3912 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+          5203.4464378      4959.95909899      4959.95909899
+  Force two-norm initial, final = 739.543 116.644
+  Force max component initial, final = 301.371 26.5082
+  Final line search alpha, max atom move = 5.2565e-13 1.3934e-11
+  Iterations, force evaluations = 19 99
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 1.0606     | 1.0606     | 1.0606     |   0.0 | 59.22
+Bond    | 0.18954    | 0.18954    | 0.18954    |   0.0 | 10.58
+Kspace  | 0.53454    | 0.53454    | 0.53454    |   0.0 | 29.85
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 5.0545e-05 | 5.0545e-05 | 5.0545e-05 |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.006141   |            |       |  0.34
+
+Nlocal:    3912 ave 3912 max 3912 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    325993 ave 325993 max 325993 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 325993
+Ave neighs/atom = 83.3315
+Ave special neighs/atom = 11.2633
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-243.168 -243.168 -243.168) to (243.168 243.168 243.168)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  3997 atoms
+  reading velocities ...
+  3997 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  4325 bonds
+  reading angles ...
+  7614 angles
+  reading dihedrals ...
+  11746 dihedrals
+  reading impropers ...
+  1316 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00307298 secs
+  read_data CPU = 0.0384729 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0616366
+  grid = 24 24 24
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0365826
+  estimated relative force accuracy = 0.000110167
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 24389 13824
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 70 70 70
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 24.16 | 24.16 | 24.16 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    416.21922    1848.1128    3393.9294    10199.761    1.3434749 
+       7    416.21922    1851.0135    3205.1339    10013.866    1.5947793 
+Loop time of 1.30061 on 1 procs for 7 steps with 3997 atoms
+
+100.1% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         5242.04220105      5056.14733956      5056.14733956
+  Force two-norm initial, final = 733.538 80.3815
+  Force max component initial, final = 354.934 22.5516
+  Final line search alpha, max atom move = 1.61589e-12 3.6441e-11
+  Iterations, force evaluations = 7 72
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.75012    | 0.75012    | 0.75012    |   0.0 | 57.67
+Bond    | 0.14431    | 0.14431    | 0.14431    |   0.0 | 11.10
+Kspace  | 0.40216    | 0.40216    | 0.40216    |   0.0 | 30.92
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 3.8624e-05 | 3.8624e-05 | 3.8624e-05 |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.003978   |            |       |  0.31
+
+Nlocal:    3997 ave 3997 max 3997 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    307176 ave 307176 max 307176 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 307176
+Ave neighs/atom = 76.8516
+Ave special neighs/atom = 11.2634
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-244.917 -244.917 -244.917) to (244.917 244.917 244.917)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  4082 atoms
+  reading velocities ...
+  4082 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  4417 bonds
+  reading angles ...
+  7776 angles
+  reading dihedrals ...
+  11996 dihedrals
+  reading impropers ...
+  1344 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.0031302 secs
+  read_data CPU = 0.03878 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0612647
+  grid = 24 24 24
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.036816
+  estimated relative force accuracy = 0.00011087
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 24389 13824
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 70 70 70
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 24.18 | 24.18 | 24.18 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    426.15911    1873.5366    3430.0794    10487.708     1.582903 
+       9    426.15911     1871.441    3238.7614    10294.294    1.7897512 
+Loop time of 1.42277 on 1 procs for 9 steps with 4082 atoms
+
+99.9% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         5303.61597059      5110.20234056      5110.20234056
+  Force two-norm initial, final = 734.232 80.7105
+  Force max component initial, final = 299.944 22.9417
+  Final line search alpha, max atom move = 9.57337e-13 2.19629e-11
+  Iterations, force evaluations = 9 79
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.8289     | 0.8289     | 0.8289     |   0.0 | 58.26
+Bond    | 0.15781    | 0.15781    | 0.15781    |   0.0 | 11.09
+Kspace  | 0.43148    | 0.43148    | 0.43148    |   0.0 | 30.33
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 4.8161e-05 | 4.8161e-05 | 4.8161e-05 |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.004524   |            |       |  0.32
+
+Nlocal:    4082 ave 4082 max 4082 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    317440 ave 317440 max 317440 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 317440
+Ave neighs/atom = 77.7658
+Ave special neighs/atom = 11.2636
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-246.642 -246.642 -246.642) to (246.642 246.642 246.642)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  4167 atoms
+  reading velocities ...
+  4167 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  4509 bonds
+  reading angles ...
+  7938 angles
+  reading dihedrals ...
+  12246 dihedrals
+  reading impropers ...
+  1372 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00317597 secs
+  read_data CPU = 0.039077 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0609024
+  grid = 24 24 24
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0370436
+  estimated relative force accuracy = 0.000111556
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 24389 13824
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 71 71 71
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 24.25 | 24.25 | 24.25 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    373.94208     1887.515    3565.9466    10097.095     1.173886 
+       7    373.94208    1886.7744    3369.1634     9899.571    1.4558839 
+Loop time of 1.38571 on 1 procs for 7 steps with 4167 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         5453.46163383      5255.93776867      5255.93776867
+  Force two-norm initial, final = 740.96 83.1787
+  Force max component initial, final = 293.042 20.193
+  Final line search alpha, max atom move = 9.49324e-13 1.91697e-11
+  Iterations, force evaluations = 7 75
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.81386    | 0.81386    | 0.81386    |   0.0 | 58.73
+Bond    | 0.15227    | 0.15227    | 0.15227    |   0.0 | 10.99
+Kspace  | 0.41532    | 0.41532    | 0.41532    |   0.0 | 29.97
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 2.9564e-05 | 2.9564e-05 | 2.9564e-05 |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.004233   |            |       |  0.31
+
+Nlocal:    4167 ave 4167 max 4167 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    332684 ave 332684 max 332684 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 332684
+Ave neighs/atom = 79.8378
+Ave special neighs/atom = 11.2637
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic
+read_data       temp.lmps
+  orthogonal box = (-248.343 -248.343 -248.343) to (248.343 248.343 248.343)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  4252 atoms
+  reading velocities ...
+  4252 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  6 = max angles/atom
+  scanning dihedrals ...
+  24 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  reading bonds ...
+  4601 bonds
+  reading angles ...
+  8100 angles
+  reading dihedrals ...
+  12496 dihedrals
+  reading impropers ...
+  1400 impropers
+  4 = max # of 1-2 neighbors
+  10 = max # of 1-3 neighbors
+  19 = max # of 1-4 neighbors
+  22 = max # of special neighbors
+  special bonds CPU = 0.00325298 secs
+  read_data CPU = 0.0407431 secs
+################################################################################
+
+min_style cg
+minimize 1e-06 1e-06 1000000 10000000
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:190)
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:332)
+  G vector (1/distance) = 0.0605492
+  grid = 24 24 24
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0372655
+  estimated relative force accuracy = 0.000112224
+  using double precision KISS FFT
+  3d grid and FFT values/proc = 24389 13824
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 71 71 71
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 24.26 | 24.26 | 24.26 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    306.98414    1906.7183    3514.4671    9311.1115    1.0857984 
+       6    306.98414    1894.1649    3327.2159    9111.3069    1.2901337 
+Loop time of 1.33723 on 1 procs for 6 steps with 4252 atoms
+
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+         5421.18545419      5221.38079996      5221.38079996
+  Force two-norm initial, final = 735.478 91.6176
+  Force max component initial, final = 298.883 30.3732
+  Final line search alpha, max atom move = 1.35319e-12 4.11009e-11
+  Iterations, force evaluations = 6 71
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.79228    | 0.79228    | 0.79228    |   0.0 | 59.25
+Bond    | 0.14768    | 0.14768    | 0.14768    |   0.0 | 11.04
+Kspace  | 0.39328    | 0.39328    | 0.39328    |   0.0 | 29.41
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 4.1008e-05 | 4.1008e-05 | 4.1008e-05 |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.003944   |            |       |  0.29
+
+Nlocal:    4252 ave 4252 max 4252 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    332089 ave 332089 max 332089 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 332089
+Ave neighs/atom = 78.1018
+Ave special neighs/atom = 11.2639
+Neighbor list builds = 0
+Dangerous builds = 0
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit

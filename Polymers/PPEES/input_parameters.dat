@@ -1,0 +1,21 @@
+### Input parameters for polymer building ###
+#1. Index of head atom of the monomer (index starts from 1)
+#2. Index of the tail atom of the monomer 
+#3. Hydrogen attached to the head atom of the monomer
+#4. Hydrogen attached to the tail atom of the monomer
+#5. Chain length distribution it should be written like x1 x2 x3 x4. Suppose you want to build a polymer with chains havinf 10-mer, 15-mer and 20-mer then write 10 15 20
+#6. Name of the molecule (You should remember that your initial xyz file of the monomer should have a name like {moleculename}_initial.xyz), also make sure xyz file have two remarks like in begining. 
+#7. To remove files set it to 1. To keep make it 0
+#8. Flag to optimize or not, if 1 it will optimize, if 0 it will build the polymer...else not
+### Sometimes, you may not have some parameters in your force-field database, then you have to modify gaff.json to include those. 
+### That's all, you are ready to build your first polymer ###
+#10 20 22 22 23 22 20 13 23
+
+
+31
+11
+28
+12 
+PPEES
+0 
+0

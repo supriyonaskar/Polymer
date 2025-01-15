@@ -1,0 +1,72 @@
+HEADER    pdb written using pySIMM system module
+ATOM      1   c2 RES     1      -2.208  -9.237   0.708                       C
+ATOM      2    o RES     1      -4.246 -10.147   0.713                       O
+ATOM      3   c3 RES     1      -3.032 -10.513   1.017                       C
+ATOM      4   ha RES     1      -1.162  -9.360   1.018                       H
+ATOM      5   ha RES     1      -2.608  -8.310   1.148                       H
+ATOM      6   h1 RES     1      -2.775 -10.859   2.003                       H
+ATOM      7   h1 RES     1      -2.621 -11.359   0.455                       H
+ATOM      8   c2 RES     1      -5.469  -9.929   0.767                       C
+ATOM      9    o RES     1      -5.436  -7.681   0.810                       O
+ATOM     10   c3 RES     1      -5.870  -8.652   1.454                       C
+ATOM     11   ha RES     1      -5.896 -10.736   1.313                       H
+ATOM     12   ha RES     1      -5.879 -10.024  -0.293                       H
+ATOM     13   h1 RES     1      -5.633  -8.781   2.492                       H
+ATOM     14   h1 RES     1      -6.923  -8.536   1.499                       H
+ATOM     15   c2 RES     1      -4.710  -6.698   1.009                       C
+ATOM     16    o RES     1      -4.768  -4.584   2.168                       O
+ATOM     17   c3 RES     1      -5.485  -5.384   1.394                       C
+ATOM     18   ha RES     1      -4.066  -6.429   0.177                       H
+ATOM     19   ha RES     1      -4.040  -6.833   1.966                       H
+ATOM     20   h1 RES     1      -6.411  -5.703   1.923                       H
+ATOM     21   h1 RES     1      -5.929  -4.850   0.577                       H
+ATOM     22   c2 RES     1      -3.900  -4.489   3.011                       C
+ATOM     23    o RES     1      -3.429  -6.323   4.193                       O
+ATOM     24   c3 RES     1      -4.205  -5.263   4.340                       C
+ATOM     25   ha RES     1      -3.823  -3.368   3.167                       H
+ATOM     26   ha RES     1      -2.951  -4.745   2.637                       H
+ATOM     27   h1 RES     1      -5.240  -5.544   4.526                       H
+ATOM     28   h1 RES     1      -3.954  -4.573   5.149                       H
+ATOM     29   c2 RES     1      -4.888  -8.697   5.344                       C
+ATOM     30   c1 RES     1      -3.155  -7.406   4.546                       C
+ATOM     31   c2 RES     1      -3.713  -8.100   5.524                       C
+ATOM     32    o RES     1      -2.248  -8.004   4.095                       O
+ATOM     33   ha RES     1      -5.334  -9.327   6.092                       H
+ATOM     34   ha RES     1      -5.496  -8.603   4.451                       H
+ATOM     35   ha RES     1      -3.203  -8.465   6.404                       H
+TER
+CONECT    1    3    4    5
+CONECT    2    3    8
+CONECT    3    1    2    6    7
+CONECT    4    1
+CONECT    5    1
+CONECT    6    3
+CONECT    7    3
+CONECT    8    2   10   11   12
+CONECT    9   10   15
+CONECT   10    8    9   13   14
+CONECT   11    8
+CONECT   12    8
+CONECT   13   10
+CONECT   14   10
+CONECT   15    9   17   18   19
+CONECT   16   17   22
+CONECT   17   15   16   20   21
+CONECT   18   15
+CONECT   19   15
+CONECT   20   17
+CONECT   21   17
+CONECT   22   16   24   25   26
+CONECT   23   24   30
+CONECT   24   22   23   27   28
+CONECT   25   22
+CONECT   26   22
+CONECT   27   24
+CONECT   28   24
+CONECT   29   31   33   34
+CONECT   30   23   31   32
+CONECT   31   29   30   35
+CONECT   32   30
+CONECT   33   29
+CONECT   34   29
+CONECT   35   31

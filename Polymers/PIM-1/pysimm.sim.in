@@ -1,0 +1,27 @@
+log steps.log append
+
+
+################################################################################
+##################################    Init    ##################################
+################################################################################
+units           real
+atom_style      full
+pair_style      lj/cut/coul/long 12.0  12.0 
+kspace_style    pppm 1e-4
+bond_style      harmonic
+angle_style     harmonic
+dihedral_style  fourier
+improper_style  cvff
+special_bonds   amber
+pair_modify     mix arithmetic 
+read_data       temp.lmps
+################################################################################
+
+min_style cg
+minimize 1e-05 1e-05 10000 100000
+timestep        1
+fix             pysimm_md all nvt temp 100 100 100 
+run             5000
+unfix pysimm_md
+write_dump all custom pysimm.dump.tmp id q x y z vx vy vz
+quit

@@ -1,0 +1,349 @@
+
+Host: node21
+
+Timers On : Tue Jan 17 10:27:51 2023
+Timers Off: Tue Jan 17 11:33:00 2023
+
+Wall Time:     3909.67 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+DFH: sparsity prep                  :    203.567u      0.033s    122.111w     52 calls
+Libint2ERI::Libint2ERI              :   1171.767u     31.583s    288.430w   2271 calls
+DFH: initialize()                   :  17767.533u    380.983s    670.320w     52 calls
+DFH: AO Construction                :   4548.067u     63.767s    161.189w     52 calls
+DFH: AO-Met. Contraction            :   7287.683u    138.067s    256.349w     52 calls
+HF: Form core H                     :    803.183u     10.717s     25.743w     52 calls
+HF: Form S/X                        :    177.883u      6.317s      5.823w     52 calls
+HF: Guess                           :     29.750u      1.200s      0.971w     52 calls
+SAD Guess                           :     25.533u      1.033s      0.839w      4 calls
+HF: Form G                          :  25979.517u    679.133s   1026.235w    568 calls
+JK: D                               :     18.933u      0.667s      0.614w    568 calls
+JK: USO2AO                          :      1.750u      0.100s      0.058w    568 calls
+JK: JK                              :  25858.950u    673.900s   1022.215w    568 calls
+DFH: compute_JK()                   :  25836.833u    672.883s   1021.478w    568 calls
+DFH: Grabbing AOs                   :      0.017u      0.000s      0.002w    568 calls
+DFH: compute_J                      :   2003.067u      7.850s     63.531w    568 calls
+DFH: compute_K                      :  20609.133u    149.400s    683.160w    568 calls
+JK: AO2USO                          :      0.050u      0.000s      0.001w    568 calls
+HF: Form F                          :     18.117u      0.833s      0.602w    568 calls
+HF: Form D                          :     17.550u      0.717s      0.579w    568 calls
+HF: DIIS                            :    659.700u     36.800s     22.087w    564 calls
+HF: Form C                          :   1419.517u     45.800s     46.271w    564 calls
+Grad: V T Perturb                   :    750.833u      8.933s     23.936w     49 calls
+Grad: S                             :    200.383u      4.617s      6.450w     49 calls
+Grad: JK                            :  31790.183u    740.633s   1606.961w     49 calls
+JKGrad: Amn                         :   9389.467u    255.833s    577.783w     49 calls
+JKGrad: Awmn                        :      0.000u      0.000s      0.000w     49 calls
+JKGrad: AB                          :   6030.950u    182.117s    203.790w     49 calls
+JKGrad: UV                          :   2258.883u     51.117s     89.392w     49 calls
+JKGrad: ABx                         :    368.633u      9.700s     11.956w     49 calls
+JKGrad: Amnx                        :  13614.767u    231.717s    703.919w     49 calls
+Grad: XC                            :      0.000u      0.000s      0.000w     49 calls
+
+--------------------------------------------------------------------------------------
+DFH: sparsity prep                  :    203.567u      0.033s    122.111w     52 calls
+| Libint2ERI::Libint2ERI            :    140.817u      0.033s     84.437w     52 calls
+DFH: initialize()                   :  17767.533u    380.983s    670.320w     52 calls
+| Libint2ERI::Libint2ERI            :    289.667u      7.700s     65.991w   1092 calls
+| DFH: AO Construction              :   4548.067u     63.767s    161.189w     52 calls
+| DFH: AO-Met. Contraction          :   7287.683u    138.067s    256.349w     52 calls
+HF: Form core H                     :    803.183u     10.717s     25.743w     52 calls
+HF: Form S/X                        :    177.883u      6.317s      5.823w     52 calls
+HF: Guess                           :     29.750u      1.200s      0.971w     52 calls
+| SAD Guess                         :     25.533u      1.033s      0.839w      4 calls
+HF: Form G                          :  25979.517u    679.133s   1026.235w    568 calls
+| JK: D                             :     18.933u      0.667s      0.614w    568 calls
+| JK: USO2AO                        :      1.750u      0.100s      0.058w    568 calls
+| JK: JK                            :  25858.950u    673.900s   1022.215w    568 calls
+| | DFH: compute_JK()               :  25836.833u    672.883s   1021.478w    568 calls
+| | | DFH: Grabbing AOs             :      0.017u      0.000s      0.002w    568 calls
+| | | DFH: compute_J                :   2003.067u      7.850s     63.531w    568 calls
+| | | DFH: compute_K                :  20609.133u    149.400s    683.160w    568 calls
+| JK: AO2USO                        :      0.050u      0.000s      0.001w    568 calls
+HF: Form F                          :     18.117u      0.833s      0.602w    568 calls
+HF: Form D                          :     17.550u      0.717s      0.579w    568 calls
+HF: DIIS                            :    659.700u     36.800s     22.087w    564 calls
+HF: Form C                          :   1419.517u     45.800s     46.271w    564 calls
+Grad: V T Perturb                   :    750.833u      8.933s     23.936w     49 calls
+Grad: S                             :    200.383u      4.617s      6.450w     49 calls
+Grad: JK                            :  31790.183u    740.633s   1606.961w     49 calls
+| JKGrad: Amn                       :   9389.467u    255.833s    577.783w     49 calls
+| | Libint2ERI::Libint2ERI          :    365.967u     12.117s     68.195w     49 calls
+| JKGrad: Awmn                      :      0.000u      0.000s      0.000w     49 calls
+| JKGrad: AB                        :   6030.950u    182.117s    203.790w     49 calls
+| | Libint2ERI::Libint2ERI          :      0.900u      0.000s      0.521w    980 calls
+| JKGrad: UV                        :   2258.883u     51.117s     89.392w     49 calls
+| JKGrad: ABx                       :    368.633u      9.700s     11.956w     49 calls
+| | Libint2ERI::Libint2ERI          :      1.050u      0.050s      0.032w     49 calls
+| JKGrad: Amnx                      :  13614.767u    231.717s    703.919w     49 calls
+| | Libint2ERI::Libint2ERI          :    373.367u     11.683s     69.252w     49 calls
+Grad: XC                            :      0.000u      0.000s      0.000w     49 calls
+
+**************************************************************************************
+
+Host: chesdens.d3.icgm.fr
+
+Timers On : Tue Jan 17 18:49:22 2023
+Timers Off: Tue Jan 17 18:51:04 2023
+
+Wall Time:      101.96 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+
+--------------------------------------------------------------------------------------
+
+**************************************************************************************
+
+Host: chesdens.d3.icgm.fr
+
+Timers On : Wed Jan 18 09:20:50 2023
+Timers Off: Wed Jan 18 09:22:37 2023
+
+Wall Time:      106.87 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+
+--------------------------------------------------------------------------------------
+
+**************************************************************************************
+
+Host: chesdens.d3.icgm.fr
+
+Timers On : Wed Jan 18 09:31:11 2023
+Timers Off: Wed Jan 18 09:31:11 2023
+
+Wall Time:        0.44 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+
+--------------------------------------------------------------------------------------
+
+**************************************************************************************
+
+Host: chesdens.d3.icgm.fr
+
+Timers On : Wed Jan 18 09:32:44 2023
+Timers Off: Wed Jan 18 09:34:16 2023
+
+Wall Time:       91.32 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+
+--------------------------------------------------------------------------------------
+
+**************************************************************************************
+
+Host: chesdens.d3.icgm.fr
+
+Timers On : Wed Jan 18 09:36:39 2023
+Timers Off: Wed Jan 18 09:41:02 2023
+
+Wall Time:      263.44 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+
+--------------------------------------------------------------------------------------
+
+**************************************************************************************
+
+Host: chesdens.d3.icgm.fr
+
+Timers On : Wed Jan 18 09:41:19 2023
+Timers Off: Wed Jan 18 09:43:14 2023
+
+Wall Time:      114.79 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+
+--------------------------------------------------------------------------------------
+
+**************************************************************************************
+
+Host: chesdens.d3.icgm.fr
+
+Timers On : Wed Jan 18 09:47:22 2023
+Timers Off: Wed Jan 18 09:48:07 2023
+
+Wall Time:       44.62 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+
+--------------------------------------------------------------------------------------
+
+**************************************************************************************
+
+Host: chesdens.d3.icgm.fr
+
+Timers On : Wed Jan 18 09:52:34 2023
+Timers Off: Wed Jan 18 09:53:18 2023
+
+Wall Time:       44.17 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+
+--------------------------------------------------------------------------------------
+
+**************************************************************************************
+
+Host: chesdens.d3.icgm.fr
+
+Timers On : Wed Jan 18 09:54:59 2023
+Timers Off: Wed Jan 18 09:55:44 2023
+
+Wall Time:       45.03 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+
+--------------------------------------------------------------------------------------
+
+**************************************************************************************
+
+Host: chesdens.d3.icgm.fr
+
+Timers On : Wed Jan 18 09:57:13 2023
+Timers Off: Wed Jan 18 09:58:43 2023
+
+Wall Time:       89.37 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+
+--------------------------------------------------------------------------------------
+
+**************************************************************************************
+
+Host: chesdens.d3.icgm.fr
+
+Timers On : Wed Jan 18 09:59:47 2023
+Timers Off: Wed Jan 18 10:02:04 2023
+
+Wall Time:      136.45 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+
+--------------------------------------------------------------------------------------
+
+**************************************************************************************
+
+Host: chesdens.d3.icgm.fr
+
+Timers On : Wed Jan 18 10:07:01 2023
+Timers Off: Wed Jan 18 10:08:17 2023
+
+Wall Time:       76.01 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+
+--------------------------------------------------------------------------------------
+
+**************************************************************************************
+
+Host: chesdens.d3.icgm.fr
+
+Timers On : Wed Jan 18 10:26:44 2023
+Timers Off: Wed Jan 18 10:27:29 2023
+
+Wall Time:       45.30 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+
+--------------------------------------------------------------------------------------
+
+**************************************************************************************
+
+Host: chesdens.d3.icgm.fr
+
+Timers On : Wed Jan 18 10:28:09 2023
+Timers Off: Wed Jan 18 10:44:51 2023
+
+Wall Time:     1002.67 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+
+--------------------------------------------------------------------------------------
+
+**************************************************************************************
+
+Host: node20
+
+Timers On : Wed Jan 18 10:50:13 2023
+Timers Off: Wed Jan 18 10:52:44 2023
+
+Wall Time:      150.68 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+
+--------------------------------------------------------------------------------------
+
+**************************************************************************************
+
+Host: node20
+
+Timers On : Wed Jan 18 10:58:42 2023
+Timers Off: Wed Jan 18 11:10:17 2023
+
+Wall Time:      694.50 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+
+--------------------------------------------------------------------------------------
+
+**************************************************************************************
+
+Host: node20
+
+Timers On : Wed Jan 18 11:27:42 2023
+Timers Off: Wed Jan 18 11:49:39 2023
+
+Wall Time:     1317.20 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+
+--------------------------------------------------------------------------------------
+
+**************************************************************************************
+
+Host: node20
+
+Timers On : Wed Jan 18 11:53:09 2023
+Timers Off: Wed Jan 18 12:11:39 2023
+
+Wall Time:     1109.99 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+
+--------------------------------------------------------------------------------------
+
+**************************************************************************************
+
+Host: node20
+
+Timers On : Wed Jan 18 12:15:32 2023
+Timers Off: Wed Jan 18 12:32:41 2023
+
+Wall Time:     1029.04 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+
+--------------------------------------------------------------------------------------
+
+**************************************************************************************

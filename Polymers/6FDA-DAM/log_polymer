@@ -1,0 +1,428 @@
+# In this code we will optimize a monomer structure using scf/cc-pVDZ 
+
+# Then we wil calculate ESP and RESP charges
+ 
+# Then we build the polymer 
+
+# we have the initial structure of the monomer from avogadro 
+ 
+# You need to have the following modules: numpy, math, mdtraj, pysimm, psi4, resp, pandas 
+
+# you need to have the follwing files: input_parameters.dat file and {monomername}_initial.xyz 
+ 
+# input_parameters.dat file should have 7 columns 
+
+#1. Index of head atom of the monomer (index starts from 1) 
+
+#2. Index of the tail atom of the monomer 
+
+#3. Hydrogen attached to the head atom of the monomer 
+
+#4. Hydrogen attached to the tail atom of the monomer 
+
+#5. Name of the molecule (You should remember that your initial xyz file of the monomer should have a name like {moleculename}_monomer.mol2), also make sure xyz file have two remarks like in begining. 
+ 
+#6. Flag to keep or remove all the unnecessary files dusing the code execution. if 0 it keeps everything, elseif 1 it removes everything 
+
+#7. Flag to optimize or not, if 1 it will optimize, if 0 it will build the polymer...else not 
+# Sometimes, you may not have some parameters in your force-field database, then you have to modify gaff.json to include those. 
+
+### Written by Supriyo Naskar, ICGM, Univ. of Montepllier, CNRS, ENSCM ### 
+(debug) PySIMM: reading file
+15:02:32: starting LAMMPS simulation
+15:02:33: simulation using LAMMPS successful
+(debug) PySIMM: reading file
+hn ha
+PySIMM: Molecule 1 inserted
+15:02:35: 1/10 monomers added
+15:02:35: 2/10 monomers added
+15:02:35: starting relax_002 LAMMPS simulation
+15:02:53: relax_002 simulation using LAMMPS successful
+15:02:53: 3/10 monomers added
+15:02:53: starting relax_003 LAMMPS simulation
+15:02:54: relax_003 simulation using LAMMPS successful
+15:02:54: 4/10 monomers added
+15:02:54: starting relax_004 LAMMPS simulation
+15:02:55: relax_004 simulation using LAMMPS successful
+15:02:55: 5/10 monomers added
+15:02:55: starting relax_005 LAMMPS simulation
+15:02:57: relax_005 simulation using LAMMPS successful
+15:02:57: 6/10 monomers added
+15:02:57: starting relax_006 LAMMPS simulation
+15:02:59: relax_006 simulation using LAMMPS successful
+15:02:59: 7/10 monomers added
+15:02:59: starting relax_007 LAMMPS simulation
+15:03:02: relax_007 simulation using LAMMPS successful
+15:03:02: 8/10 monomers added
+15:03:02: starting relax_008 LAMMPS simulation
+15:03:05: relax_008 simulation using LAMMPS successful
+15:03:05: 9/10 monomers added
+15:03:05: starting relax_009 LAMMPS simulation
+15:03:09: relax_009 simulation using LAMMPS successful
+15:03:09: 10/10 monomers added
+15:03:09: starting relax_010 LAMMPS simulation
+15:03:12: relax_010 simulation using LAMMPS successful
+15:03:13: starting LAMMPS simulation
+15:03:13: simulation using LAMMPS successful
+15:03:13: starting LAMMPS simulation
+15:03:13: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:03:14: 1/2 monomers added
+15:03:14: 2/2 monomers added
+15:03:14: starting relax_002 LAMMPS simulation
+15:03:18: relax_002 simulation using LAMMPS successful
+15:03:19: starting LAMMPS simulation
+15:03:19: simulation using LAMMPS successful
+15:03:19: starting LAMMPS simulation
+15:03:19: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:03:20: 1/2 monomers added
+15:03:20: 2/2 monomers added
+15:03:20: starting relax_002 LAMMPS simulation
+15:03:25: relax_002 simulation using LAMMPS successful
+15:03:25: starting LAMMPS simulation
+15:03:26: simulation using LAMMPS successful
+15:03:26: starting LAMMPS simulation
+15:03:26: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:03:26: 1/2 monomers added
+15:03:26: 2/2 monomers added
+15:03:26: starting relax_002 LAMMPS simulation
+15:03:32: relax_002 simulation using LAMMPS successful
+15:03:33: starting LAMMPS simulation
+15:03:33: simulation using LAMMPS successful
+15:03:33: starting LAMMPS simulation
+15:03:33: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:03:33: 1/2 monomers added
+15:03:33: 2/2 monomers added
+15:03:34: starting relax_002 LAMMPS simulation
+15:03:39: relax_002 simulation using LAMMPS successful
+15:03:40: starting LAMMPS simulation
+15:03:40: simulation using LAMMPS successful
+15:03:40: starting LAMMPS simulation
+15:03:40: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:03:40: 1/2 monomers added
+15:03:40: 2/2 monomers added
+15:03:40: starting relax_002 LAMMPS simulation
+15:03:46: relax_002 simulation using LAMMPS successful
+15:03:47: starting LAMMPS simulation
+15:03:47: simulation using LAMMPS successful
+15:03:47: starting LAMMPS simulation
+15:03:47: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:03:48: 1/2 monomers added
+15:03:48: 2/2 monomers added
+15:03:48: starting relax_002 LAMMPS simulation
+15:03:54: relax_002 simulation using LAMMPS successful
+15:03:55: starting LAMMPS simulation
+15:03:55: simulation using LAMMPS successful
+15:03:55: starting LAMMPS simulation
+15:03:56: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:03:56: 1/2 monomers added
+15:03:56: 2/2 monomers added
+15:03:56: starting relax_002 LAMMPS simulation
+15:04:02: relax_002 simulation using LAMMPS successful
+15:04:04: starting LAMMPS simulation
+15:04:04: simulation using LAMMPS successful
+15:04:04: starting LAMMPS simulation
+15:04:04: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:04:04: 1/2 monomers added
+15:04:05: 2/2 monomers added
+15:04:05: starting relax_002 LAMMPS simulation
+15:04:11: relax_002 simulation using LAMMPS successful
+15:04:13: starting LAMMPS simulation
+15:04:13: simulation using LAMMPS successful
+15:04:13: starting LAMMPS simulation
+15:04:13: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:04:14: 1/2 monomers added
+15:04:14: 2/2 monomers added
+15:04:14: starting relax_002 LAMMPS simulation
+15:04:21: relax_002 simulation using LAMMPS successful
+15:04:23: starting LAMMPS simulation
+15:04:23: simulation using LAMMPS successful
+15:04:23: starting LAMMPS simulation
+15:04:23: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:04:24: 1/2 monomers added
+15:04:24: 2/2 monomers added
+15:04:24: starting relax_002 LAMMPS simulation
+15:04:31: relax_002 simulation using LAMMPS successful
+15:04:33: starting LAMMPS simulation
+15:04:34: simulation using LAMMPS successful
+15:04:34: starting LAMMPS simulation
+15:04:34: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:04:34: 1/2 monomers added
+15:04:34: 2/2 monomers added
+15:04:35: starting relax_002 LAMMPS simulation
+15:04:43: relax_002 simulation using LAMMPS successful
+15:04:45: starting LAMMPS simulation
+15:04:46: simulation using LAMMPS successful
+15:04:46: starting LAMMPS simulation
+15:04:46: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:04:47: 1/2 monomers added
+15:04:47: 2/2 monomers added
+15:04:47: starting relax_002 LAMMPS simulation
+15:04:56: relax_002 simulation using LAMMPS successful
+15:04:58: starting LAMMPS simulation
+15:04:59: simulation using LAMMPS successful
+15:04:59: starting LAMMPS simulation
+15:04:59: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:05:00: 1/2 monomers added
+15:05:00: 2/2 monomers added
+15:05:00: starting relax_002 LAMMPS simulation
+15:05:10: relax_002 simulation using LAMMPS successful
+15:05:12: starting LAMMPS simulation
+15:05:12: simulation using LAMMPS successful
+15:05:12: starting LAMMPS simulation
+15:05:13: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:05:13: 1/2 monomers added
+15:05:13: 2/2 monomers added
+15:05:13: starting relax_002 LAMMPS simulation
+15:05:23: relax_002 simulation using LAMMPS successful
+15:05:26: starting LAMMPS simulation
+15:05:26: simulation using LAMMPS successful
+15:05:26: starting LAMMPS simulation
+15:05:27: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:05:27: 1/2 monomers added
+15:05:27: 2/2 monomers added
+15:05:27: starting relax_002 LAMMPS simulation
+15:05:38: relax_002 simulation using LAMMPS successful
+15:05:41: starting LAMMPS simulation
+15:05:41: simulation using LAMMPS successful
+15:05:41: starting LAMMPS simulation
+15:05:42: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:05:42: 1/2 monomers added
+15:05:42: 2/2 monomers added
+15:05:42: starting relax_002 LAMMPS simulation
+15:05:52: relax_002 simulation using LAMMPS successful
+15:05:56: starting LAMMPS simulation
+15:05:56: simulation using LAMMPS successful
+15:05:56: starting LAMMPS simulation
+15:05:56: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:05:57: 1/2 monomers added
+15:05:57: 2/2 monomers added
+15:05:57: starting relax_002 LAMMPS simulation
+15:06:08: relax_002 simulation using LAMMPS successful
+15:06:11: starting LAMMPS simulation
+15:06:12: simulation using LAMMPS successful
+15:06:12: starting LAMMPS simulation
+15:06:12: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:06:13: 1/2 monomers added
+15:06:13: 2/2 monomers added
+15:06:13: starting relax_002 LAMMPS simulation
+15:06:24: relax_002 simulation using LAMMPS successful
+15:06:28: starting LAMMPS simulation
+15:06:29: simulation using LAMMPS successful
+15:06:29: starting LAMMPS simulation
+15:06:29: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:06:30: 1/2 monomers added
+15:06:30: 2/2 monomers added
+15:06:30: starting relax_002 LAMMPS simulation
+15:06:41: relax_002 simulation using LAMMPS successful
+15:06:45: starting LAMMPS simulation
+15:06:45: simulation using LAMMPS successful
+15:06:46: starting LAMMPS simulation
+15:06:46: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:06:47: 1/2 monomers added
+15:06:47: 2/2 monomers added
+15:06:47: starting relax_002 LAMMPS simulation
+15:06:59: relax_002 simulation using LAMMPS successful
+15:07:03: starting LAMMPS simulation
+15:07:04: simulation using LAMMPS successful
+15:07:04: starting LAMMPS simulation
+15:07:04: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:07:05: 1/2 monomers added
+15:07:05: 2/2 monomers added
+15:07:05: starting relax_002 LAMMPS simulation
+15:07:17: relax_002 simulation using LAMMPS successful
+15:07:21: starting LAMMPS simulation
+15:07:22: simulation using LAMMPS successful
+15:07:22: starting LAMMPS simulation
+15:07:22: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:07:24: 1/2 monomers added
+15:07:24: 2/2 monomers added
+15:07:24: starting relax_002 LAMMPS simulation
+15:07:36: relax_002 simulation using LAMMPS successful
+15:07:41: starting LAMMPS simulation
+15:07:42: simulation using LAMMPS successful
+15:07:42: starting LAMMPS simulation
+15:07:42: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:07:42: 1/2 monomers added
+15:07:43: 2/2 monomers added
+15:07:43: starting relax_002 LAMMPS simulation
+15:07:56: relax_002 simulation using LAMMPS successful
+15:08:01: starting LAMMPS simulation
+15:08:03: simulation using LAMMPS successful
+15:08:03: starting LAMMPS simulation
+15:08:03: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:08:04: 1/2 monomers added
+15:08:04: 2/2 monomers added
+15:08:04: starting relax_002 LAMMPS simulation
+15:08:17: relax_002 simulation using LAMMPS successful
+15:08:22: starting LAMMPS simulation
+15:08:23: simulation using LAMMPS successful
+15:08:23: starting LAMMPS simulation
+15:08:24: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:08:24: 1/2 monomers added
+15:08:25: 2/2 monomers added
+15:08:25: starting relax_002 LAMMPS simulation
+15:08:39: relax_002 simulation using LAMMPS successful
+15:08:45: starting LAMMPS simulation
+15:08:45: simulation using LAMMPS successful
+15:08:46: starting LAMMPS simulation
+15:08:46: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:08:46: 1/2 monomers added
+15:08:47: 2/2 monomers added
+15:08:47: starting relax_002 LAMMPS simulation
+15:09:00: relax_002 simulation using LAMMPS successful
+15:09:07: starting LAMMPS simulation
+15:09:08: simulation using LAMMPS successful
+15:09:09: starting LAMMPS simulation
+15:09:09: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:09:10: 1/2 monomers added
+15:09:10: 2/2 monomers added
+15:09:10: starting relax_002 LAMMPS simulation
+15:09:25: relax_002 simulation using LAMMPS successful
+15:09:33: starting LAMMPS simulation
+15:09:34: simulation using LAMMPS successful
+15:09:34: starting LAMMPS simulation
+15:09:36: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:09:37: 1/2 monomers added
+15:09:37: 2/2 monomers added
+15:09:37: starting relax_002 LAMMPS simulation
+15:09:52: relax_002 simulation using LAMMPS successful
+15:10:00: starting LAMMPS simulation
+15:10:01: simulation using LAMMPS successful
+15:10:01: starting LAMMPS simulation
+15:10:02: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:10:03: 1/2 monomers added
+15:10:03: 2/2 monomers added
+15:10:03: starting relax_002 LAMMPS simulation
+15:10:18: relax_002 simulation using LAMMPS successful
+15:10:26: starting LAMMPS simulation
+15:10:28: simulation using LAMMPS successful
+15:10:28: starting LAMMPS simulation
+15:10:28: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:10:29: 1/2 monomers added
+15:10:29: 2/2 monomers added
+15:10:29: starting relax_002 LAMMPS simulation
+15:10:45: relax_002 simulation using LAMMPS successful
+15:10:53: starting LAMMPS simulation
+15:10:55: simulation using LAMMPS successful
+15:10:55: starting LAMMPS simulation
+15:10:56: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:10:56: 1/2 monomers added
+15:10:59: 2/2 monomers added
+15:10:59: starting relax_002 LAMMPS simulation
+15:11:16: relax_002 simulation using LAMMPS successful
+15:11:25: starting LAMMPS simulation
+15:11:26: simulation using LAMMPS successful
+15:11:26: starting LAMMPS simulation
+15:11:26: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:11:28: 1/2 monomers added
+15:11:28: 2/2 monomers added
+15:11:28: starting relax_002 LAMMPS simulation
+15:11:47: relax_002 simulation using LAMMPS successful
+15:11:56: starting LAMMPS simulation
+15:11:58: simulation using LAMMPS successful
+15:11:58: starting LAMMPS simulation
+15:11:59: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:11:59: 1/2 monomers added
+15:11:59: 2/2 monomers added
+15:11:59: starting relax_002 LAMMPS simulation
+15:12:19: relax_002 simulation using LAMMPS successful
+15:12:29: starting LAMMPS simulation
+15:12:31: simulation using LAMMPS successful
+15:12:31: starting LAMMPS simulation
+15:12:31: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:12:33: 1/2 monomers added
+15:12:33: 2/2 monomers added
+15:12:33: starting relax_002 LAMMPS simulation
+15:12:54: relax_002 simulation using LAMMPS successful
+15:13:05: starting LAMMPS simulation
+15:13:07: simulation using LAMMPS successful
+15:13:07: starting LAMMPS simulation
+15:13:07: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:13:08: 1/2 monomers added
+15:13:08: 2/2 monomers added
+15:13:08: starting relax_002 LAMMPS simulation
+15:13:29: relax_002 simulation using LAMMPS successful
+15:13:44: starting LAMMPS simulation
+15:13:48: simulation using LAMMPS successful
+15:13:49: starting LAMMPS simulation
+15:13:54: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:13:55: 1/2 monomers added
+15:13:55: 2/2 monomers added
+15:13:56: starting relax_002 LAMMPS simulation
+15:14:24: relax_002 simulation using LAMMPS successful
+15:14:51: starting LAMMPS simulation
+15:15:01: simulation using LAMMPS successful
+15:15:04: starting LAMMPS simulation
+15:15:12: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:15:14: 1/2 monomers added
+15:15:15: 2/2 monomers added
+15:15:16: starting relax_002 LAMMPS simulation
+15:15:46: relax_002 simulation using LAMMPS successful
+15:16:02: starting LAMMPS simulation
+15:16:04: simulation using LAMMPS successful
+15:16:04: starting LAMMPS simulation
+15:16:07: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:16:08: 1/2 monomers added
+15:16:08: 2/2 monomers added
+15:16:09: starting relax_002 LAMMPS simulation
+15:16:34: relax_002 simulation using LAMMPS successful
+15:16:48: starting LAMMPS simulation
+15:16:51: simulation using LAMMPS successful
+15:16:51: starting LAMMPS simulation
+15:16:57: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:16:59: 1/2 monomers added
+15:17:02: 2/2 monomers added
+15:17:02: starting relax_002 LAMMPS simulation
+15:17:31: relax_002 simulation using LAMMPS successful
+15:17:54: starting LAMMPS simulation
+15:18:01: simulation using LAMMPS successful
+15:18:01: starting LAMMPS simulation
+15:18:09: simulation using LAMMPS successful
+PySIMM: Molecule 1 inserted
+15:18:11: 1/2 monomers added
+15:18:11: 2/2 monomers added
+15:18:15: starting relax_002 LAMMPS simulation
+15:18:42: relax_002 simulation using LAMMPS successful
+15:18:55: starting LAMMPS simulation
+15:18:57: simulation using LAMMPS successful
+15:18:57: starting LAMMPS simulation
+15:18:58: simulation using LAMMPS successful

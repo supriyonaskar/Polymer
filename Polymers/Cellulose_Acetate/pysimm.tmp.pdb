@@ -1,0 +1,130 @@
+HEADER    pdb written using pySIMM system module
+ATOM      1    C RES     1      -5.729   0.454  -0.539                       C
+ATOM      2    C RES     1      -4.534   1.371  -0.616                       C
+ATOM      3    H RES     1      -6.444   0.893   0.150                       H
+ATOM      4    H RES     1      -5.433  -0.527  -0.166                       H
+ATOM      5    H RES     1      -6.191   0.318  -1.517                       H
+ATOM      6    O RES     1      -3.618   1.138  -1.557                       O
+ATOM      7    C RES     1      -3.580  -0.025  -2.354                       C
+ATOM      8    O RES     1      -4.383   2.289   0.115                       O
+ATOM      9    C RES     1      -0.564   3.577  -0.485                       C
+ATOM     10    H RES     1      -0.437   3.507   1.639                       H
+ATOM     11    O RES     1      -0.185   4.304  -1.351                       O
+ATOM     12    C RES     1      -1.017   4.019   0.872                       C
+ATOM     13    H RES     1      -0.895   5.095   0.959                       H
+ATOM     14    O RES     1      -0.643   2.262  -0.635                       O
+ATOM     15    H RES     1      -2.067   3.747   0.989                       H
+ATOM     16    C RES     1      -0.092   0.226  -1.739                       C
+ATOM     17    C RES     1      -0.203   1.736  -1.879                       C
+ATOM     18    C RES     1      -1.154   2.142  -3.028                       C
+ATOM     19    C RES     1      -1.659   0.922  -3.788                       C
+ATOM     20    O RES     1      -0.516   2.965  -3.958                       O
+ATOM     21    H RES     1      -2.002   2.653  -2.580                       H
+ATOM     22    C RES     1      -2.167  -0.204  -2.883                       C
+ATOM     23    O RES     1      -1.344  -0.409  -1.754                       O
+ATOM     24    H RES     1      -2.447   1.225  -4.479                       H
+ATOM     25    H RES     1      -4.283   0.059  -3.186                       H
+ATOM     26    H RES     1      -3.833  -0.905  -1.764                       H
+ATOM     27    H RES     1      -2.185  -1.129  -3.470                       H
+ATOM     28    H RES     1       0.792   2.118  -2.088                       H
+ATOM     29    H RES     1      -0.252   3.753  -3.500                       H
+ATOM     30    H RES     1       1.560  -4.043  -0.277                       H
+ATOM     31    H RES     1       3.692  -3.006  -0.035                       H
+ATOM     32    C RES     1       1.807  -3.704   0.732                       C
+ATOM     33    H RES     1       4.042  -0.605  -0.496                       H
+ATOM     34    O RES     1       2.171  -4.819   1.432                       O
+ATOM     35    C RES     1       2.920  -2.663   0.649                       C
+ATOM     36    H RES     1      -0.723  -2.679  -0.070                       H
+ATOM     37    O RES     1       5.125  -1.298   1.257                       O
+ATOM     38    C RES     1       0.976  -1.382  -0.362                       C
+ATOM     39    C RES     1       4.584  -1.885   2.140                       C
+ATOM     40    O RES     1       3.175  -0.764  -0.845                       O
+ATOM     41    C RES     1       0.013  -2.169   0.560                       C
+ATOM     42    C RES     1       2.394  -1.290   0.186                       C
+ATOM     43    O RES     1       0.691  -3.127   1.335                       O
+ATOM     44    O RES     1       3.475  -2.593   1.966                       O
+ATOM     45    H RES     1       5.979  -1.364   3.656                       H
+ATOM     46    C RES     1       5.046  -1.912   3.566                       C
+ATOM     47    C RES     1      -0.774  -1.297   1.512                       C
+ATOM     48    H RES     1      -1.429  -0.651   0.937                       H
+ATOM     49    H RES     1       5.177  -2.944   3.892                       H
+ATOM     50    H RES     1       2.364  -0.624   1.046                       H
+ATOM     51    H RES     1      -1.363  -1.949   2.159                       H
+ATOM     52    H RES     1       4.280  -1.456   4.193                       H
+ATOM     53    O RES     1       0.131  -0.541   2.288                       O
+ATOM     54    H RES     1      -2.255  -0.008   3.416                       H
+ATOM     55    C RES     1      -0.231   0.567   2.936                       C
+ATOM     56    C RES     1      -1.704   0.865   3.067                       C
+ATOM     57    H RES     1      -2.118   1.170   2.106                       H
+ATOM     58    O RES     1       0.609   1.261   3.399                       O
+ATOM     59    H RES     1      -1.819   1.679   3.777                       H
+ATOM     60    O RES     1       0.518  -0.071  -0.555                       O
+ATOM     61    H RES     1       0.509  -0.145  -2.576                       H
+ATOM     62    H RES     1      -0.841   0.547  -4.406                       H
+ATOM     63    H RES     1       1.032  -1.888  -1.329                       H
+ATOM     64    H RES     1       2.467  -4.543   2.289                       H
+TER
+CONECT    1    2    3    4    5
+CONECT    2    1    6    8
+CONECT    3    1
+CONECT    4    1
+CONECT    5    1
+CONECT    6    2    7
+CONECT    7    6   22   25   26
+CONECT    8    2
+CONECT    9   11   12   14
+CONECT   10   12
+CONECT   11    9
+CONECT   12    9   10   13   15
+CONECT   13   12
+CONECT   14    9   17
+CONECT   15   12
+CONECT   16   17   23   60   61
+CONECT   17   14   16   18   28
+CONECT   18   17   19   20   21
+CONECT   19   18   22   24   62
+CONECT   20   18   29
+CONECT   21   18
+CONECT   22    7   19   23   27
+CONECT   23   16   22
+CONECT   24   19
+CONECT   25    7
+CONECT   26    7
+CONECT   27   22
+CONECT   28   17
+CONECT   29   20
+CONECT   30   32
+CONECT   31   35
+CONECT   32   30   34   35   43
+CONECT   33   40
+CONECT   34   32   64
+CONECT   35   31   32   42   44
+CONECT   36   41
+CONECT   37   39
+CONECT   38   41   42   60   63
+CONECT   39   37   44   46
+CONECT   40   33   42
+CONECT   41   36   38   43   47
+CONECT   42   35   38   40   50
+CONECT   43   32   41
+CONECT   44   35   39
+CONECT   45   46
+CONECT   46   39   45   49   52
+CONECT   47   41   48   51   53
+CONECT   48   47
+CONECT   49   46
+CONECT   50   42
+CONECT   51   47
+CONECT   52   46
+CONECT   53   47   55
+CONECT   54   56
+CONECT   55   53   56   58
+CONECT   56   54   55   57   59
+CONECT   57   56
+CONECT   58   55
+CONECT   59   56
+CONECT   60   16   38
+CONECT   61   16
+CONECT   62   19
+CONECT   63   38
+CONECT   64   34

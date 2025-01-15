@@ -1,0 +1,57 @@
+Electrostatic potential parameters
+    van der Waals radii (Angstrom):
+                                      C   1.500
+                                      H   1.200
+                                      O   1.400
+    VDW scale factors:                1.40  1.60  1.80  2.00
+    VDW point density:                1.000
+    ESP method:                       scf
+    ESP basis set:                    6-31g*
+
+Grid information (see 1_optimized_grid.dat in Angstrom)
+    Number of grid points:            1041
+
+Quantum electrostatic potential (see 1_optimized_grid_esp.dat)
+
+Constraints
+    Charge constraints
+        Total charge of   0.00000000 on the set  25
+        Total charge of   0.00000000 on the set  12
+
+Restraint
+    Hyperbolic restraint to a charge of zero
+    Hydrogen atoms are not restrained
+    resp_a:                           0.0005
+    resp_b:                           0.1000
+
+Fit
+
+Electrostatic Potential Charges
+   Center  Symbol       ESP      RESP
+      1    C      -0.27802079 -0.08496759
+      2    C       0.41177158  0.30948321
+      3    H       0.03311795 -0.00200035
+      4    O      -0.55004627 -0.43656356
+      5    C       0.52807153  0.15356983
+      6    H      -0.05711016 -0.00283624
+      7    O      -0.51287685 -0.34955909
+      8    H       0.02427040  0.01592494
+      9    C       0.44925740  0.23007737
+     10    H       0.08426037  0.05264087
+     11    H      -0.05152943 -0.02362303
+     12    H       0.00000000  0.00000000
+     13    C      -0.30495871 -0.07296905
+     14    H       0.05446916  0.03127606
+     15    H       0.05756478  0.02330927
+     16    H       0.05818912  0.03009410
+     17    H      -0.00655648  0.07788764
+     18    C       0.23983101  0.09092032
+     19    H       0.07841761  0.04782085
+     20    H       0.11508147  0.06833876
+     21    C      -0.25340475 -0.12902332
+     22    H      -0.02723860 -0.00647473
+     23    H      -0.04354295 -0.01081419
+     24    C      -0.04924452 -0.01937188
+     25    H       0.00000000  0.00000000
+     26    H       0.00022712  0.00685979
+Total Charge:      0.00000000 -0.00000000

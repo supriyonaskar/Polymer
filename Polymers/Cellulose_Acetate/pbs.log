@@ -1,0 +1,11 @@
+The used cpu number is 
+The used node name is 1
+The nodefile is /var/spool/torque/aux//269016.chesdens.d3.icgm.fr
+The node_list is node47
+269016.chesdens.d3.icgm.fr started on chesdens.d3.icgm.fr at Thu Dec 15 15:52:42 CET 2022
+Traceback (most recent call last):
+  File "/home/snaskar/All_polymers/Cellulose_Acetate/build-polymer_v2.py", line 131, in <module>
+    psi4.optimize('scf/cc-pVDZ', molecule=PBI)
+  File "/home/snaskar/software/anaconda3/lib/python3.9/site-packages/psi4/driver/driver.py", line 1318, in optimize
+    raise OptimizationConvergenceError("""geometry optimization""", n - 1, wfn)
+psi4.driver.p4util.exceptions.OptimizationConvergenceError: Could not converge geometry optimization in 50 iterations.

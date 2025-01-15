@@ -1,0 +1,54 @@
+HEADER    pdb written using pySIMM system module
+ATOM      1    C RES     1      -0.763   2.346  -0.320                       C
+ATOM      2    C RES     1      -1.932   1.445   0.052                       C
+ATOM      3    H RES     1      -0.934   3.363   0.043                       H
+ATOM      4    O RES     1      -1.645   0.114  -0.287                       O
+ATOM      5    C RES     1      -0.473  -0.360   0.290                       C
+ATOM      6    H RES     1       0.466   1.840   1.367                       H
+ATOM      7    O RES     1       0.620   0.411  -0.088                       O
+ATOM      8    H RES     1       1.870   2.387  -1.290                       H
+ATOM      9    C RES     1       0.520   1.772   0.271                       C
+ATOM     10    H RES     1      -0.669   2.382  -1.408                       H
+ATOM     11    H RES     1      -2.142   1.517   1.127                       H
+ATOM     12    H RES     1       2.659   2.002   0.245                       H
+ATOM     13    C RES     1      -0.257  -1.784  -0.167                       C
+ATOM     14    H RES     1       2.024  -4.349   0.471                       H
+ATOM     15    H RES     1       0.281  -4.512   0.237                       H
+ATOM     16    H RES     1       1.299  -3.934  -1.085                       H
+ATOM     17    H RES     1      -0.576  -0.313   1.386                       H
+ATOM     18    C RES     1       0.956  -2.455   0.472                       C
+ATOM     19    H RES     1      -1.167  -2.343   0.063                       H
+ATOM     20    H RES     1      -0.156  -1.766  -1.255                       H
+ATOM     21    C RES     1       1.151  -3.893  -0.002                       C
+ATOM     22    H RES     1       1.849  -1.869   0.248                       H
+ATOM     23    H RES     1       0.845  -2.447   1.562                       H
+ATOM     24    C RES     1       1.780   2.465  -0.205                       C
+ATOM     25    H RES     1      -2.838   1.719  -0.484                       H
+ATOM     26    H RES     1       1.764   3.522   0.069                       H
+TER
+CONECT    1    2    3    9   10
+CONECT    2    1    4   11   25
+CONECT    3    1
+CONECT    4    2    5
+CONECT    5    4    7   13   17
+CONECT    6    9
+CONECT    7    5    9
+CONECT    8   24
+CONECT    9    1    6    7   24
+CONECT   10    1
+CONECT   11    2
+CONECT   12   24
+CONECT   13    5   18   19   20
+CONECT   14   21
+CONECT   15   21
+CONECT   16   21
+CONECT   17    5
+CONECT   18   13   21   22   23
+CONECT   19   13
+CONECT   20   13
+CONECT   21   14   15   16   18
+CONECT   22   18
+CONECT   23   18
+CONECT   24    8    9   12   26
+CONECT   25    2
+CONECT   26   24

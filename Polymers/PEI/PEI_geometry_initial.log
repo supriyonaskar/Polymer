@@ -1,0 +1,58 @@
+2023-01-17:09:45:02,437 INFO     [psi4.driver.task_planner:266] PLANNING Atomic:  keywords={'SCF__INTS_TOLERANCE': 1e-12, 'function_kwargs': {}}
+2023-01-17:09:45:02,444 INFO     [psi4.driver.driver:617] Compute gradient(): method=scf, basis=cc-pvdz, molecule=default, nre=82.65728391894996
+2023-01-17:09:45:04,487 INFO     [psi4.driver.driver:620] Return gradient(): -134.25707757500697
+2023-01-17:09:45:04,488 INFO     [psi4.driver.driver:621] [[-0.00124183  0.00074059  0.01282041]
+ [ 0.00697954 -0.00085418 -0.00211463]
+ [-0.00580351 -0.00983465  0.0039647 ]
+ [ 0.01518029 -0.00228698 -0.01347032]
+ [ 0.00732612 -0.00121719 -0.00895737]
+ [ 0.00287741 -0.01237086 -0.00390809]
+ [ 0.00541525  0.01104917 -0.00501736]
+ [-0.00352785  0.01117367  0.0029707 ]
+ [-0.01698346 -0.02935108  0.00833037]
+ [-0.01022196  0.0329515   0.00538158]]
+2023-01-17:09:45:04,616 INFO     [psi4.driver.task_planner:266] PLANNING Atomic:  keywords={'CART_HESS_READ': 0, 'SCF__GUESS': 'READ', 'SCF__INTS_TOLERANCE': 1e-12, 'function_kwargs': {}}
+2023-01-17:09:45:04,619 INFO     [psi4.driver.driver:617] Compute gradient(): method=scf, basis=cc-pvdz, molecule=default, nre=82.88696253272713
+2023-01-17:09:45:05,520 INFO     [psi4.driver.driver:620] Return gradient(): -134.26222539780193
+2023-01-17:09:45:05,520 INFO     [psi4.driver.driver:621] [[-0.00211625 -0.00000091 -0.00486481]
+ [-0.00034407  0.00005951  0.00046764]
+ [ 0.00128628  0.00075227 -0.00007615]
+ [-0.00022748  0.00037759  0.00747885]
+ [-0.0018206   0.00013918 -0.00122902]
+ [-0.00085146  0.00066167  0.0011992 ]
+ [-0.00096183 -0.00034944  0.00124722]
+ [ 0.0010948  -0.00101381  0.00000757]
+ [ 0.00237917  0.00345778 -0.00229405]
+ [ 0.00156144 -0.00408384 -0.00193646]]
+2023-01-17:09:45:05,573 INFO     [psi4.driver.task_planner:266] PLANNING Atomic:  keywords={'CART_HESS_READ': 0, 'SCF__GUESS': 'READ', 'SCF__INTS_TOLERANCE': 1e-12, 'function_kwargs': {}}
+2023-01-17:09:45:05,577 INFO     [psi4.driver.driver:617] Compute gradient(): method=scf, basis=cc-pvdz, molecule=default, nre=83.06662554380178
+2023-01-17:09:45:06,440 INFO     [psi4.driver.driver:620] Return gradient(): -134.26246745452397
+2023-01-17:09:45:06,441 INFO     [psi4.driver.driver:621] [[-0.00058583  0.00005836 -0.00010648]
+ [ 0.00138695 -0.00020712 -0.00120087]
+ [ 0.00014834  0.00012363 -0.00010086]
+ [-0.00034012  0.00006299  0.00053329]
+ [ 0.00007085  0.00002639  0.0007237 ]
+ [-0.00021887  0.00030169 -0.00006331]
+ [-0.00027914 -0.00025231 -0.00003664]
+ [ 0.00011763 -0.00016122 -0.00008733]
+ [-0.00013368  0.00017753  0.00016222]
+ [-0.00016613 -0.00012993  0.00017629]]
+2023-01-17:09:45:06,490 INFO     [psi4.driver.task_planner:266] PLANNING Atomic:  keywords={'CART_HESS_READ': 0, 'SCF__GUESS': 'READ', 'SCF__INTS_TOLERANCE': 1e-12, 'function_kwargs': {}}
+2023-01-17:09:45:06,494 INFO     [psi4.driver.driver:617] Compute gradient(): method=scf, basis=cc-pvdz, molecule=default, nre=83.07113226821183
+2023-01-17:09:45:07,296 INFO     [psi4.driver.driver:620] Return gradient(): -134.2624725010359
+2023-01-17:09:45:07,297 INFO     [psi4.driver.driver:621] [[-0.00008672  0.00001212  0.00005139]
+ [-0.00005525 -0.00000181 -0.00015565]
+ [ 0.00001953  0.00000202  0.00001087]
+ [ 0.00017266 -0.00001595  0.00005735]
+ [ 0.00002994 -0.00000654 -0.00007194]
+ [-0.00001981  0.00000351  0.00009778]
+ [-0.00001909  0.00000988  0.00009738]
+ [ 0.00001845 -0.00000526  0.00001133]
+ [-0.000038   -0.00007474 -0.00004571]
+ [-0.00002173  0.00007676 -0.00005281]]
+2023-01-17:09:45:07,423 INFO     [psi4.driver.task_planner:266] PLANNING Atomic:  keywords={'SCF__INTS_TOLERANCE': 1e-12, 'function_kwargs': {}}
+2023-01-17:09:45:07,426 INFO     [psi4.driver.driver:774] Compute properties(): method=scf, basis=6-31g*, molecule=optimized, nre=83.0711322682166
+2023-01-17:09:45:08,376 INFO     [psi4.driver.driver:777] Return properties(): -134.24730354777668
+2023-01-17:09:45:08,559 INFO     [psi4.driver.task_planner:266] PLANNING Atomic:  keywords={'SCF__INTS_TOLERANCE': 1e-12, 'function_kwargs': {}}
+2023-01-17:09:45:08,563 INFO     [psi4.driver.driver:774] Compute properties(): method=scf, basis=6-31g*, molecule=optimized, nre=83.0711322682166
+2023-01-17:09:45:10,243 INFO     [psi4.driver.driver:777] Return properties(): -134.24730354763588
