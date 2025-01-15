@@ -7,7 +7,7 @@ This script performs the following tasks:
 1. Optimizes a monomer's geometry using Psi4.
 2. Calculates ESP and RESP charges.
 3. Builds a polymer using Pysimm.
-4. Please install Pysimm_by_SN from my repository and install it to run this code and add the below lines to your bashrc file.
+4. Please install [Pysimm_by_SN](https://github.com/supriyonaskar/Pysimm_by_SN.git) from my repository and install it to run this code and add the below lines to your bashrc file.
    export LAMMPS_EXEC=path_to_your/lmp_mpi
    export PYTHONPATH=$PYTHONPATH:/path_to_your/pysimm
    export PATH=$PATH:/path_to_your/bin
