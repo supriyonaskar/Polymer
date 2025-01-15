@@ -12,6 +12,7 @@ This script performs the following tasks:
 - export PYTHONPATH=$PYTHONPATH:/path_to_your/pysimm
 - export PATH=$PATH:/path_to_your/bin
 - export ANTECHAMBER_EXEC=~/path_to_your/antechamber
+5. The script requires AMBER Tools to run. You can download and install it from [AMBER's official site](https://ambermd.org/).
 
 
 
