@@ -111,3 +111,6 @@ SPEEK
 ### Written by:
 **Supriyo Naskar**
 Institute: ICGM, CNRS, ENSCM, University of Montpellier
+
+### Reference:
+[Alejandro Diaz-Marquez, Supriyo Naskar, Dong Fan, Mohamed Eddaoudi, and Guillaume Maurin. "MOF surface morphology governs interfacial pore architecture and CO₂ dynamics in mixed matrix membranes." Chemical Science (2025).](https://doi.org/10.1039/D5SC04241K)
