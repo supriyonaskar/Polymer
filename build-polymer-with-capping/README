@@ -1,0 +1,38 @@
+1. Load the Conda Environment
+
+First, source the Conda environment to ensure all dependencies are correctly set:
+
+    source /home/adiaz/anaconda3/etc/profile.d/conda.sh
+    conda activate polymer_build
+
+2. Prepare Polymer Structure Files
+
+Provide the structural information for the polymer:
+
+- Capping Groups:
+  - If the polymer has capping groups, include the corresponding files:
+    - Tail_initial.xyz
+    - Head_initial.xyz
+  - If not, replace them with hydrogen atoms (H).
+
+- Polymer Backbone:
+  - Main polymer structure should be given in:
+    - PEGDA_initial.xyz
+
+- Input Parameters:
+  - Include system-specific parameters in the file:
+    - input_parameters.dat
+
+3. Build the Polymer Chains
+
+Run the following Python script to generate polymer chains ranging from 10 to 50 units:
+
+    python build-polymer_v2.py
+
+4. Pack the Polymeric Chains with MOFs
+
+Ensure the presence of:
+
+- list: A text file containing the list of numbered polymers.
+- packing: A directory or script responsible for packing the system.
+
